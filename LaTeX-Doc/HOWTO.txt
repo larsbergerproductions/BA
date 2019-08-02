@@ -1,0 +1,10 @@
+USAGE:
+	alle Metainformationen => Meta.TeX
+	alle Inhalte als einzelne Sections => content/inhalt_ch#.tex
+		diese dann in content.tex hinzufügen
+
+
+HINWEISE:
+	in Acronyms.tex können Acronyme erstellt werden
+	es gibt implementierte, nicht getestete Funktionen(z.B. das Einfügen von Code in LaTeX)
+	Bibliography ist nicht geklärt!

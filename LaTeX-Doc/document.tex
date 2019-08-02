@@ -1,0 +1,79 @@
+% Nach Vorlage der Projektdokumentation für Fachinformatiker Anwendungsentwicklung von Stefan Macke (http://fiae.link/LaTeXVorlageFIAE)
+% Deckblatt der UniBwM Fakultät für Informatik 
+% Mathebefehle von Dr. Sören Kleine UniBwM
+\documentclass[
+	ngerman,
+	11pt,
+	toc=listof,
+	toc=bibliography,
+	footnotes=multiple,
+	parskip=half,
+	numbers=noendperiod
+	%,twocolumn
+]{scrartcl}
+
+\usepackage[utf8]{inputenc}
+
+\input{Meta}
+\input{TeX-StyleDefinition/packages}
+\input{TeX-StyleDefinition/sitestyle}
+\input{TeX-StyleDefinition/commands}
+\input{TeX-StyleDefinition/commands_math}
+\input{Commands}
+\input{Glossary}
+
+
+\begin{document}
+	
+% ######################################
+% #                                    #
+% #              DECKBLATT             #
+% #                                    #
+% ######################################	
+	\phantomsection						
+	\thispagestyle{plain}
+	\pagenumbering{gobble}	
+	\pdfbookmark[1]{Deckblatt}{deckblatt}
+	\input{FrontSheet}
+	\cleardoublepage
+	
+	
+% ######################################
+% #                                    #
+% #         INHALTSVERZEICHNIS         #
+% #                                    #
+% ######################################	
+	\phantomsection						
+	\pdfbookmark[1]{Inhaltsverzeichnis}{inhalt}
+	\pagenumbering{Roman}
+	\tableofcontents
+	\cleardoublepage
+% ######################################
+% #                                    #
+% #               INHALT               #
+% #                                    #
+% ######################################
+	\pagenumbering{arabic}
+	\input{content.tex}
+	
+	
+	
+% ######################################
+% #                                    #
+% #        LITERATURVERZEICHNIS        #
+% #                                    #
+% ######################################
+	\clearpage
+	\renewcommand{\refname}{Literaturverzeichnis}
+	\bibliography{Bibliography}
+	\bibliographystyle{Allgemein/natdin}
+
+% ######################################
+% #                                    #
+% #             ERKLÄRUNG              #
+% #                                    #
+% ######################################
+	\input{Erklaerung}
+	
+	
+\end{document}
