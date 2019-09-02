@@ -1,0 +1,20 @@
+% !TeX spellcheck = de_DE_frami
+% !TEX root = document.tex
+\section{Der Greedy Algorithmus}
+Eine der bekanntesten Methoden, eine Ägyptische  Brucherweiterung
+%todo: anderen Begriff finden!
+für Brüche $\frac{a}{b} \text{ ; } a, b \in \Q$ zu finden, ist der Greedy Algorithmus. Dabei werden jeweils die größtmöglichen Stammbrüche $\frac{1}{x_i}$ gesucht, wobei
+$$\frac{1}{x_i} \leq \frac{a}{b} - \sum_{j=1}^{i-1} \frac{1}{x_j} < \frac{1}{x_{i}-1},$$
+wobei gilt, dass
+$$x_i \neq x_j; \forall i \neq j = (1,..,i)$$ \todo{check}
+solange, bis
+$$\frac{a}{b} = \frac{1}{x_1} + \frac{1}{x_2} + ... + \frac{1}{x_i} = \sum_{j=1}^{i} \frac{1}{x_j}.$$
+Da in jedem Fall der größtmögliche, noch nicht vorhandene Bruch gesucht wird, der noch in die Summe der Stammbrüche passt, ohne dass diese zu groß wird, kann es zu sehr ungünstigen Ergebnissen mit extrem langen Divisoren kommen; ein anschauliches Beispiel dafür ist:
+$$\frac{5}{121} = \uf{25} + \uf{757} + \uf{763309} + \uf{873960180913} + \uf{1527612795642093418846225},$$
+wobei man den Bruch auch folgendermaßen zerlegen kann:
+$$\frac{5}{121} = \uf{33} + \uf{121} + \uf{363}.$$
+Durch diese Komplexitätsprobleme scheint es unsinnig, den Greedy-Algorithmus zu verwenden. Trotz hat WERAUCHIMMER \todo{Namen und Quelle finden!}
+IRGENDWANN \todo{wann?} nachgewiesen, dass der Algorithmus tatsächlich terminiert.
+\todo{Beweis einfügen}
+Im Anhang \ref{code:greedy_pari} findet sich eine eigene Implementierung des Greedy-Algorithmus.
+\todo[inline]{Mathematisch mit Hypothese, Lemma, Satz und Beweis?}
