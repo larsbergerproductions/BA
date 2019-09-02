@@ -6,7 +6,8 @@ Eine der bekanntesten Methoden, eine Ägyptische  Brucherweiterung
 für Brüche $\frac{a}{b} \text{ ; } a, b \in \Q$ zu finden, ist der Greedy Algorithmus. Dabei werden jeweils die größtmöglichen Stammbrüche $\frac{1}{x_i}$ gesucht, wobei
 $$\frac{1}{x_i} \leq \frac{a}{b} - \sum_{j=1}^{i-1} \frac{1}{x_j} < \frac{1}{x_{i}-1},$$
 wobei gilt, dass
-$$x_i \neq x_j; \forall i \neq j = (1,..,i)$$ \todo{check}
+$$x_i \neq x_j; \forall i \neq j = (1,..,i)$$ 
+\unsure{this is right, isn't it?}
 solange, bis
 $$\frac{a}{b} = \frac{1}{x_1} + \frac{1}{x_2} + ... + \frac{1}{x_i} = \sum_{j=1}^{i} \frac{1}{x_j}.$$
 Da in jedem Fall der größtmögliche, noch nicht vorhandene Bruch gesucht wird, der noch in die Summe der Stammbrüche passt, ohne dass diese zu groß wird, kann es zu sehr ungünstigen Ergebnissen mit extrem langen Divisoren kommen; ein anschauliches Beispiel dafür ist:
@@ -17,4 +18,4 @@ Durch diese Komplexitätsprobleme scheint es unsinnig, den Greedy-Algorithmus zu
 IRGENDWANN \todo{wann?} nachgewiesen, dass der Algorithmus tatsächlich terminiert.
 \todo{Beweis einfügen}
 Im Anhang \ref{code:greedy_pari} findet sich eine eigene Implementierung des Greedy-Algorithmus.
-\todo[inline]{Mathematisch mit Hypothese, Lemma, Satz und Beweis?}
+\unsure[inline]{Mathematisch mit Hypothese, Lemma, Satz und Beweis?}

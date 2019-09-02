@@ -6,8 +6,7 @@ egyp(fraction)=
 	result=List();
 	candidate = 1; /*only allowing fractions $a/b < 1$ */
 	
-	
-	/* put error if fraction is larger one*/
+	/* print error if fraction is larger one */
 	if (numerator(fraction) > denominator(fraction),
 		print("fraction is larger than 1. Use fractions smaller or equal to 1.");
 		return;
@@ -19,7 +18,7 @@ egyp(fraction)=
 		listput(result, fraction);
 	);
 	
-	/*calculate summands and add them to the result*/ 
+	/* calculate summands and add them to the result */
 	while (listsum(result) < fraction,
 		candidate += 1;
 		while (1/candidate > fraction - listsum(result),
@@ -35,3 +34,8 @@ egyp(fraction)=
 
 /* +++ for shorter usage in command line use +++ */
 e(fraction) = egyp(fraction);
+
+/* show timer for each calculation */
+#
+
+print("You can use \"e(frac)\" to get the egyptian fraction sum for frac. Note, that frac should be less than or equal to one.")

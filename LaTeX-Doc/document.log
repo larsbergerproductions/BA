@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.7.29)  2 SEP 2019 13:21
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.7.29)  2 SEP 2019 14:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -642,6 +642,30 @@ Package: relsize 2013/03/29 ver 4.1
 (/usr/share/texlive/texmf-dist/tex/latex/doublestroke/dsfont.sty
 Package: dsfont 1995/08/01 v0.1 Double stroke roman fonts
 )
+(/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
+)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
+Package xcolor Info: Model `RGB' extended on input line 1364.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/dvipsnam.def
+File: dvipsnam.def 2016/06/17 v3.0m Driver-dependent file (DPC,SPQR)
+))
 (/usr/share/texlive/texmf-dist/tex/latex/tools/tabularx.sty
 Package: tabularx 2016/02/03 v2.11 `tabularx' package (DPC)
 
@@ -715,10 +739,7 @@ Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 99.
-
-(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
-File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
-)))
+))
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
 \Gin@req@height=\dimen112
@@ -1008,35 +1029,11 @@ Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
 \XKV@depth=\count130
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 ))
-(/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
-Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
-
-(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg
-File: color.cfg 2016/01/02 v1.6 sample color configuration
-)
-Package xcolor Info: Driver file: pdftex.def on input line 225.
-
-(/usr/share/texlive/texmf-dist/tex/latex/colortbl/colortbl.sty
-Package: colortbl 2012/02/13 v1.0a Color table columns (DPC)
-\everycr=\toks40
-\minrowclearance=\skip114
-)
-\rownum=\count131
-Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
-Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
-Package xcolor Info: Model `RGB' extended on input line 1364.
-Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
-Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
-Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
-Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
-Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
-Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
-)
 (/usr/share/texlive/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
 (/usr/share/texlive/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
 (/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
-\pgfutil@everybye=\toks41
+\pgfutil@everybye=\toks40
 \pgfutil@tempdima=\dimen151
 \pgfutil@tempdimb=\dimen152
 
@@ -1057,12 +1054,12 @@ Package: pgf 2015/08/07 v3.0.1a (rcs-revision 1.15)
 Package: pgfsys 2014/07/09 v3.0.1a (rcs-revision 1.48)
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
-\pgfkeys@pathtoks=\toks42
-\pgfkeys@temptoks=\toks43
+\pgfkeys@pathtoks=\toks41
+\pgfkeys@temptoks=\toks42
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeysfiltered.code.t
 ex
-\pgfkeys@tmptoks=\toks44
+\pgfkeys@tmptoks=\toks43
 ))
 \pgf@x=\dimen153
 \pgf@y=\dimen154
@@ -1074,13 +1071,13 @@ ex
 \pgf@yc=\dimen160
 \w@pgf@writea=\write4
 \r@pgf@reada=\read1
-\c@pgf@counta=\count132
-\c@pgf@countb=\count133
-\c@pgf@countc=\count134
-\c@pgf@countd=\count135
-\t@pgf@toka=\toks45
-\t@pgf@tokb=\toks46
-\t@pgf@tokc=\toks47
+\c@pgf@counta=\count131
+\c@pgf@countb=\count132
+\c@pgf@countc=\count133
+\c@pgf@countd=\count134
+\t@pgf@toka=\toks44
+\t@pgf@tokb=\toks45
+\t@pgf@tokc=\toks46
  (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
 File: pgf.cfg 2008/05/14  (rcs-revision 1.7)
 )
@@ -1096,8 +1093,8 @@ File: pgfsys-common-pdf.def 2013/10/10  (rcs-revision 1.13)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.
 tex
 File: pgfsyssoftpath.code.tex 2013/09/09  (rcs-revision 1.9)
-\pgfsyssoftpath@smallbuffer@items=\count136
-\pgfsyssoftpath@bigbuffer@items=\count137
+\pgfsyssoftpath@smallbuffer@items=\count135
+\pgfsyssoftpath@bigbuffer@items=\count136
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.
 tex
@@ -1111,11 +1108,11 @@ Package: pgfcore 2010/04/11 v3.0.1a (rcs-revision 1.7)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
 \pgfmath@dimen=\dimen161
-\pgfmath@count=\count138
+\pgfmath@count=\count137
 \pgfmath@box=\box42
-\pgfmath@toks=\toks48
-\pgfmath@stack@operand=\toks49
-\pgfmath@stack@operation=\toks50
+\pgfmath@toks=\toks47
+\pgfmath@stack@operand=\toks48
+\pgfmath@stack@operation=\toks49
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code
@@ -1135,7 +1132,7 @@ tex)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerari
 thmetics.code.tex)))
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
-\c@pgfmathroundto@lastzeros=\count139
+\c@pgfmathroundto@lastzeros=\count138
 ))
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.te
 x
@@ -1173,7 +1170,7 @@ File: pgfcorescopes.code.tex 2015/05/08  (rcs-revision 1.46)
 \pgfpic=\box43
 \pgf@hbox=\box44
 \pgf@layerbox@main=\box45
-\pgf@picture@serial@count=\count140
+\pgf@picture@serial@count=\count139
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.c
 ode.tex
@@ -1206,7 +1203,7 @@ File: pgfcorearrows.code.tex 2015/05/14  (rcs-revision 1.43)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
 File: pgfcoreshade.code.tex 2013/07/15  (rcs-revision 1.15)
 \pgf@max=\dimen185
-\pgf@sys@shading@range@num=\count141
+\pgf@sys@shading@range@num=\count140
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
 File: pgfcoreimage.code.tex 2013/07/15  (rcs-revision 1.18)
@@ -1254,8 +1251,8 @@ Package: pgffor 2013/12/13 v3.0.1a (rcs-revision 1.25)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)
 \pgffor@iter=\dimen188
 \pgffor@skip=\dimen189
-\pgffor@stack=\toks51
-\pgffor@toks=\toks52
+\pgffor@stack=\toks50
+\pgffor@toks=\toks51
 ))
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
 Package: tikz 2015/08/07 v3.0.1a (rcs-revision 1.151)
@@ -1263,7 +1260,7 @@ Package: tikz 2015/08/07 v3.0.1a (rcs-revision 1.151)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers
 .code.tex
 File: pgflibraryplothandlers.code.tex 2013/08/31 v3.0.1a (rcs-revision 1.20)
-\pgf@plot@mark@count=\count142
+\pgf@plot@mark@count=\count141
 \pgfplotmarksize=\dimen190
 )
 \tikz@lastx=\dimen191
@@ -1276,18 +1273,18 @@ File: pgflibraryplothandlers.code.tex 2013/08/31 v3.0.1a (rcs-revision 1.20)
 \tikz@figbox@bg=\box49
 \tikz@tempbox=\box50
 \tikz@tempbox@bg=\box51
-\tikztreelevel=\count143
-\tikznumberofchildren=\count144
-\tikznumberofcurrentchild=\count145
-\tikz@fig@count=\count146
+\tikztreelevel=\count142
+\tikznumberofchildren=\count143
+\tikznumberofcurrentchild=\count144
+\tikz@fig@count=\count145
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
 File: pgfmodulematrix.code.tex 2013/09/17  (rcs-revision 1.8)
-\pgfmatrixcurrentrow=\count147
-\pgfmatrixcurrentcolumn=\count148
-\pgf@matrix@numberofcolumns=\count149
+\pgfmatrixcurrentrow=\count146
+\pgfmatrixcurrentcolumn=\count147
+\pgf@matrix@numberofcolumns=\count148
 )
-\tikz@expandcount=\count150
+\tikz@expandcount=\count149
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
 zlibrarytopaths.code.tex
@@ -1299,25 +1296,31 @@ File: tikzlibrarypositioning.code.tex 2008/10/06 v3.0.1a (rcs-revision 1.7)
 )
 (/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2014/10/28 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count151
-\calc@Bcount=\count152
+\calc@Acount=\count150
+\calc@Bcount=\count151
 \calc@Adimen=\dimen197
 \calc@Bdimen=\dimen198
-\calc@Askip=\skip115
-\calc@Bskip=\skip116
+\calc@Askip=\skip114
+\calc@Bskip=\skip115
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count153
-\calc@Cskip=\skip117
+\calc@Ccount=\count152
+\calc@Cskip=\skip116
 )
-\c@@todonotes@numberoftodonotes=\count154
+\c@@todonotes@numberoftodonotes=\count153
 )
 (/usr/share/texlive/texmf-dist/tex/latex/natbib/natbib.sty
 Package: natbib 2010/09/13 8.31b (PWD, AO)
-\bibhang=\skip118
-\bibsep=\skip119
+\bibhang=\skip117
+\bibsep=\skip118
 LaTeX Info: Redefining \cite on input line 694.
-\c@NAT@ctr=\count155
+\c@NAT@ctr=\count154
+)
+(/usr/share/texlive/texmf-dist/tex/latex/xargs/xargs.sty
+Package: xargs 2008/03/22 v1.1  extended macro definitions  (mpg)
+\xargs@max=\count155
+\xargs@toksa=\toks52
+\xargs@toksb=\toks53
 )
 (/usr/share/texlive/texmf-dist/tex/latex/pdfpages/pdfpages.sty
 Package: pdfpages 2017/10/31 v0.5l Insert pages of external PDF documents (AM)
@@ -1341,8 +1344,8 @@ Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
 File: pppdftex.def 2017/10/31 v0.5l Pdfpages driver for pdfTeX (AM)
 )
 \AM@pagebox=\box52
-\AM@global@opts=\toks53
-\AM@toc@title=\toks54
+\AM@global@opts=\toks54
+\AM@toc@title=\toks55
 \c@AM@survey=\count156
 \AM@templatesizebox=\box53
 )
@@ -1459,7 +1462,7 @@ Package: rerunfilecheck 2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 82.
 )
-\Hy@SectionHShift=\skip120
+\Hy@SectionHShift=\skip119
 )
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
@@ -1476,7 +1479,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (/usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
 \lst@mode=\count167
 \lst@gtempboxa=\box54
-\lst@token=\toks55
+\lst@token=\toks56
 \lst@length=\count168
 \lst@currlwidth=\dimen261
 \lst@column=\count169
@@ -1508,8 +1511,8 @@ Package: mfirstuc 2017/11/14 v2.06 (NLCT)
 Package: etoolbox 2018/02/11 v2.5e e-TeX tools for LaTeX (JAW)
 \etb@tempcnta=\count175
 )
-\@glsmfirst=\toks56
-\@glsmrest=\toks57
+\@glsmfirst=\toks57
+\@glsmrest=\toks58
 )
 (/usr/share/texlive/texmf-dist/tex/latex/textcase/textcase.sty
 Package: textcase 2004/10/07 v0.07 Text only upper/lower case changing (DPC)
@@ -1575,9 +1578,9 @@ Package: fp-upn 1996/10/21
 (/usr/share/texlive/texmf-dist/tex/latex/fp/fp-eval.sty
 Package: fp-eval 1995/04/03
 )))
-\@dtl@toks=\toks58
+\@dtl@toks=\toks59
 \@dtl@tmpcount=\count188
-\dtl@tmplength=\skip121
+\dtl@tmplength=\skip120
 \dtl@sortresult=\count189
 \@dtl@numgrpsepcount=\count190
 \@dtl@datatype=\count191
@@ -1600,23 +1603,23 @@ f
 File: glossaries-german.ldf 2014/11/23 v1.0
 )
 \gls@level=\count195
-\@gls@tmpb=\toks59
-\gls@tmplen=\skip122
-\glskeylisttok=\toks60
-\glslabeltok=\toks61
-\glsshorttok=\toks62
-\glslongtok=\toks63
+\@gls@tmpb=\toks60
+\gls@tmplen=\skip121
+\glskeylisttok=\toks61
+\glslabeltok=\toks62
+\glsshorttok=\toks63
+\glslongtok=\toks64
 
 (/usr/share/texlive/texmf-dist/tex/latex/glossaries/styles/glossary-hypernav.st
 y
 Package: glossary-hypernav 2017/11/14 v4.35 (NLCT)
 ) (/usr/share/texlive/texmf-dist/tex/latex/glossaries/styles/glossary-list.sty
 Package: glossary-list 2017/11/14 v4.35 (NLCT)
-\glslistdottedwidth=\skip123
+\glslistdottedwidth=\skip122
 ) (/usr/share/texlive/texmf-dist/tex/latex/glossaries/styles/glossary-long.sty
 Package: glossary-long 2017/11/14 v4.35 (NLCT)
-\glsdescwidth=\skip124
-\glspagelistwidth=\skip125
+\glsdescwidth=\skip123
+\glspagelistwidth=\skip124
 ) (/usr/share/texlive/texmf-dist/tex/latex/glossaries/styles/glossary-super.sty
 Package: glossary-super 2017/11/14 v4.35 (NLCT)
 
@@ -1624,9 +1627,9 @@ Package: glossary-super 2017/11/14 v4.35 (NLCT)
 Package: supertabular 2004/02/20 v4.1e the supertabular environment
 \c@tracingst=\count196
 \ST@wd=\dimen265
-\ST@rightskip=\skip126
-\ST@leftskip=\skip127
-\ST@parfillskip=\skip128
+\ST@rightskip=\skip125
+\ST@leftskip=\skip126
+\ST@parfillskip=\skip127
 \ST@pageleft=\dimen266
 \ST@headht=\dimen267
 \ST@tailht=\dimen268
@@ -1641,13 +1644,13 @@ Package: supertabular 2004/02/20 v4.1e the supertabular environment
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/glossaries/styles/glossary-tree.sty
 Package: glossary-tree 2017/11/14 v4.35 (NLCT)
-\glstreeindent=\skip129
+\glstreeindent=\skip128
 ))
 \glswrite=\write5
 \glo@main@file=\write6
 \openout6 = `document.glo'.
 
-Package glossaries Info: Writing glossary file document.glo on input line 190.
+Package glossaries Info: Writing glossary file document.glo on input line 198.
 ) (./TeX-StyleDefinition/sitestyle.tex
 (/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrpage2.sty
 Package: scrpage2 2017/09/07 v3.24 KOMA-Script package (page head and foot)
@@ -1661,8 +1664,8 @@ Package scrpage2 Warning: usage of obsolete package!
 
 LaTeX Info: Redefining \pagemark on input line 180.
 )) (./TeX-StyleDefinition/commands.tex
-\myx=\skip130
-\myy=\skip131
+\myx=\skip129
+\myy=\skip130
 )
 (./TeX-StyleDefinition/commands_math.tex
 \c@lemma=\count197
@@ -1670,34 +1673,31 @@ LaTeX Info: Redefining \pagemark on input line 180.
 (./document.aux)
 \openout1 = `document.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 25.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 25.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 27.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 27.
  (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Try loading font information for T1+lmr on input line 25.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Try loading font information for T1+lmr on input line 27.
 
 (/usr/share/texmf/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-ABD: EverySelectfont initializing macros
-LaTeX Info: Redefining \selectfont on input line 25.
-
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count198
@@ -1705,12 +1705,12 @@ LaTeX Info: Redefining \selectfont on input line 25.
 \scratchbox=\box57
 \nofMPsegments=\count199
 \nofMParguments=\count266
-\everyMPshowfont=\toks64
+\everyMPshowfont=\toks65
 \MPscratchCnt=\count267
 \MPscratchDim=\dimen277
 \MPnumerator=\count268
 \makeMPintoPDFobject=\count269
-\everyMPtoPDFconversion=\toks65
+\everyMPtoPDFconversion=\toks66
 ) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
@@ -1728,6 +1728,8 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
+ABD: EverySelectfont initializing macros
+LaTeX Info: Redefining \selectfont on input line 27.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
 Package caption Info: listings package is loaded.
@@ -1775,7 +1777,7 @@ ABD: EveryShipout initializing macros
 Package: pdflscape 2016/05/14 v0.11 Display of landscape pages in PDF (HO)
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 )
-Package hyperref Info: Link coloring ON on input line 25.
+Package hyperref Info: Link coloring ON on input line 27.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
@@ -1786,22 +1788,22 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 \c@section@level=\count270
 LaTeX Info: Redefining \Ref on input line 515.
 )
-LaTeX Info: Redefining \ref on input line 25.
-LaTeX Info: Redefining \pageref on input line 25.
-LaTeX Info: Redefining \nameref on input line 25.
+LaTeX Info: Redefining \ref on input line 27.
+LaTeX Info: Redefining \pageref on input line 27.
+LaTeX Info: Redefining \nameref on input line 27.
 
 (./document.out) (./document.out)
 \@outlinefile=\write7
 \openout7 = `document.out'.
 
-LaTeX Info: Redefining \Ref on input line 25.
+LaTeX Info: Redefining \Ref on input line 27.
 \c@lstlisting=\count271
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 35.
+(babel)             in language  on input line 37.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 35.
+(babel)             in language  on input line 37.
  (./FrontSheet.tex
-<images/unibw.jpg, id=35, 442.2924pt x 84.315pt>
+<images/unibw.jpg, id=39, 442.2924pt x 84.315pt>
 File: images/unibw.jpg Graphic file (type jpg)
 <use images/unibw.jpg>
 Package pdftex.def Info: images/unibw.jpg  used on input line 5.
@@ -1859,43 +1861,48 @@ Package babel Info: Redefining ngerman shorthand "~
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./images/unibw.jpg>])
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 46.
+(babel)             in language  on input line 48.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 46.
+(babel)             in language  on input line 48.
  (./document.toc)
 \tf@toc=\write8
 \openout8 = `document.toc'.
 
 File: images/unibw.jpg Graphic file (type jpg)
 <use images/unibw.jpg>
-Package pdftex.def Info: images/unibw.jpg  used on input line 49.
+Package pdftex.def Info: images/unibw.jpg  used on input line 51.
 (pdftex.def)             Requested size: 176.91382pt x 33.72539pt.
 
 Overfull \vbox (1.2785pt too high) has occurred while \output is active []
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 49.
+(babel)             in language  on input line 51.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 49.
+(babel)             in language  on input line 51.
 
 [1
 
 
-] (./content.tex (./document.tdo)
+] (./content.tex
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 3.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 3.
+ (./document.tdo)
 \tf@tdo=\write9
 \openout9 = `document.tdo'.
 
 File: images/unibw.jpg Graphic file (type jpg)
 <use images/unibw.jpg>
-Package pdftex.def Info: images/unibw.jpg  used on input line 4.
+Package pdftex.def Info: images/unibw.jpg  used on input line 5.
 (pdftex.def)             Requested size: 176.91382pt x 33.72539pt.
 
 Overfull \vbox (1.2785pt too high) has occurred while \output is active []
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 4.
+(babel)             in language  on input line 5.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 4.
+(babel)             in language  on input line 5.
 
 [1
 
@@ -1912,15 +1919,15 @@ File: Udsrom.fd 1995/08/01 v0.1 Double stroke roman font definitions
 ))
 File: images/unibw.jpg Graphic file (type jpg)
 <use images/unibw.jpg>
-Package pdftex.def Info: images/unibw.jpg  used on input line 6.
+Package pdftex.def Info: images/unibw.jpg  used on input line 7.
 (pdftex.def)             Requested size: 176.91382pt x 33.72539pt.
 
 Overfull \vbox (1.2785pt too high) has occurred while \output is active []
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 6.
+(babel)             in language  on input line 7.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 6.
+(babel)             in language  on input line 7.
 
 [2
 
@@ -1930,7 +1937,7 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 3.
 Package hyperref Info: bookmark level for unknown todo defaults to 0 on input l
-ine 9.
+ine 10.
 
 
 LaTeX Warning: Marginpar on page 3 moved.
@@ -1939,22 +1946,22 @@ LaTeX Warning: Marginpar on page 3 moved.
 LaTeX Warning: Marginpar on page 3 moved.
 
 
-Overfull \hbox (10.44997pt too wide) in paragraph at lines 20--20
+Overfull \hbox (10.44997pt too wide) in paragraph at lines 21--21
 [] 
  []
 
 )
 File: images/unibw.jpg Graphic file (type jpg)
 <use images/unibw.jpg>
-Package pdftex.def Info: images/unibw.jpg  used on input line 8.
+Package pdftex.def Info: images/unibw.jpg  used on input line 9.
 (pdftex.def)             Requested size: 176.91382pt x 33.72539pt.
 
 Overfull \vbox (1.2785pt too high) has occurred while \output is active []
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 8.
+(babel)             in language  on input line 9.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 8.
+(babel)             in language  on input line 9.
 
 [3
 
@@ -1974,35 +1981,27 @@ LaTeX Font Info:    Try loading font information for TS1+lmr on input line 7.
 
 (/usr/share/texmf/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
-))
+)
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <9> on input line 24.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 24.
+)))
 File: images/unibw.jpg Graphic file (type jpg)
 <use images/unibw.jpg>
-Package pdftex.def Info: images/unibw.jpg  used on input line 4.
+Package pdftex.def Info: images/unibw.jpg  used on input line 68.
 (pdftex.def)             Requested size: 176.91382pt x 33.72539pt.
 
 Overfull \vbox (1.2785pt too high) has occurred while \output is active []
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 4.
+(babel)             in language  on input line 68.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 4.
+(babel)             in language  on input line 68.
 
 [4
 
-]))
-File: images/unibw.jpg Graphic file (type jpg)
-<use images/unibw.jpg>
-Package pdftex.def Info: images/unibw.jpg  used on input line 66.
-(pdftex.def)             Requested size: 176.91382pt x 33.72539pt.
-
-Overfull \vbox (1.2785pt too high) has occurred while \output is active []
-
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 66.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 66.
-
-[5] (./document.bbl) (./Erklaerung.tex
+] (./document.bbl) (./Erklaerung.tex
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 3.
 Package babel Info: Redefining ngerman shorthand "~
@@ -2020,56 +2019,67 @@ This document will not have a glossary.
 
 File: images/unibw.jpg Graphic file (type jpg)
 <use images/unibw.jpg>
-Package pdftex.def Info: images/unibw.jpg  used on input line 79.
+Package pdftex.def Info: images/unibw.jpg  used on input line 81.
 (pdftex.def)             Requested size: 176.91382pt x 33.72539pt.
 
 Overfull \vbox (1.2785pt too high) has occurred while \output is active []
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 79.
+(babel)             in language  on input line 81.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 79.
+(babel)             in language  on input line 81.
 
-[6
+[5
 
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 79.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 79.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 81.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 81.
  (./document.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 79.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 79.
-Package rerunfilecheck Info: File `document.out' has not changed.
-(rerunfilecheck)             Checksum: 3918A25A189F79693A37361532D74AA3;405.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 79.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 81.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 81.
+
+
+Package rerunfilecheck Warning: File `document.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `document.out':
+(rerunfilecheck)             Before: 3DE2BD10397C707EEBB0EBB434D9A5D0;447
+(rerunfilecheck)             After:  15654FA3F32DC38BE5D21056CE416603;447.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 81.
  ) 
 Here is how much of TeX's memory you used:
- 32764 strings out of 492982
- 584494 string characters out of 6134896
- 963308 words of memory out of 5000000
- 35552 multiletter control sequences out of 15000+600000
- 67863 words of font info for 53 fonts, out of 8000000 for 9000
+ 32941 strings out of 492982
+ 587278 string characters out of 6134896
+ 1029573 words of memory out of 5000000
+ 35712 multiletter control sequences out of 15000+600000
+ 79070 words of font info for 66 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 76i,15n,80p,8819b,1239s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/share/texmf/fonts/enc/d
-vips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/shar
-e/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/l
-m-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}</usr/share/texlive
-/texmf-dist/fonts/type1/public/doublestroke/dsrom10.pfb></usr/share/texmf/fonts
-/type1/public/lm/lmbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmcsc10.pfb
-></usr/share/texmf/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf/fonts/typ
-e1/public/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi6.pfb></usr
-/share/texmf/fonts/type1/public/lm/lmmi8.pfb></usr/share/texmf/fonts/type1/publ
-ic/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr6.pfb></usr/share/te
-xmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmri
-12.pfb></usr/share/texmf/fonts/type1/public/lm/lmss10.pfb></usr/share/texmf/fon
-ts/type1/public/lm/lmss17.pfb></usr/share/texmf/fonts/type1/public/lm/lmssbx10.
-pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/
-type1/public/lm/lmsy8.pfb>
-Output written on document.pdf (8 pages, 466975 bytes).
+ 76i,15n,80p,8819b,1453s stack positions out of 5000i,500n,10000p,200000b,80000s
+pdfTeX warning (dest): name{section*.58} has been referenced but does not exi
+st, replaced by a fixed one
+
+{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/
+dvips/lm/lm-ts1.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/
+texmf/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-
+mathit.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}</usr/share/texlive/t
+exmf-dist/fonts/type1/public/doublestroke/dsrom10.pfb></usr/share/texmf/fonts/t
+ype1/public/lm/lmbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmcsc10.pfb><
+/usr/share/texmf/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf/fonts/type1
+/public/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi6.pfb></usr/s
+hare/texmf/fonts/type1/public/lm/lmmi8.pfb></usr/share/texmf/fonts/type1/public
+/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr6.pfb></usr/share/texm
+f/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmr9.p
+fb></usr/share/texmf/fonts/type1/public/lm/lmri12.pfb></usr/share/texmf/fonts/t
+ype1/public/lm/lmss10.pfb></usr/share/texmf/fonts/type1/public/lm/lmss17.pfb></
+usr/share/texmf/fonts/type1/public/lm/lmssbx10.pfb></usr/share/texmf/fonts/type
+1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/
+share/texmf/fonts/type1/public/lm/lmsy9.pfb>
+Output written on document.pdf (7 pages, 507223 bytes).
 PDF statistics:
- 222 PDF objects out of 1000 (max. 8388607)
- 193 compressed objects within 2 object streams
- 63 named destinations out of 1000 (max. 500000)
- 74 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 238 PDF objects out of 1000 (max. 8388607)
+ 207 compressed objects within 3 object streams
+ 68 named destinations out of 1000 (max. 500000)
+ 82 words of extra memory for PDF output out of 10000 (max. 10000000)
 
