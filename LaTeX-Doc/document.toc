@@ -4,4 +4,5 @@
 \contentsline {section}{\numberline {2}Der Greedy Algorithmus}{3}{section.7}
 \contentsline {section}{\numberline {3}Anhang}{4}{section.13}
 \contentsline {subsection}{\numberline {3.1}PARI Code f\IeC {\"u}r den Greedy-Algorithmus}{4}{subsection.14}
-\contentsline {section}{\nonumberline Eidesstattliche Erkl\IeC {\"a}rung}{5}{section*.57}
+\contentsline {subsection}{\numberline {3.2}PARI Code f\IeC {\"u}r den Odd-Greedy-Algorithmus}{5}{subsection.57}
+\contentsline {section}{\nonumberline Eidesstattliche Erkl\IeC {\"a}rung}{6}{section*.100}
