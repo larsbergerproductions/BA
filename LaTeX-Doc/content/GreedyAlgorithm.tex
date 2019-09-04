@@ -4,7 +4,9 @@
 Eine der bekanntesten Methoden, eine Ägyptische  Brucherweiterung
 %todo: anderen Begriff finden!
 für Brüche $\frac{a}{b} \text{ ; } a, b \in \Q$ zu finden, ist der Greedy Algorithmus. Dabei werden jeweils die größtmöglichen Stammbrüche $\frac{1}{x_i}$ gesucht, wobei
-$$\frac{1}{x_i} \leq \frac{a}{b} - \sum_{j=1}^{i-1} \frac{1}{x_j} < \frac{1}{x_{i}-1},$$
+\begin{equation}\label{eq:greedy_fracNorm}
+\frac{1}{x_i} \leq \frac{a}{b} - \sum_{j=1}^{i-1} \frac{1}{x_j} < \frac{1}{x_{i}-1},
+\end{equation}
 wobei gilt, dass
 $$x_i \neq x_j; \forall i \neq j = (1,..,i)$$ 
 \unsure{this is right, isn't it?}
@@ -18,4 +20,18 @@ Durch diese Komplexitätsprobleme scheint es unsinnig, den Greedy-Algorithmus zu
 IRGENDWANN \todo{wann?} nachgewiesen, dass der Algorithmus tatsächlich terminiert.
 \todo{Beweis einfügen}
 Im Anhang \ref{code:greedy} findet sich eine eigene Implementierung des Greedy-Algorithmus.
-\unsure[inline]{Mathematisch mit Hypothese, Lemma, Satz und Beweis?}
+
+\begin{satz}
+	Der Greedy-Algortihmus terminiert für paarweise verschiedene Brüche $\uf{x}$
+\end{satz}
+\begin{bew}
+	Für die erste Iteration des Greedy-Algorithmus ergibt sich aus \ref{eq:greedy_fracNorm}:
+	\begin{equation*}
+		\uf{x} \leq \frac{a}{b} < \uf{x-1}
+	\end{equation*}
+	Daraus folgt ein Rest $r$ von
+	$$ r = \frac{a}{b}-\uf{x} = \frac{ax-b}{bx},$$
+	der den Zähler $(ax-b)$ hat, \unsure{woher weiß ich das?} der kleiner als a ist. \\ Somit verkleinert sich dieser Rest mit jedem Schritt und erreicht irgendwann Null, wie gefordert.
+\end{bew}
+
+%\unsure[inline]{Mathematisch mit Hypothese, Lemma, Satz und Beweis?}
