@@ -1,10 +1,10 @@
 listsum(list) = sum(i=1,#list,list[i]);
 
 
-egyp(fraction)=
+fibonacci_sylvester(fraction, stepsize, start)=
 { local(candidate, result);
 	result=List();
-	candidate = 1; /*only allowing fractions $a/b < 1$ */
+	candidate = start;
 	
 	/* print error if fraction is larger one */
 	if (numerator(fraction) > denominator(fraction),
@@ -20,9 +20,9 @@ egyp(fraction)=
 	
 	/* calculate summands and add them to the result */
 	while (listsum(result) < fraction,
-		candidate += 1;
+		candidate += stepsize;
 		while (1/candidate > fraction - listsum(result),
-			candidate += 1;
+			candidate += stepsize;
 		);
 		print("adding ", 1/candidate);
 		listput(result, 1/candidate);
@@ -32,10 +32,12 @@ egyp(fraction)=
 }
 
 
-/* +++ for shorter usage in command line use +++ */
-e(fraction) = egyp(fraction);
+greedy(fraction) = fibonacci_sylvester(fraction, 1, 1);
+greedy_odd(fraction) = {print("\nthis might not come to an end!\n"); fibonacci_sylvester(fraction, 2, 1);}
+greedy_even(fraction) = fibonacci_sylvester(fraction, 2, 0);
+
 
 /* show timer for each calculation */
 #
-
-print("You can use \"e(frac)\" to get the egyptian fraction sum for frac. Note, that frac should be less than or equal to one.")
+print("\n available main functions, not recommended for usage:\n - fibonacci_sylvester(frac, stepsize, start)\n");
+print("Available algos:\n - greedy(frac)\n - greedy_odd(frac)\n - greedy_even(frac)");
