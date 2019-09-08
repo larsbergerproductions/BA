@@ -2,7 +2,14 @@
 \BOOKMARK [1][-]{inhalt.1}{Inhaltsverzeichnis}{}% 2
 \BOOKMARK [1][-]{section.4}{0 TODOs}{}% 3
 \BOOKMARK [1][-]{section.6}{1 Einleitung}{}% 4
-\BOOKMARK [1][-]{section.8}{2 Der Greedy Algorithmus}{}% 5
-\BOOKMARK [1][-]{section.16}{3 Anhang}{}% 6
-\BOOKMARK [2][-]{subsection.17}{3.1 PARI Code f\374r den Greedy-Algorithmus}{section.16}% 7
-\BOOKMARK [1][-]{section*.56}{Eidesstattliche Erkl\344rung}{}% 8
+\BOOKMARK [1][-]{section.8}{2 \304gyptische Arithmetik}{}% 5
+\BOOKMARK [2][-]{subsection.9}{2.1 \304gyptische Multiplikation}{section.8}% 6
+\BOOKMARK [2][-]{subsection.11}{2.2 \304gyptische Division}{section.8}% 7
+\BOOKMARK [3][-]{subsubsection.12}{2.2.1 Ganzzahlige Division}{subsection.11}% 8
+\BOOKMARK [3][-]{subsubsection.14}{2.2.2 Division mit Rest}{subsection.11}% 9
+\BOOKMARK [2][-]{subsection.16}{2.3 Ermittlung \304gyptischer Zerlegungen von Br\374chen}{section.8}% 10
+\BOOKMARK [1][-]{section.17}{3 Der Greedy Algorithmus}{}% 11
+\BOOKMARK [1][-]{section.25}{4 Anhang}{}% 12
+\BOOKMARK [2][-]{subsection.26}{4.1 PARI/GP Code f\374r den Greedy-Algorithmus}{section.25}% 13
+\BOOKMARK [1][-]{section*.65}{Literaturverzeichnis}{}% 14
+\BOOKMARK [1][-]{section*.66}{Eidesstattliche Erkl\344rung}{}% 15
