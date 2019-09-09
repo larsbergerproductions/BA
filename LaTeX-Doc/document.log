@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.7.29)  9 SEP 2019 08:27
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.7.29)  9 SEP 2019 14:15
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -642,6 +642,18 @@ Package: relsize 2013/03/29 ver 4.1
 (/usr/share/texlive/texmf-dist/tex/latex/doublestroke/dsfont.sty
 Package: dsfont 1995/08/01 v0.1 Double stroke roman fonts
 )
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/pifont.sty
+Package: pifont 2005/04/12 PSNFSS-v9.2a Pi font support (SPQR) 
+LaTeX Font Info:    Try loading font information for U+pzd on input line 63.
+
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/upzd.fd
+File: upzd.fd 2001/06/04 font definitions for U/pzd.
+)
+LaTeX Font Info:    Try loading font information for U+psy on input line 64.
+
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/upsy.fd
+File: upsy.fd 2001/06/04 font definitions for U/psy.
+))
 (/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
 Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
 
@@ -703,7 +715,7 @@ Package: longtable 2014/10/28 v4.11 Multi-page Table package (DPC)
 \c@LT@chunks=\count95
 \LT@p@ftn=\toks19
 )
-Class scrartcl Info: longtable captions redefined on input line 23.
+Class scrartcl Info: longtable captions redefined on input line 24.
 
 (/usr/share/texlive/texmf-dist/tex/latex/ms/ragged2e.sty
 Package: ragged2e 2009/05/21 v2.1 ragged2e Package (MS)
@@ -1466,15 +1478,15 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\\' on input line 114.
+(hyperref)                removing `\\' on input line 115.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\\' on input line 114.
+(hyperref)                removing `\\' on input line 115.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\\' on input line 114.
+(hyperref)                removing `\\' on input line 115.
 
 (/usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
 \lst@mode=\count167
@@ -1650,7 +1662,7 @@ Package: glossary-tree 2017/11/14 v4.35 (NLCT)
 \glo@main@file=\write6
 \openout6 = `document.glo'.
 
-Package glossaries Info: Writing glossary file document.glo on input line 201.
+Package glossaries Info: Writing glossary file document.glo on input line 202.
 ) (./TeX-StyleDefinition/sitestyle.tex
 (/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrpage2.sty
 Package: scrpage2 2017/09/07 v3.24 KOMA-Script package (page head and foot)
@@ -1960,40 +1972,55 @@ Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 44.
 File: images/unibw.jpg Graphic file (type jpg)
 <use images/unibw.jpg>
-Package pdftex.def Info: images/unibw.jpg  used on input line 49.
+Package pdftex.def Info: images/unibw.jpg  used on input line 50.
 (pdftex.def)             Requested size: 176.91382pt x 33.72539pt.
 
 Overfull \vbox (1.2785pt too high) has occurred while \output is active []
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 49.
+(babel)             in language  on input line 50.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 49.
+(babel)             in language  on input line 50.
 
 [3
 
 ]
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 60.
+(babel)             in language  on input line 61.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 60.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 83.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 83.
+(babel)             in language  on input line 61.
 File: images/unibw.jpg Graphic file (type jpg)
 <use images/unibw.jpg>
-Package pdftex.def Info: images/unibw.jpg  used on input line 88.
+Package pdftex.def Info: images/unibw.jpg  used on input line 97.
 (pdftex.def)             Requested size: 176.91382pt x 33.72539pt.
 
 Overfull \vbox (1.2785pt too high) has occurred while \output is active []
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 88.
+(babel)             in language  on input line 97.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 88.
+(babel)             in language  on input line 97.
 
-[4])
+[4]
+Package hyperref Info: bookmark level for unknown todo defaults to 0 on input l
+ine 114.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 117.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 117.
+File: images/unibw.jpg Graphic file (type jpg)
+<use images/unibw.jpg>
+Package pdftex.def Info: images/unibw.jpg  used on input line 122.
+(pdftex.def)             Requested size: 176.91382pt x 33.72539pt.
+
+Overfull \vbox (1.2785pt too high) has occurred while \output is active []
+
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 122.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 122.
+
+[5])
 File: images/unibw.jpg Graphic file (type jpg)
 <use images/unibw.jpg>
 Package pdftex.def Info: images/unibw.jpg  used on input line 9.
@@ -2006,19 +2033,15 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 9.
 
-[5] (./content/GreedyAlgorithm.tex
+[6] (./content/GreedyAlgorithm.tex
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 3.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 3.
-Package hyperref Info: bookmark level for unknown todo defaults to 0 on input l
-ine 12.
 
-
-LaTeX Warning: Marginpar on page 6 moved.
-
-
-LaTeX Warning: Marginpar on page 6 moved.
+Overfull \hbox (10.44997pt too wide) in paragraph at lines 10--10
+[] 
+ []
 
 )
 File: images/unibw.jpg Graphic file (type jpg)
@@ -2033,7 +2056,7 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 11.
 
-[6
+[7
 
 ] (./content/Anhang.tex
 Package babel Info: Redefining ngerman shorthand "|
@@ -2064,7 +2087,7 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 68.
 
-[7
+[8
 
 ] (./document.bbl
 Package babel Info: Redefining ngerman shorthand "|
@@ -2088,7 +2111,7 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 2.
 
-[8
+[9
 
 ]
 Package babel Info: Redefining ngerman shorthand "|
@@ -2118,7 +2141,7 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 82.
 
-[9
+[10
 
 ]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 82.
@@ -2127,21 +2150,21 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 82.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 82.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 82.
 Package rerunfilecheck Info: File `document.out' has not changed.
-(rerunfilecheck)             Checksum: 4F141B3A2BCAFFAC3AFDB635F2CD04FE;991.
+(rerunfilecheck)             Checksum: 43ECF686316B953172087B74C96F5D88;991.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 82.
  ) 
 Here is how much of TeX's memory you used:
- 33056 strings out of 492982
- 588980 string characters out of 6134896
- 1015583 words of memory out of 5000000
- 35801 multiletter control sequences out of 15000+600000
- 84336 words of font info for 70 fonts, out of 8000000 for 9000
+ 33084 strings out of 492982
+ 589431 string characters out of 6134896
+ 1013138 words of memory out of 5000000
+ 35818 multiletter control sequences out of 15000+600000
+ 82034 words of font info for 71 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  76i,16n,80p,8819b,1247s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dv
 ips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/shar
-e/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/lm/l
-m-mathex.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}</usr/share/texlive
+e/texmf/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/share/texmf/fonts/enc/dvips/lm/l
+m-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}</usr/share/texlive
 /texmf-dist/fonts/type1/public/doublestroke/dsrom10.pfb></usr/share/texmf/fonts
 /type1/public/lm/lmbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmcsc10.pfb
 ></usr/share/texmf/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf/fonts/typ
@@ -2156,10 +2179,11 @@ xmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmr9
 sr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/texmf/fonts/type1/pu
 blic/lm/lmsy9.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt10.pfb></usr/shar
 e/texmf/fonts/type1/public/lm/lmtti10.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/public/amsfonts/symbols/msam10.pfb>
-Output written on document.pdf (11 pages, 589390 bytes).
+type1/public/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/t
+ype1/urw/zapfding/uzdr.pfb>
+Output written on document.pdf (12 pages, 595256 bytes).
 PDF statistics:
- 332 PDF objects out of 1000 (max. 8388607)
+ 334 PDF objects out of 1000 (max. 8388607)
  293 compressed objects within 3 object streams
  84 named destinations out of 1000 (max. 500000)
  138 words of extra memory for PDF output out of 10000 (max. 10000000)

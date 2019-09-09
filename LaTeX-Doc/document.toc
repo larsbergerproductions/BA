@@ -6,9 +6,9 @@
 \contentsline {subsection}{\numberline {2.2}\IeC {\"A}gyptische Division}{3}{subsection.11}
 \contentsline {subsubsection}{\numberline {2.2.1}Ganzzahlige Division}{3}{subsubsection.12}
 \contentsline {subsubsection}{\numberline {2.2.2}Division mit Rest}{4}{subsubsection.14}
-\contentsline {subsection}{\numberline {2.3}Ermittlung \IeC {\"A}gyptischer Zerlegungen von Br\IeC {\"u}chen}{4}{subsection.16}
-\contentsline {section}{\numberline {3}Der Greedy Algorithmus}{6}{section.17}
-\contentsline {section}{\numberline {4}Anhang}{7}{section.25}
-\contentsline {subsection}{\numberline {4.1}PARI/GP Code f\IeC {\"u}r den Greedy-Algorithmus}{7}{subsection.26}
-\contentsline {section}{\nonumberline Literaturverzeichnis}{8}{section*.65}
-\contentsline {section}{\nonumberline Eidesstattliche Erkl\IeC {\"a}rung}{9}{section*.66}
+\contentsline {subsection}{\numberline {2.3}Ermittlung \IeC {\"A}gyptischer Zerlegungen von Br\IeC {\"u}chen}{5}{subsection.17}
+\contentsline {section}{\numberline {3}Der Greedy-Algorithmus}{7}{section.18}
+\contentsline {section}{\numberline {4}Anhang}{8}{section.23}
+\contentsline {subsection}{\numberline {4.1}PARI/GP Code f\IeC {\"u}r den Greedy-Algorithmus}{8}{subsection.24}
+\contentsline {section}{\nonumberline Literaturverzeichnis}{9}{section*.64}
+\contentsline {section}{\nonumberline Eidesstattliche Erkl\IeC {\"a}rung}{10}{section*.65}

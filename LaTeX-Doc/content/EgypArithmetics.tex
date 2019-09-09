@@ -3,7 +3,7 @@
 	Um die Verwendung ägyptischer Brüche historisch zu verstehen, lohnt sich ein kurzer Blick in die Arithmetik des alten Ägypten. Im Folgenden werden dazu die Multiplikation und die darauf aufbauende Division betrachtet, welche letztendlich die Verwendung von Brüchen bei Division mit nichttrivialem Rest erforderlich macht. Das gesamte arithmetische System der Ägypter baut dabei letztendlich auf der Addition auf.
 
 \subsection{Ägyptische Multiplikation}\label{subsec:egypMult}
-	Bei der Multiplikation zweier ganzer Zahlen $a \cdot b$ mit $a, b \in \N$ stellt man eine zweispaltige Tabelle auf, die in der linken Spalte die Zweierpotenzen $2^{n}$ für die n-te Zeile, mit n=0 beginnend, und rechts das Produkt $a \cdot 2^n$.
+	Bei der Multiplikation zweier natürlicher Zahlen $a, b \in \N$ stellt man eine zweispaltige Tabelle auf, die in der linken Spalte die Zweierpotenzen $2^{n}$ für die n-te Zeile, mit n=0 beginnend, und rechts das Produkt $a \cdot 2^n$.
 	Zur Multiplikation wählt man nun aus der linken Spalte die Zeilen aus, deren Werte sich zu $b$ addieren, und markiert diese, bspw. mittels eines Hakens (\checkmark). Schließlich werden die Zahlen der rechten Spalte aufaddiert, deren Zeile mittels \checkmark markiert wurde. Die sich ergebende Summe ist das Ergebnis.
 	
 	\begin{bsp}\label{Bsp: EgypMult}
@@ -42,10 +42,11 @@
 	Diese Methode funktioniert, da jede natürliche Zahl $n \in \N$ als Summe paarweise verschiedener Zweierpotenzen darstellbar ist. Es wird im Allgemeinen angezweifelt, dass dies von den Ägyptern je formal bewiesen wurde, aber die Nutzung zeigt, dass sie diesen Zusammenhang zumindest erkannt hatten. \cite{Burton2011}
 \subsection{Ägyptische Division}
 	\subsubsection{Ganzzahlige Division}
-	Der einfachere Fall der ganzzahligen Division ohne Rest ist dem Prinzip der Multiplikation sehr ähnlich, nur die Herangehensweise ist verändert. Zur Division von $a \div b$ mit $a, b \in \N$ nutzt man die Tabellenmethode aus der Multiplikation wie in \ref{subsec:egypMult}, nur wird $a$ als Ergebnis in der letzten Zeile rechts notiert und der fehlende Multiplikator ergibt sich dann in der letzten Zeile links.
+	Der einfachere Fall der ganzzahligen Division ohne Rest ist dem Prinzip der Multiplikation sehr ähnlich, nur die Herangehensweise ist verändert. Um das Prinzip der Multiplikation anzuwenden zu können, verändert man dafür die Fragestellung. 
+	Seien $x \in \Q; a,b\in \N; b \neq 0$. Statt die Lösung für $x$ in der Gleichung $x=\frac{a}{b}$ zu suchen, stellt man die Frage, für welches $x$ gilt $b \cdot x = a$. Somit ergibt sich das Problem der Multiplikation, nur dass die unbekannte Variable eine andere ist.
 	
 	\begin{bsp}
-		Es sei die Division $\textcolor{OliveGreen}{117} \div \textcolor{blue}{9}$ betrachtet. Die Tabelle generiert sich wie oben. Nun wählt man alle Zeilen aus, deren rechte Spalten sich zu $117$ addieren, addiert die linke Spalte der ausgewählten Zeilen und erhält das Ergebnis $117 \div 9 = 13$
+		Es sei die Division $\textcolor{OliveGreen}{117} \div \textcolor{blue}{9}$ betrachtet. Die Tabelle generiert sich wie oben. Nun wählt man mittels Greedy-Verfahren, also mit jeweils dem größten Wert beginnend, alle Zeilen aus, deren rechte Spalten sich zu $117$ addieren, addiert die linke Spalte der ausgewählten Zeilen und erhält das Ergebnis $117 \div 9 = 13$
 		\begin{center}
 			\begin{tabular}{r r r}
 				\checkmark & 1 & \textcolor{blue}{9}\\
@@ -61,29 +62,62 @@
 	Die Division mit Rest $a \div b$ mit $a, b \in \N$ funktioniert ähnlich wie die ganzzahlige, jedoch fügt man an die Tabelle nun noch die nötigen Bruchteile von $a$ an, die nötig sind.
 	
 	\begin{bsp}
-		Wir betrachten hierfür die Division $\textcolor{blue}{117} \div \textcolor{OliveGreen}{7}$.
+		Wir betrachten hierfür die Division $\textcolor{blue}{117} \div \textcolor{OliveGreen}{7}$ und stellen die Tabelle auf wie oben.
 		\begin{center}
 			\begin{tabular}{r r r}
 				& 1 & \textcolor{OliveGreen}{7}\\
 				& 2 & 14\\
 				& 4 & 28\\
 				& 8 & 56\\
-				\checkmark & 16 & 112\\
+				\checkmark & 16 & 112\\ \hline
+				\ding{53}& 16 & 112
+			\end{tabular}
+		\end{center}
+		Offensichtlich ist das Ergebnis hier noch nicht erreicht, allerdings kann keine weitere Zahl der rechten Spalte ausgewählt werden, ohne 117 zu überschreiten. Folglich sind also kleinere Zahlen als 7 notwendig. Die - aus heutiger Sicht betrachtet - einfache Mathematik des alten Ägypten würde nun, statt die 7 fortlaufend zu verdoppeln, diese zunächst durch sich selbst teilen, um eine 1 zu generieren und dann weiter halbieren, woraus sich diese unvollständige Tabelle ergäbe:
+		\begin{center}
+			\begin{tabular}{r r r}
+				& $1$ & $\textcolor{OliveGreen}{7}$\\
+				& $\uf{7}$ & $1$\\
+				& $\uf{14}$ & $\uf{2}$\\
+				& $\uf{28}$ & $\uf{4}$\\
+				& ... & ...\\
+			\end{tabular}
+		\end{center}
+		Zudem ist auch das bloße fortgesetzte Halbieren der Zahl oben rechts praktisch angewendet worden:
+		\begin{center}
+			\begin{tabular}{r r r}
+				& 1 & \textcolor{OliveGreen}{7}\\
+				& $\uf{2}$ & $3+\uf{2}$\\
+				& $\uf{4}$ & $1+\uf{2}+\uf{4}$\\
+				& $\uf{8}$ & $\uf{2}+\uf{4}+\uf{8}$\\
+				&...&...
+			\end{tabular}
+		\end{center}
+		Was folgt, ist etwa das trial-and-error-Verfahren. verucht man, mithilfe der Reihe $\uf{7}+\uf{14}+\uf{28}+...$ auf das Ergebnis zu kommen, wird man schnell feststellen, dass sich in der rechten Spalte die partielle harmonische Reihe bildet, die den Wert von 2 niemals erreichen, geschweige denn übersteigen wird. Da wir eine Summe von insgesamt $117-112=5$ brauchen, wird wohl die Folge $(1, \uf{2}, \uf{4}, ...)$ aushelfen müssen. Tatsächlich reicht uns davon der Wert für $\uf{2}$ schon aus, der $3+\uf{2}$ beträgt, somit fehlen nur noch $117-112-3-\uf{2}=1+\uf{2}$. Da die Ägypter gern durch 2 teilten, weil das entsprechend leicht zu berechnen war, wäre also schon viel gewonnen, wenn wur nur die 1 generieren könnte, da das verbleibende $\uf{2}$ damit aus dessen Hälfte entstünde. Die zuerst betrachtete Folge bietet uns genau das mit den Werten für $\uf{7} + \uf{14}$. Es folgt also die Gesamttabelle:
+		\begin{center}
+			\begin{tabular}{r r r}
+				& 1 & \textcolor{OliveGreen}{7}\\
+				& 2 & 14\\
+				& 4 & 28\\
+				& 8 & 56\\
+				\checkmark & 16 & 112\\ 
 				\checkmark & $\uf{2}$ & $3+\uf{2}$\\
 				\checkmark & $\uf{7}$ & $1$\\
 				\checkmark & $\uf{14}$ & $\uf{2}$\\ \hline
-				& \underline{\underline{$16+\uf{2}+\uf{7}+\uf{14}$}} & \textcolor{blue}{$117$}
+				& $16+\uf{2}+\uf{7}+\uf{14}$ & 117
 			\end{tabular}
 		\end{center}
 	\end{bsp}
-	Sei $x \in \N$ und $n$ der Divisor der gewählten Division. Typische Brüche, die in der linken Spalte verwendet wurden, weil einfach zu berechnen, waren $\uf{2x}$ sowie $\uf{nx}$.
+	Sei $x \in \N$ und $n$ der Divisor der gewählten Division. Typische Brüche, die in der linken Spalte verwendet wurden, weil einfach zu berechnen, waren $\uf{2^x}$,  sowie $\uf{n \cdot 2^x}$.
 	
-	Aus dieser Methodik heraus ergibt sich die Notation der Ägyptischen Brüche. Selbstverständlich wurde auch mit solchen Brüchen multipliziert und dividiert, solche Beispiele würden aber den Rahmen dieser Arbeit sprengen, weshalb diese nicht weiter betrachtet werden.
+	Aus dieser Methodik heraus ergibt sich die Notation der Ägyptischen Brüche. Selbstverständlich wurde auch mit solchen Brüchen multipliziert und dividiert, solche Beispiele würden aber den Rahmen dieser Arbeit sprengen, 
+	\improvement{vielleicht doch?}
+	weshalb diese nicht weiter betrachtet werden.
 	
 \subsection{Ermittlung Ägyptischer Zerlegungen von Brüchen}
 Die Ägypter brauchten nun also ein System, mit dessen Hilfe sie die Zerlegung von Brüchen in eine Summe von Stammbrüchen mit paarweise Verschiedenen Nennern berechnen konnten. Die einfache Zerlegung
 $$\frac{a}{b} = \underbrace{\uf{b} + \uf{b} + ... +\uf{b}}_{a-mal}$$
-kam dabei nicht in Frage, da die Ägypter es als ,,unnatürlich'' ansahen, dass es mehr als diesen einen, wahren Teiler $\uf{b}$ einer Zahl geben sollte. \cite{Burton2011}\\
-Für z.B. Brüche $\frac{2}{n}$ für $5 \leq n \leq 101$ ungerade findet sich dafür im Rhind Papyrus eine Tabelle mit der jeweiligen Zerlegung. Auch waren einige Regeln bekannt, beispielsweise
+kam dabei nicht in Frage, da die Ägypter es als ,,unnatürlich'' ansahen, dass es mehr als diesen einen, wahren Teiler $\uf{b}$ einer Zahl geben sollte. \cite[p.]{Burton2011}\\
+Für z.B. Brüche $\frac{2}{n}$ für $5 \leq n \leq 101$ ungerade findet sich dafür im Rhind-Papyrus eine Tabelle mit der jeweiligen Zerlegung. Auch waren einige Regeln bekannt, beispielsweise
 $$\frac{2}{n} = \uf{n} + \uf{2n} + \uf{3n} +\uf{6n}.$$
 Tatsächlich wurde diese Regel in der zuvor genannten Tabelle des Papyrus nur einmal, bei $\frac{2}{101} = \uf{101}+\uf{202}+\uf{303}+\uf{606}$, verwendet, sonst wurden kürzere Zerlegungen gewählt. Trotz immenser Bemühungen ist es bisher nicht gelungen, das System zu ermitteln, mittels welchem diese Tabelle zustande kam. \cite{Burton2011}

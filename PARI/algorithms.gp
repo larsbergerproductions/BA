@@ -33,7 +33,8 @@ fibonacci_sylvester(fraction, stepsize, start)=
 
 
 greedy(fraction) = fibonacci_sylvester(fraction, 1, 1);
-greedy_odd(fraction) = {print("\nthis might not come to an end!\n"); fibonacci_sylvester(fraction, 2, 1);}
+greedy_odd(fraction) = {print("\nthis might not come to an end!\n");
+			alarm(3600, fibonacci_sylvester(fraction, 2, 1));}
 greedy_even(fraction) = fibonacci_sylvester(fraction, 2, 0);
 
 
