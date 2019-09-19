@@ -4,12 +4,12 @@
 \BOOKMARK [1][-]{section.6}{1 Einleitung}{}% 4
 \BOOKMARK [1][-]{section.8}{2 \304gyptische Arithmetik}{}% 5
 \BOOKMARK [2][-]{subsection.9}{2.1 \304gyptische Multiplikation}{section.8}% 6
-\BOOKMARK [2][-]{subsection.11}{2.2 \304gyptische Division}{section.8}% 7
-\BOOKMARK [3][-]{subsubsection.12}{2.2.1 Ganzzahlige Division}{subsection.11}% 8
-\BOOKMARK [3][-]{subsubsection.14}{2.2.2 Division mit Rest}{subsection.11}% 9
-\BOOKMARK [2][-]{subsection.17}{2.3 Ermittlung \304gyptischer Zerlegungen von Br\374chen}{section.8}% 10
-\BOOKMARK [1][-]{section.19}{3 Der Greedy-Algorithmus}{}% 11
-\BOOKMARK [1][-]{section.24}{4 Anhang}{}% 12
-\BOOKMARK [2][-]{subsection.25}{4.1 PARI/GP Code f\374r den Greedy-Algorithmus}{section.24}% 13
-\BOOKMARK [1][-]{section*.65}{Literaturverzeichnis}{}% 14
-\BOOKMARK [1][-]{section*.66}{Eidesstattliche Erkl\344rung}{}% 15
+\BOOKMARK [2][-]{subsection.12}{2.2 \304gyptische Division}{section.8}% 7
+\BOOKMARK [3][-]{subsubsection.13}{2.2.1 Ganzzahlige Division}{subsection.12}% 8
+\BOOKMARK [3][-]{subsubsection.15}{2.2.2 Division mit Rest}{subsection.12}% 9
+\BOOKMARK [2][-]{subsection.22}{2.3 Ermittlung \304gyptischer Zerlegungen von Br\374chen}{section.8}% 10
+\BOOKMARK [1][-]{section.24}{3 Der Greedy-Algorithmus}{}% 11
+\BOOKMARK [1][-]{section.28}{4 Anhang}{}% 12
+\BOOKMARK [2][-]{subsection.29}{4.1 PARI/GP Code f\374r den Greedy-Algorithmus}{section.28}% 13
+\BOOKMARK [1][-]{section*.69}{Literaturverzeichnis}{}% 14
+\BOOKMARK [1][-]{section*.70}{Eidesstattliche Erkl\344rung}{}% 15

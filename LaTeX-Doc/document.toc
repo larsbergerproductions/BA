@@ -3,12 +3,12 @@
 \contentsline {section}{\numberline {1}Einleitung}{2}{section.6}
 \contentsline {section}{\numberline {2}\IeC {\"A}gyptische Arithmetik}{3}{section.8}
 \contentsline {subsection}{\numberline {2.1}\IeC {\"A}gyptische Multiplikation}{3}{subsection.9}
-\contentsline {subsection}{\numberline {2.2}\IeC {\"A}gyptische Division}{3}{subsection.11}
-\contentsline {subsubsection}{\numberline {2.2.1}Ganzzahlige Division}{3}{subsubsection.12}
-\contentsline {subsubsection}{\numberline {2.2.2}Division mit Rest}{4}{subsubsection.14}
-\contentsline {subsection}{\numberline {2.3}Ermittlung \IeC {\"A}gyptischer Zerlegungen von Br\IeC {\"u}chen}{5}{subsection.17}
-\contentsline {section}{\numberline {3}Der Greedy-Algorithmus}{7}{section.19}
-\contentsline {section}{\numberline {4}Anhang}{9}{section.24}
-\contentsline {subsection}{\numberline {4.1}PARI/GP Code f\IeC {\"u}r den Greedy-Algorithmus}{9}{subsection.25}
-\contentsline {section}{\nonumberline Literaturverzeichnis}{10}{section*.65}
-\contentsline {section}{\nonumberline Eidesstattliche Erkl\IeC {\"a}rung}{11}{section*.66}
+\contentsline {subsection}{\numberline {2.2}\IeC {\"A}gyptische Division}{3}{subsection.12}
+\contentsline {subsubsection}{\numberline {2.2.1}Ganzzahlige Division}{3}{subsubsection.13}
+\contentsline {subsubsection}{\numberline {2.2.2}Division mit Rest}{4}{subsubsection.15}
+\contentsline {subsection}{\numberline {2.3}Ermittlung \IeC {\"A}gyptischer Zerlegungen von Br\IeC {\"u}chen}{5}{subsection.22}
+\contentsline {section}{\numberline {3}Der Greedy-Algorithmus}{7}{section.24}
+\contentsline {section}{\numberline {4}Anhang}{9}{section.28}
+\contentsline {subsection}{\numberline {4.1}PARI/GP Code f\IeC {\"u}r den Greedy-Algorithmus}{9}{subsection.29}
+\contentsline {section}{\nonumberline Literaturverzeichnis}{10}{section*.69}
+\contentsline {section}{\nonumberline Eidesstattliche Erkl\IeC {\"a}rung}{11}{section*.70}

@@ -1,9 +1,9 @@
 % !TEX root=../document.tex
 \section{Ägyptische Arithmetik}
-	Um die Verwendung ägyptischer Brüche historisch zu verstehen, lohnt sich ein kurzer Blick in die Arithmetik des alten Ägypten. Im Folgenden werden dazu die Multiplikation und die darauf aufbauende Division betrachtet, welche letztendlich die Verwendung von Brüchen bei Division mit nichttrivialem Rest erforderlich macht. Das gesamte arithmetische System der Ägypter baut dabei letztendlich auf der Addition auf.
+	Um die Verwendung ägyptischer Brüche historisch zu verstehen, lohnt sich ein kurzer Blick in die Arithmetik des alten Ägypten. Im Folgenden werden dazu die Multiplikation und die darauf aufbauende Division betrachtet, welche die Verwendung von Brüchen bei Division mit nichttrivialem Rest erforderlich macht. Das gesamte arithmetische System der Ägypter baut dabei letztendlich auf der Addition auf.
 
 \subsection{Ägyptische Multiplikation}\label{subsec:egypMult}
-	Bei der Multiplikation zweier natürlicher Zahlen $a, b \in \N$ stellt man eine zweispaltige Tabelle auf, die in der linken Spalte die Zweierpotenzen $2^{n}$ für die n-te Zeile, mit n=0 beginnend, und rechts das Produkt $a \cdot 2^n$.
+	Bei der Multiplikation zweier natürlicher Zahlen $a, b \in \N$ stellt man eine zweispaltige Tabelle auf, die in der linken Spalte die Zweierpotenzen $2^{n}$ für die $n$-te Zeile, mit $n=0$ beginnend, und rechts das Produkt $a \cdot 2^n$.
 	Zur Multiplikation wählt man nun aus der linken Spalte die Zeilen aus, deren Werte sich zu $b$ addieren, und markiert diese, bspw. mittels eines Hakens (\checkmark). Schließlich werden die Zahlen der rechten Spalte aufaddiert, deren Zeile mittels \checkmark markiert wurde. Die sich ergebende Summe ist das Ergebnis.
 	
 	\begin{bsp}\label{Bsp: EgypMult}
@@ -39,7 +39,7 @@
 	
 	\end{bsp}
 	
-	Diese Methode funktioniert, da jede natürliche Zahl $n \in \N$ als Summe paarweise verschiedener Zweierpotenzen darstellbar ist. Es wird im Allgemeinen angezweifelt, dass dies von den Ägyptern je formal bewiesen wurde, aber die Nutzung zeigt, dass sie diesen Zusammenhang zumindest erkannt hatten. \cite{Burton2011}
+	Diese Methode funktioniert, da jede natürliche Zahl $n \in \N$ als \improvement{Beweis/ Quelle!} Summe paarweise verschiedener Zweierpotenzen darstellbar ist. Es wird im Allgemeinen angezweifelt, dass dies von den Ägyptern je formal bewiesen wurde, aber die Nutzung zeigt, dass sie diesen Zusammenhang zumindest erkannt hatten. \cite{Burton2011}
 \subsection{Ägyptische Division}
 	\subsubsection{Ganzzahlige Division}
 	Der einfachere Fall der ganzzahligen Division ohne Rest ist dem Prinzip der Multiplikation sehr ähnlich, nur die Herangehensweise ist verändert. Um das Prinzip der Multiplikation anzuwenden zu können, verändert man dafür die Fragestellung. 
@@ -73,45 +73,55 @@
 				\ding{53}& 16 & 112
 			\end{tabular}
 		\end{center}
-		Offensichtlich ist das Ergebnis hier noch nicht erreicht, allerdings kann keine weitere Zahl der rechten Spalte ausgewählt werden, ohne 117 zu überschreiten. Folglich sind also kleinere Zahlen als 7 notwendig. Die - aus heutiger Sicht betrachtet - einfache Mathematik des alten Ägypten würde nun, statt die 7 fortlaufend zu verdoppeln, diese zunächst durch sich selbst teilen, um eine 1 zu generieren und dann weiter halbieren, woraus sich diese unvollständige Tabelle ergäbe:
-		\begin{center}
-			\begin{tabular}{r r r}
+		Offensichtlich ist das Ergebnis hier noch nicht erreicht, allerdings kann keine weitere Zahl der rechten Spalte ausgewählt werden, ohne 117 zu überschreiten. Folglich sind also kleinere Zahlen als 7 notwendig. Die - aus heutiger Sicht betrachtet - einfache Mathematik des alten Ägypten würde nun, statt die 7 fortlaufend zu verdoppeln, diese zunächst durch sich selbst teilen, um eine 1 zu generieren und dann weiter halbieren, woraus sich diese unvollständige Tabelle ergäbe:~\\
+		\todo[inline]{Tabellen \ref{table:Division_HalbEins} und \ref{table:Division_HalbSieben} nebeneinander anordnen(?)}
+		\begin{table}[H]
+			\centering
+			\begin{tabular}{Sr Sr Sr}
 				& $1$ & $\textcolor{OliveGreen}{7}$\\
 				& $\uf{7}$ & $1$\\
 				& $\uf{14}$ & $\uf{2}$\\
 				& $\uf{28}$ & $\uf{4}$\\
-				& ... & ...\\
+				& \vdots & \vdots \\
 			\end{tabular}
-		\end{center}
-		Zudem ist auch das bloße fortgesetzte Halbieren der Zahl oben rechts praktisch angewendet worden:
-		\begin{center}
-			\begin{tabular}{r r r}
+		\caption{Teilen durch $7$, dann Fortgesetzte Halbierung von $1$}
+		\label{table:Division_HalbEins}
+		\end{table}
+		Zudem ist auch das bloße fortgesetzte Halbieren der Zahl oben rechts praktisch angewendet worden:~	
+		\begin{table}[H]
+			\centering
+			\begin{tabular}[h]{Sr Sr Sr}
 				& 1 & \textcolor{OliveGreen}{7}\\
 				& $\uf{2}$ & $3+\uf{2}$\\
 				& $\uf{4}$ & $1+\uf{2}+\uf{4}$\\
 				& $\uf{8}$ & $\uf{2}+\uf{4}+\uf{8}$\\
-				&...&...
+				&\vdots&\vdots
 			\end{tabular}
-		\end{center}
-		Was folgt, ist etwa das trial-and-error-Verfahren. Versucht man, mithilfe der Reihe $\uf{7}+\uf{14}+\uf{28}+...$ auf das Ergebnis zu kommen, wird man schnell feststellen, dass sich in der rechten Spalte die harmonische Reihe bildet, die den Wert von 2 mit endlich vielen Summanden niemals erreichen, geschweige denn übersteigen wird. Da wir eine Summe von insgesamt $117-112=5$ brauchen, wird wohl die Folge $(1, \uf{2}, \uf{4}, ...)$ aushelfen müssen. Tatsächlich reicht uns davon der Wert für $\uf{2}$ schon aus, der $3+\uf{2}$ beträgt, somit fehlen nur noch $117-112-3-\uf{2}=1+\uf{2}$. Da die Ägypter gern durch 2 teilten, weil das entsprechend leicht zu berechnen war, wäre also schon viel gewonnen, wenn wir nur die 1 generieren könnten, da das verbleibende $\uf{2}$ damit aus dessen Hälfte entstünde. Die zuerst betrachtete Folge bietet uns genau das mit den Werten für $\uf{7} + \uf{14}$. Es folgt also die Gesamttabelle:
-		\begin{center}
-			\begin{tabular}{r r r}
+		\caption{Fortgesetzte Halbierung von $7$}
+		\label{table:Division_HalbSieben}
+		\end{table}
+		Verfahren wird hier nach einem systematisierten trial-and-error-Verfahren. Da sich aus Tabelle \ref{table:Division_HalbEins} die Harmonische Reihe ergibt, aber ein Gesamtwert von $117-112 = 5$ benötigt wird, fällt die Wahl zunächst auf das größte Element in Tabelle \ref{table:Division_HalbSieben} mit Wert $3+\uf{2}$. Es folgt nun ein Rest von $5-(3+\uf{2})=1 +\uf{2}$, welcher durch die Tabelle \ref{table:Division_HalbEins} mit den Werten $1$ und $\uf{2}$ genau erfüllt wird. Es folgt die Gesamttabelle:
+		\begin{table}[H]
+			\centering
+			\begin{tabular}{Sr Sr Sr}
 				& 1 & \textcolor{OliveGreen}{7}\\
 				& 2 & 14\\
 				& 4 & 28\\
 				& 8 & 56\\
-				\checkmark & 16 & 112\\ 
-				\checkmark & $\uf{2}$ & $3+\uf{2}$\\
-				\checkmark & $\uf{7}$ & $1$\\
-				\checkmark & $\uf{14}$ & $\uf{2}$\\ \hline
+				$\checkmark$ & 16 & 112\\ 
+				$\checkmark$ & $\uf{2}$ & $3+\uf{2}$\\
+				$\checkmark$ & $\uf{7}$ & $1$\\
+				$\checkmark$ & $\uf{14}$ & $\uf{2}$\\ \hline
 				& $16+\uf{2}+\uf{7}+\uf{14}$ & 117
 			\end{tabular}
-		\end{center}
+		\caption{Die vollständige Divisionstabelle}
+		\label{table:Division_mitRest_full}
+		\end{table}
 	\end{bsp}
 	Sei $x \in \N$ und $n$ der Divisor der gewählten Division. Typische Brüche, die in der linken Spalte verwendet wurden, weil einfach zu berechnen, waren $\uf{2^x}$,  sowie $\uf{n \cdot 2^x}$.
 	
 	Aus dieser Methodik heraus ergibt sich die Notation der Ägyptischen Brüche. Selbstverständlich wurde auch mit solchen Brüchen multipliziert und dividiert, solche Beispiele würden aber den Rahmen dieser Arbeit sprengen, 
-	\improvement{vielleicht doch?}
+	\improvement{vielleicht\\doch?}
 	weshalb diese nicht weiter betrachtet werden.
 	
 \subsection{Ermittlung Ägyptischer Zerlegungen von Brüchen}

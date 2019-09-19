@@ -1,14 +1,13 @@
 % !TeX spellcheck = de_DE_frami
 % !TEX root = document.tex
 \section{Der Greedy-Algorithmus}
-Seien $a, b \in \N; b \neq 0$. Eine der bekanntesten Methoden, eine Ägyptische Erweiterungen für Brüche $\frac{a}{b}$ zu finden, ist der Greedy-Algorithmus. Dabei werden jeweils die größtmöglichen Stammbrüche $\frac{1}{x_i}$ gesucht, sodass
+Seien $a, b \in \N; b \neq 0$. Eine der bekanntesten Methoden, eine Ägyptische Erweiterungen für Brüche $\frac{a}{b}$ zu finden, ist der Greedy-Algorithmus. Dabei werden solange jeweils die größtmöglichen Stammbrüche $\frac{1}{x_i}$ gesucht, sodass
 \begin{equation}\label{eq:greedy_fracNorm}
 \frac{1}{x_i} \leq \frac{a}{b} - \sum_{j=1}^{i-1} \frac{1}{x_j} < \frac{1}{x_{i}-1},
 \end{equation}
 wobei gilt, dass
-$$x_i \neq x_j; \forall i \neq j = (1,..,i)$$ 
-\change[inline]{das ist nicht nachvollziehbar!}
-solange, bis
+$$x_j \neq x_k; \forall j \neq k; j,k \in \{1,..,i\},$$ 
+bis
 $$\frac{a}{b} = \frac{1}{x_1} + \frac{1}{x_2} + ... + \frac{1}{x_i} = \sum_{j=1}^{i} \frac{1}{x_j}.$$
 Da in jedem Fall der größtmögliche, noch nicht vorhandene Bruch gesucht wird, der noch in die Summe der Stammbrüche passt, ohne dass diese zu groß wird, kann es zu sehr ungünstigen Ergebnissen mit extrem langen Divisoren kommen; ein anschauliches Beispiel dafür ist:
 $$\frac{5}{121} = \uf{25} + \uf{757} + \uf{763309} + \uf{873960180913} + \uf{1527612795642093418846225},$$
@@ -22,11 +21,17 @@ Im Anhang \ref{code:greedy} findet sich eine eigene Implementierung des Greedy-A
 \end{satz}
 \begin{bew}
 	Für die erste Iteration des Greedy-Algorithmus ergibt sich aus \ref{eq:greedy_fracNorm}:
-	\begin{equation*}
+	\begin{equation}\label{eqn:Greedy_Voraussetzungen}
 		\uf{x} \leq \frac{a}{b} < \uf{x-1}
-	\end{equation*}
+	\end{equation}
 	Daraus folgt ein Rest $r$ von
 	$$ r = \frac{a}{b}-\uf{x} = \frac{ax-b}{bx},$$
-	der den Zähler $(ax-b)$ hat, der kleiner als a ist.\\ \improvement[inline]{Beweis einfügen}
-	Somit verkleinert sich dieser Rest mit jedem Schritt und erreicht irgendwann Null, wie gefordert.
+	der den Zähler $(ax-b)$ hat. Aus \ref{eqn:Greedy_Voraussetzungen} folgt:
+	% Äquivalenzkette, die zeigt, dass $ax-b<a
+	\begin{eqnarray*}
+		\frac{a}{b} < \uf{x-1}& \gdw & a(x-1)<b\\
+		& \gdw & ax-a < b\\
+		& \gdw & ax-b < a.\\
+	\end{eqnarray*}
+	Somit ist dieser Rest kleiner als $a$, verkleinert sich mit jedem Schritt und erreicht irgendwann Null, wie gefordert.
 \end{bew}
