@@ -1,7 +1,7 @@
 listsum(list) = sum(i=1,#list,list[i]);
 
-fibonacci_sylvester(fraction, stepsize, start)=
-{ local(candidate, result);
+fibonacci_sylvester(fraction, stepsize, start)={
+	local(candidate, result);
 	result=List();
 	candidate = start;
 
@@ -26,7 +26,7 @@ fibonacci_sylvester(fraction, stepsize, start)=
 		/*print("adding ", 1/candidate);*/
 		listput(result, 1/candidate);
 	);
-	return(result);
+	return(Vec(result));
 }
 
 greedy(fraction) = fibonacci_sylvester(fraction, 1, 1);
@@ -79,38 +79,72 @@ greedy_fast(fraction)={
 	while (listsum(result) < fraction,
 		listput(result, largestUnitFractionLEQ(fraction-listsum(result)));
 	);
-	return(result);
+	return(Vec(result));
 }
 
-FareySeries(order)=
-{local(result);
+contains(lst, element)={
+	for(i=1, #lst,
+		if(element == lst[i],
+			return(1);
+		);
+	);
+	return(0);
+}
+
+findAdjacent(Fs, fraction)={
+	for(i=1, #Fs-1,
+		if(fraction == Fs[i],
+			return(Fs[i-1]);
+		);
+		if(fraction > Fs[i],
+			if(fraction < Fs[i+1],
+				return(Fs[i]);
+			);
+		);
+	);
+	return(-1);
+}
+
+FareySeries(order)={
+	local(result);
 	result = List();
 	for(den=1,order,
 		for(num=0, den,
-			candidate = num/den;
-			if(setsearch(result, candidate)==0,
+			if(contains(result, num/den)==0,
 				listput(result, num/den);
-			)
-		)
+			);
+		);
 	);
 	result = vecsort(Vec(result));
 	return(result);
 }
 
-isAdjacent(frac1, frac2)={if(numerator(abs(frac1-frac2))==1, return(1)); return(0);}
-
-/*
-FS(frac)={
-	local(result, nextFraction, FSofNextFraction);
+reverse_vecsort(vect)={
+	local(result);
 	result = List();
-	nextFraction = frac;
-	FSofNextFraction = Vec();
-	while(denominator(nextFraction)!=1,
-		FSofNextFraction = FareySeries(nextFraction);
-		for(i=0)
-	)
+	vect = vecsort(vect);
+	forstep(i=#vect,1,-1,listput(result, vect[i]));
+	return(Vec(result));
+
 }
-*/
+
+FS(fract)={
+	local(adjacent, remainder, result);
+	result = List();
+	while(1,
+		adjacent = findAdjacent(FareySeries(denominator(fract)), fract);
+		remainder = 1/(denominator(fract)*denominator(adjacent));
+		listput(result, remainder);
+		if(numerator(adjacent) == 1,
+			listput(result, adjacent);
+			return(reverse_vecsort(Vec(result)));
+		);
+		fract = adjacent;
+	);
+	return(-1);
+}
+
+
 /* show timer for each calculation */
 #
 print("\n#########################\n#    Script provided    #\n#           by          #\n#    Lt. Lars Berger    #\n#    Universität der    #\n#   Bundeswehr München  #\n#########################")
