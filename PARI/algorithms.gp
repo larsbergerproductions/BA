@@ -91,6 +91,14 @@ contains(lst, element)={
 	return(0);
 }
 
+reverse_vecsort(vect)={
+	local(result);
+	result = List();
+	vect = vecsort(vect);
+	forstep(i=#vect,1,-1,listput(result, vect[i]));
+	return(Vec(result));
+}
+
 findAdjacent(Fs, fraction)={
 	for(i=1, #Fs-1,
 		if(fraction == Fs[i],
@@ -119,15 +127,6 @@ FareySeries(order)={
 	return(result);
 }
 
-reverse_vecsort(vect)={
-	local(result);
-	result = List();
-	vect = vecsort(vect);
-	forstep(i=#vect,1,-1,listput(result, vect[i]));
-	return(Vec(result));
-
-}
-
 FS(fract)={
 	local(adjacent, remainder, result);
 	result = List();
@@ -144,10 +143,31 @@ FS(fract)={
 	return(-1);
 }
 
+mediant(frac1, frac2)={return((numerator(frac1)+numerator(frac2))/(denominator(frac1)+denominator(frac2)));}
+
+relevantFareySeries(fract)={
+	local(ub,lb,result);
+	ub = 1;
+	lb = 0;
+	result = List();
+	while((fract != mediant(lb, ub)) && (numerator(mediant(lb,ub)) < numerator(fract)),
+		if(fract > mediant(lb,ub),
+			lb = mediant(lb,ub);
+			/*mediant ist kleiner als Bruch und wird somit noch benötigt => hinzufügen*/
+			listput(result, mediant(lb, ub)),
+		/*else*/
+			ub = mediant(lb,ub);
+		);
+		mediant(lb,ub) = (numerator(lb) + numerator(ub))/(denominator(lb) + denominator(ub));
+	);
+	return(vecsort(Vec(result)));
+}
 
 /* show timer for each calculation */
 #
-print("\n#########################\n#    Script provided    #\n#           by          #\n#    Lt. Lars Berger    #\n#    Universität der    #\n#   Bundeswehr München  #\n#########################")
+print("\n\n\n#########################\n#    Script provided    #\n#           by          #\n#    Lt. Lars Berger    #\n#    Universität der    #\n#   Bundeswehr München  #\n#########################\n\n")
+/*
 print("\n available main functions, not recommended for usage:\n - fibonacci_sylvester(frac, stepsize, start)\n");
 print("Available secondary functions:\n - Farey_Series(order)\n - largestUnitFractionLEQ(frac)\n - isAdjacent(frac1, frac2)\n");
-print("Available Algorithms for Egyptian Fractions:\n - greedy(frac)\n - greedy_odd(frac)\n - greedy_even(frac)\n - greedy_fast(frac)");
+*/
+print("Available Algorithms for Egyptian Fractions:\n - greedy(frac)\n - greedy_odd(frac)\n - greedy_even(frac)\n - greedy_fast(frac)\n - FS(frac): Farey-Sequence-Algorithm");
