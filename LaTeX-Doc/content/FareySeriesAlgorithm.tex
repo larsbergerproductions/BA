@@ -1,0 +1,21 @@
+\subsection{Der Farey-Folgen-Algorithmus}
+Eine weitere Methode zur Erstellung Ägyptischer Brüche stellt der sog. Farey-Folgen-Algorithmus dar, der seinen Namen aus dem Umstand bezieht, dass die Farey-Folge dafür genutzt wird.
+\begin{def1}
+	Sei $q \in \N$. Die Farey-Folge der Ordnung $q$, $\, F_q$, ist definiert als die aufsteigend sortierte Folge aller gekürzten Brüche $\frac{a}{b} \in \Q$, für die gilt:
+	$0\leq a \leq b \leq q$.
+\end{def1}
+Der Algorithmus funktioniert dann wie folgt.
+\begin{algorithm}
+	Sei $\frac{p}{q} \in \Q$ in reduzierter Form der zu zerlegende Bruch. Konstruiere $F_q$. Sei $\frac{r}{s}$ der zu $\frac{p}{q}$ adjazente Bruch in $F_q$, sodass $\frac{r}{s} < \frac{p}{q}$. Aufgrund der \improvement{eigene Definition oder bessere Beschreibung}Eigenschaften der Farey-Folge gilt dann
+	$$\frac{p}{q} = \uf{qs} + \frac{r}{s},$$
+	wobei gilt, dass $s<q,\, r<p$. Wiederhole dieses Vorgehen für $\frac{r}{s}$ solange, bis $s=1 \gdw r=0$.
+\end{algorithm}
+Da die Farey-Folge $F_q$ schon für mäßig große $q$ sehr groß wird, bietet sich für das Tatsächliche Berechnen eine Optimierung an, indem nur der relevante Teil der Farey-Folge konstruiert wird. Anwendung findet dabei das Bisektionsverfahren.
+\begin{bsp}
+	Sei $\frac{p}{q} = 21/23$. Die obere und untere Schranken sind in unserem Fall $0$ \bzw $1$. Der Median liegt also bei $1/2$, wir stellen fest: $\uf{2}<\frac{21}{23}<1$, also setzen wir die Suche im Intervall $[\uf{2}, 1]$ fort. Der Median liegt nun bei $\frac{2}{3}$, $\frac{2}{3}<\frac{21}{23}<1$ \usw
+	Beim Median $\frac{11}{12}$ stellen wir fest: $\frac{10}{11} < \frac{21}{23} < \frac{11}{12}.$ Daraus folgt der relevante Teil von $F_{23}$, hier $F_{23rel}$ genannt: $$F_{23rel} = \left\{\frac{0}{1}, \frac{1}{2}, \frac{2}{3}, \frac{3}{4}, \frac{4}{5}, \frac{5}{6}, \frac{6}{7}, \frac{7}{8}, \frac{8}{9}, \frac{9}{10}, \frac{10}{11}, \frac{21}{23}, \frac{11}{12}, \frac{1}{1}\right\}.$$
+	Somit enthält die gekürzte Farey-Folge nur noch 10 der andererseits 173 zu berechnenden Elemente von $F_{23}$.
+\end{bsp}
+
+\todo[inline]{Terminierungsbeweis}
+\todo[inline]{Beispielrechnung}

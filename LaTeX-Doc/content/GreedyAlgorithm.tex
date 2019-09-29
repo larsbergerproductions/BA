@@ -1,6 +1,6 @@
 % !TeX spellcheck = de_DE_frami
 % !TEX root = document.tex
-\section{Der Greedy-Algorithmus}
+\subsection{Der Greedy-Algorithmus}
 Seien $a, b \in \N; b \neq 0$. Eine der bekanntesten Methoden, eine Ägyptische Erweiterungen für Brüche $\frac{a}{b}$ zu finden, ist der Greedy-Algorithmus. Dabei werden solange jeweils die größtmöglichen Stammbrüche $\frac{1}{x_i}$ gesucht, sodass
 \begin{equation}\label{eq:greedy_fracNorm}
 \frac{1}{x_i} \leq \frac{a}{b} - \sum_{j=1}^{i-1} \frac{1}{x_j} < \frac{1}{x_{i}-1},
@@ -9,8 +9,9 @@ wobei gilt, dass
 $$x_j \neq x_k; \forall j \neq k; j,k \in \{1,..,i\},$$ 
 bis
 $$\frac{a}{b} = \frac{1}{x_1} + \frac{1}{x_2} + ... + \frac{1}{x_i} = \sum_{j=1}^{i} \frac{1}{x_j}.$$
+\todo[inline]{Als $\backslash$begin\{algorithm\} aufschreiben}
 Da in jedem Fall der größtmögliche, noch nicht vorhandene Bruch gesucht wird, der noch in die Summe der Stammbrüche passt, ohne dass diese zu groß wird, kann es zu sehr ungünstigen Ergebnissen mit extrem langen Divisoren kommen; ein anschauliches Beispiel dafür ist:
-$$\frac{5}{121} = \uf{25} + \uf{757} + \uf{763309} + \uf{873960180913} + \uf{1527612795642093418846225},$$
+$$\frac{5}{121} = \uf{25} + \uf{757} + \uf{763.309} + \uf{873.960.180.913} + \uf{1.527.612.795.642.093.418.846.225},$$
 wobei man den Bruch auch folgendermaßen zerlegen kann:
 $$\frac{5}{121} = \uf{33} + \uf{121} + \uf{363}.$$
 Aufgrund dieser Komplexitätsprobleme scheint es unsinnig, den Greedy-Algorithmus zu verwenden. Nichtsdestotrotz lässt sich beweisen, dass der Greedy-Algorithmus immer terminiert.
@@ -33,5 +34,5 @@ Im Anhang \ref{code:greedy} findet sich eine eigene Implementierung des Greedy-A
 		& \gdw & ax-a < b\\
 		& \gdw & ax-b < a.\\
 	\end{eqnarray*}
-	Somit ist dieser Rest kleiner als $a$, verkleinert sich mit jedem Schritt und erreicht irgendwann Null, wie gefordert.
+	Somit ist dieser Rest kleiner als $a$, verkleinert sich mit jedem Schritt und erreicht nach endlich vielen Schritten Null, wie gefordert.
 \end{bew}

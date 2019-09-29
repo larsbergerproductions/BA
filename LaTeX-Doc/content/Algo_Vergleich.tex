@@ -1,0 +1,19 @@
+\subsection{Fazit und Vergleich}
+Wie in den \todo{insert Bsp.}vorangegangenen Beispielen zu sehen, liefern verschiedene Methoden z.T. stark voneinander abweichende Ergebnisse. Wie optimal zwei Ergebnisse im Vergleich zueinander sind, wird oft in den Maßeinheiten der oberen Schranken der ''Länge des größten Nenners'' \bzw der ''Anzahl der Summanden'' angegeben. In Tabelle \ref{table:Algo_Vergleich} sind die entsprechenden Werte zum Vergleich aufgelistet.
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|Sc | Sc | Sc|}
+		\hline
+		Algorithmus & Anzahl der Summanden & Länge des längsten Nenners\\
+		\hline
+		Fibonacci-Sylvester\newline(Greedy) & $p$ & exponentiell\\
+		\hline
+		Farey-Folgen-Algorithmus & $p$ & $q(q-1)$\\
+		\hline
+		Kettenbruch-Algorithmus & $\frac{2(\ln q)^2}{\ln \ln q}$ & $q^2$ \\
+		\hline
+	\end{tabular}
+	\caption{Vergleich der beschriebenen Algorithmen (obere Schranken)}
+	\label{table:Algo_Vergleich}
+\end{table}
