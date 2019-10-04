@@ -26,6 +26,7 @@ fibonacci_sylvester(fraction, stepsize, start)={
 		/*print("adding ", 1/candidate);*/
 		listput(result, 1/candidate);
 	);
+	print(fraction, " = ", printEgypFrac(result));
 	return(Vec(result));
 }
 
@@ -79,6 +80,7 @@ greedy_fast(fraction)={
 	while (listsum(result) < fraction,
 		listput(result, largestUnitFractionLEQ(fraction-listsum(result)));
 	);
+	print(fraction, " = ", printEgypFrac(result));
 	return(Vec(result));
 }
 
@@ -127,31 +129,35 @@ FareySeries(order)={
 	return(result);
 }
 
-FS(fract)={
-	local(adjacent, remainder, result);
+FS(fraction)={
+	local(adjacent, remainder, result, current_fraction);
 	result = List();
+	current_fraction = fraction;
 	while(1,
-		adjacent = findAdjacent(FareySeries(denominator(fract)), fract);
-		remainder = 1/(denominator(fract)*denominator(adjacent));
+		adjacent = findAdjacent(FareySeries(denominator(current_fraction)), current_fraction);
+		remainder = 1/(denominator(current_fraction)*denominator(adjacent));
 		listput(result, remainder);
 		if(numerator(adjacent) == 1,
 			listput(result, adjacent);
-			return(reverse_vecsort(Vec(result)));
+			result = reverse_vecsort(Vec(result));
+			print(fraction, " = ", printEgypFrac(result));
+			return(result);
 		);
-		fract = adjacent;
+		current_fraction = adjacent;
 	);
 	return(-1);
 }
 
 mediant(frac1, frac2)={return((numerator(frac1)+numerator(frac2))/(denominator(frac1)+denominator(frac2)));}
 
-relevantFareySeries(fract)={
+relevantFareySeries(fraction)={
+	/* under construction and not working properly */
 	local(ub,lb,result);
 	ub = 1;
 	lb = 0;
-	result = List();
-	while((fract != mediant(lb, ub)) && (numerator(mediant(lb,ub)) < numerator(fract)),
-		if(fract > mediant(lb,ub),
+	result = List(lb);
+	while((fraction != mediant(lb, ub)) && (numerator(mediant(lb,ub)) < numerator(fraction)),
+		if(fraction > mediant(lb,ub),
 			lb = mediant(lb,ub);
 			/*mediant ist kleiner als Bruch und wird somit noch benötigt => hinzufügen*/
 			listput(result, mediant(lb, ub)),
@@ -163,6 +169,25 @@ relevantFareySeries(fract)={
 	return(vecsort(Vec(result)));
 }
 
+printEgypFrac(arguments)={
+	local(result);
+	result = "";
+	if(#arguments <= 0,
+		result = "0";
+		return();
+	);
+	if(#arugments == 1,
+		result = Str(arguments[1]);
+		return();
+	);
+	for(i=1, #arguments-1,
+		result = Str(result, Str(arguments[i]));
+		result = Str(result, " + ");
+	);
+	result = Str(result, arguments[#arguments]);
+	return(result);
+}
+
 /* show timer for each calculation */
 #
 print("\n\n\n#########################\n#    Script provided    #\n#           by          #\n#    Lt. Lars Berger    #\n#    Universität der    #\n#   Bundeswehr München  #\n#########################\n\n")
@@ -171,3 +196,4 @@ print("\n available main functions, not recommended for usage:\n - fibonacci_syl
 print("Available secondary functions:\n - Farey_Series(order)\n - largestUnitFractionLEQ(frac)\n - isAdjacent(frac1, frac2)\n");
 */
 print("Available Algorithms for Egyptian Fractions:\n - greedy(frac)\n - greedy_odd(frac)\n - greedy_even(frac)\n - greedy_fast(frac)\n - FS(frac): Farey-Sequence-Algorithm");
+print("Please use ; after the commands, every algorithm produces a custom output.");
