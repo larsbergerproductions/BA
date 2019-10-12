@@ -2,19 +2,22 @@
 \BOOKMARK [1][-]{inhalt.1}{Inhaltsverzeichnis}{}% 2
 \BOOKMARK [1][-]{section.4}{0 TODOs}{}% 3
 \BOOKMARK [1][-]{section.6}{1 Einleitung}{}% 4
-\BOOKMARK [1][-]{section.9}{2 \304gyptische Arithmetik}{}% 5
-\BOOKMARK [2][-]{subsection.10}{2.1 \304gyptische Multiplikation}{section.9}% 6
-\BOOKMARK [2][-]{subsection.13}{2.2 \304gyptische Division}{section.9}% 7
+\BOOKMARK [1][-]{section.10}{2 \304gyptische Arithmetik}{}% 5
+\BOOKMARK [2][-]{subsection.11}{2.1 \304gyptische Multiplikation}{section.10}% 6
+\BOOKMARK [2][-]{subsection.13}{2.2 \304gyptische Division}{section.10}% 7
 \BOOKMARK [3][-]{subsubsection.14}{2.2.1 Ganzzahlige Division}{subsection.13}% 8
 \BOOKMARK [3][-]{subsubsection.16}{2.2.2 Division mit Rest}{subsection.13}% 9
-\BOOKMARK [2][-]{subsection.23}{2.3 Ermittlung \304gyptischer Zerlegungen von Br\374chen}{section.9}% 10
+\BOOKMARK [2][-]{subsection.23}{2.3 Ermittlung \304gyptischer Zerlegungen von Br\374chen}{section.10}% 10
 \BOOKMARK [1][-]{section.25}{3 Algorithmen zur Erstellung \304gyptischer Br\374che}{}% 11
-\BOOKMARK [2][-]{subsection.26}{3.1 Der Greedy-Algorithmus}{section.25}% 12
-\BOOKMARK [2][-]{subsection.31}{3.2 Der Farey-Folgen-Algorithmus}{section.25}% 13
-\BOOKMARK [2][-]{subsection.38}{3.3 Fazit und Vergleich}{section.25}% 14
-\BOOKMARK [1][-]{section.41}{4 Anhang}{}% 15
-\BOOKMARK [2][-]{subsection.42}{4.1 PARI/GP Code f\374r den Greedy-Algorithmus}{section.41}% 16
-\BOOKMARK [3][-]{subsubsection.79}{4.1.1 Optimierter Greedy-Algorithmus}{subsection.42}% 17
-\BOOKMARK [2][-]{subsection.128}{4.2 PARI/GP Code f\374r den Farey-Folgen-Algorithmus}{section.41}% 18
-\BOOKMARK [1][-]{section*.173}{Literaturverzeichnis}{}% 19
-\BOOKMARK [1][-]{section*.174}{Eidesstattliche Erkl\344rung}{}% 20
+\BOOKMARK [2][-]{subsection.27}{3.1 Der Greedy-Algorithmus}{section.25}% 12
+\BOOKMARK [2][-]{subsection.35}{3.2 Der Farey-Folgen-Algorithmus}{section.25}% 13
+\BOOKMARK [2][-]{subsection.46}{3.3 Bin\344ralgorithmus}{section.25}% 14
+\BOOKMARK [2][-]{subsection.56}{3.4 Fazit und Vergleich}{section.25}% 15
+\BOOKMARK [1][-]{section.59}{4 Anhang}{}% 16
+\BOOKMARK [2][-]{subsection.60}{4.1 Hilfsfunktionen}{section.59}% 17
+\BOOKMARK [2][-]{subsection.138}{4.2 PARI/GP Code f\374r den Greedy-Algorithmus}{section.59}% 18
+\BOOKMARK [3][-]{subsubsection.174}{4.2.1 Optimierter Greedy-Algorithmus}{subsection.138}% 19
+\BOOKMARK [2][-]{subsection.224}{4.3 PARI/GP Code f\374r den Farey-Folgen-Algorithmus}{section.59}% 20
+\BOOKMARK [2][-]{subsection.244}{4.4 PARI/GP Code f\374r den Bin\344ralgorithmus}{section.59}% 21
+\BOOKMARK [1][-]{section*.268}{Literaturverzeichnis}{}% 22
+\BOOKMARK [1][-]{section*.269}{Eidesstattliche Erkl\344rung}{}% 23

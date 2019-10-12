@@ -1,8 +1,14 @@
-\section{Algorithmen zur Erstellung Ägyptischer Brüche}
-Im Folgenden sollen verschiedene Algorithmen erklärt und verglichen werden, mit welchen sich rationale Brüche in solche ägyptischer Schreibweise zerlegen lassen. Die dabei aufgezeigten Methoden wurden über mehrere Jahrhunderte hinweg entwickelt und weisen dementsprechend signifikante Unterschiede auf. Im Anschluss an die Erklärung der Algorithmen soll ein Vergleich gezogen werden, der die Effizienz anhand der Kriterien Anzahl der verwendeten Stammbrüche und Länge des größten Nenners vergleicht.
+\section{Algorithmen zur Erstellung Ägyptischer Brüche}\label{sec:algorithmen}
+Im Folgenden sollen verschiedene Algorithmen erklärt und verglichen werden, mit welchen sich rationale Brüche in Ägyptische Brüche gemäß Definition \ref{def:egypfrac} zerlegen lassen. Die dabei aufgezeigten Methoden wurden über mehrere Jahrhunderte hinweg entwickelt und weisen dementsprechend signifikante Unterschiede auf. Im Anschluss an die Erklärung der Algorithmen soll ein Vergleich gezogen werden, der die Effizienz anhand der Kriterien ''Anzahl der verwendeten Stammbrüche'' und ''Länge des größten Nenners'' vergleicht.
 Die nun betrachteten Algorithmen werden sein:
 \begin{itemize}
 	\item der Fibonacci-Sylvester-Algorithmus (auch: Greedy-Algorithmus)
 	\item der Farey-Folgen-Algorithmus
 	\item der Kettenbruch-Algorithmus
 \end{itemize}
+
+Da im alten Ägypten noch keine negativen Zahlen bekannt waren, beschränken sich entsprechend die Algorithmen auf die positiven rationalen Brüche.
+\begin{def1}
+	Da wir im Folgenden nur positive rationale Brüche betrachten wollen, sei die Menge $\Q_+$ wie folgt definiert:
+	$$\Q_+ = \left\{x \in \Q: x>0\right\}.$$
+\end{def1}

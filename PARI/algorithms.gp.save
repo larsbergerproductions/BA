@@ -1,6 +1,4 @@
 listsum(list) = sum(i=1,#list,list[i]);
-listmin(list) = {local(minimum); minimum=list[1]; for(i=1,#list,if(list[i]<minimum, minimum = list[i])); return(minimum)}
-listmax(list) = {local(maximum); maximum=list[1]; for(i=1,#list,if(list[i]>maximum, maximum = list[i])); return(maximum)}
 
 fibonacci_sylvester(fraction, stepsize, start)={
 	local(candidate, result);
@@ -28,7 +26,7 @@ fibonacci_sylvester(fraction, stepsize, start)={
 		/*print("adding ", 1/candidate);*/
 		listput(result, 1/candidate);
 	);
-	/*print("Greedy: ", fraction, " = ", printEgypFrac(result));*/
+	print("Greedy: ", fraction, " = ", printEgypFrac(result));
 	return(Vec(result));
 }
 
@@ -82,7 +80,7 @@ greedy_fast(fraction)={
 	while (listsum(result) < fraction,
 		listput(result, largestUnitFractionLEQ(fraction-listsum(result)));
 	);
-	/*print("Greedy fast: ", fraction, " = ", printEgypFrac(result));*/
+	print("Greedy fast: ", fraction, " = ", printEgypFrac(result));
 	return(Vec(result));
 }
 
@@ -136,7 +134,7 @@ FS(fraction)={
 		if(numerator(adjacent) == 1,
 			listput(result, adjacent);
 			result = reverse_vecsort(Vec(result));
-			/*print("Farey_Sequence: ", fraction, " = ", printEgypFrac(result));*/
+			print("Farey_Sequence: ", fraction, " = ", printEgypFrac(result));
 			return(result);
 		);
 		current_fraction = adjacent;
@@ -197,7 +195,7 @@ binary_algo(fraction)={
 		summands = findDivisorsOf_k_addingup_n(q*Nk,r);
 		for(i=1, #summands, listput(result, 1/((q*Nk)/summands[i])));
 	);
-	/*print("Binary: ", fraction, " = ", printEgypFrac(result));*/
+	print("Binary: ", fraction, " = ", printEgypFrac(result));
 	return(reverse_vecsort(Vec(result)));
 }
 
@@ -235,95 +233,27 @@ test_main(fraction)={
 	return();
 }
 
-automatic_test_greedy(start,end)={
-	local(t, result, LenDenom, Terms, Time);
-	LenDenom = List();
-	Terms=List();
-	Time=List();
+automatic_test(start, stop)={
+	local(result, greedyLenDenom, greedyTerms, FsLenDenom, FsTerms, BinLenDenom, BinTerms);
+	greedyLenDenom = List();
+	greedyTerms = List();
+	FsLenDemons = List();
+	FsTerms = List();
+	BinLenDenom = List();
+	BinTerms = List();
 
-	write("/home/lars/Programming/Bachelorarbeit/PARI/results_greedy.csv", "Nenner,AVG #Terms,MIN #Terms,MAX #Terms,MIN longest Denominator,MAX longest Denominator,Time");
-	for(denom=start,end,
-		if(denom%10==0, print(denom));
-		for(num=2, denom,
-			if(gcd(denom,num) == 1,
-				t = getabstime();
-				result = greedy_fast(num/denom);
-				listput(Time, getabstime()-t);
-				listput(LenDenom, denominator(result[#result]));
-				listput(Terms, #result);
-			);
-		);
-		write("results_greedy.csv", denom, ",", round(listsum(Terms)/#Terms), ",", listmin(Terms), ",", listmax(Terms), ",", listmin(LenDenom), ",", listmax(LenDenom),"," round(listsum(Time)/#Time));
-		LenDenom = List();
-		Terms = List();
-		Time = List();
-	);
-}
+	for(denom=start,stop,
+		for(num=2,denom-1,
+			result = greedy_fast(num/denom); = List();
+	
+			listput(greedyLenDenom, denominator(result[#result]));
+			listput(greedyTerms, #result);
 
-
-automatic_test_farey(start,end)={
-	local(t, result, LenDenom, Terms, Time);
-	LenDenom = List();
-	Terms=List();
-	Time=List();
-
-	write("results_farey.csv", "Nenner,AVG #Terms,MIN #Terms,MAX #Terms,MIN longest Denominator,MAX longest Denominator,Time");
-	for(denom=start,end,
-		if(denom%10==0, print(denom));
-		for(num=2, denom,
-			if(gcd(denom,num) == 1,
-				t = getabstime();
-				result = FS(num/denom);
-				listput(Time, getabstime()-t);
-				listput(LenDenom, denominator(result[#result]));
-				listput(Terms, #result);
-			);
-		);
-		write("results_farey.csv", denom, ",", round(listsum(Terms)/#Terms), ",", listmin(Terms), ",", listmax(Terms), ",", listmin(LenDenom), ",", listmax(LenDenom),"," round(listsum(Time)/#Time));
-		LenDenom = List();
-		Terms = List();
-		Time = List();
-	);
-}
-automatic_test_binary(start,end)={
-	local(t, result, LenDenom, Terms, Time);
-	LenDenom = List();
-	Terms=List();
-	Time=List();
-
-	write("/home/lars/Programming/Bachelorarbeit/PARI/results_binary.csv", "Nenner,AVG #Terms,MIN #Terms,MAX #Terms,MIN longest Denominator,MAX longest Denominator,Time");
-	for(denom=start,end,
-		if(denom%10==0, print(denom));
-		for(num=2, denom,
-			if(gcd(denom,num) == 1,
-				t = getabstime();
-				result = binary_algo(num/denom);
-				listput(Time, getabstime()-t);
-				listput(LenDenom, denominator(result[#result]));
-				listput(Terms, #result);
-			);
-		);
-		write("results_binary.csv", denom, ",", round(listsum(Terms)/#Terms), ",", listmin(Terms), ",", listmax(Terms), ",", listmin(LenDenom), ",", listmax(LenDenom),"," round(listsum(Time)/#Time));
-		LenDenom = List();
-		Terms = List();
-		Time = List();
-	);
-}
-
-compareFareySeriesDetect(maximum)={
-	local();
-
-	for(i=2,maximum,
-		fareyseries = FareySeries(i);
-		for(index=2,#fareyseries,
-			full = findAdjacent(fareyseries, fareyseries[index]);
-			reduced = findAdjacent(relevantFareySeries(fareyseries[index]));
-			if(full != reduced, print("i = ", i, ", fraction = ", fareyseries[index], ": ", full, " != ", reduced);return(-1););
+			FsRes = FS(num/denom);
+			listput()
 		);
 	);
-	return(1);
 }
-
 
 /* show timer for each calculation */
 #

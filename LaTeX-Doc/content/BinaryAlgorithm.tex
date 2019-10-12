@@ -1,0 +1,42 @@
+\subsection{Binäralgorithmus}
+
+Dass die Ägypter schon damals implizit eine Art Binärschreibweise für ihre Multiplikation und Division verwendeten, wie in Abschnitt \ref{sec:arithmetic} erläutert, ist inzwischen bekannt. Nun kann man den gleichen Umstand auch für einen Konstruktionsalgorithmus verwenden, wie im Folgenden gezeigt wird.\\
+Seien $m, n \in \N$ und $N = 2^n$. Alle $m < N$ lassen sich als Summe paarweise verschiedener Teiler von $N$ beschreiben, folglich also mit maximal $n$ Summanden. Praktisch lässt sich dies am Einfachsten anhand der Binärdarstellung von $m$ erkennen.
+
+\begin{algorithm}\label{algo:binary}
+	Sei $\frac{p}{q} \in Q_+, \, \frac{p}{q} < 1$ in gekürzter Form und $k \in \N$.
+	\begin{enumerate}
+		\item Finde $N_{k-1} < q \leq N_k$ wobei $N_k=2^k$ ist.
+		\item Falls $q = N_k$, schreibe $p$ als Summe von Teilern von $N_k$, hier $d_i$ genannt:
+		$$\frac{p}{q} = \sum_{i=1}^{j} \frac{d_i}{N_k}=  \sum_{i = 1}^{j}\frac{1}{\frac{N_k}{d_i}}$$
+		\item Sonst seien $s, r \in \N, 0 < r < N_k$ so gewählt, dass:
+		$$pN_k = qs+r.$$
+		Es folgt:
+		$$\frac{p}{q} = \frac{p N_k}{q N_k} = \frac{qs + r}{q N_k} = \frac{s}{N_k} + \frac{r}{q N_k}$$.
+		\item Schreibe $s = \sum d_i$ und $r = \sum d_i'$, wobei $d_i, d_i'$ jeweils paarweise verschiedene Teiler von $N_k$ sind.
+		\item Erhalte den Ägyptischen Bruch:
+		$$\sum \uf{\frac{N_k}{d_i}} + \sum \uf{\frac{q N_k}{d_i'}}$$
+	\end{enumerate}
+\end{algorithm}
+
+Sei $\frac{p}{q} \in \Q_+, \frac{p}{q} < 1$. Gong zeigte, dass 
+\todo[inline]{Komplexitätsabschätzung!}
+
+Da es für diesen Algorithmus zwei Fälle gibt, soll für jeden Fall ein Beispiel gezeigt werden. Dafür beginnen wir mit dem einfachen Fall.
+
+\begin{bsp}
+	Sei $\frac{9}{16}$ der zu zerlegende Bruch. $N_k = 16$, da $8<16\leq16$.\\
+	Da $16 = 16$, wird nach Schritt (2) aus Algorithmus \ref{algo:binary} verfahren:
+	$$\frac{9}{16} = \frac{8+1}{16} = \uf{2}+\uf{16}.$$
+\end{bsp}
+Ist der Nenner des zu zerlegenden Bruchs also eine Zweierpotenz, terminiert der Algorithmus sehr schnell. Anders ist dies, sollte es sich um keine Zweierpotenz handeln, wie das nächste Beispiel zeigt.
+\begin{bsp}
+	Sei $\frac{21}{23}$ der zu zerlegende Bruch. $N_k = 32$, da $16 < 23 \leq 32$.\\
+	Da $23<32$ ist, wird nach Schritt (3) aus Algorithmus \ref{algo:binary} verfahren:
+	$$\frac{21}{23} = \frac{21 \cdot 32}{23 \cdot 32}.$$
+	Aus der Bedingung $0<r<32$ folgt $s = 29$ und $r = 5$, da $$qs+r = 29 \cdot 23 + 5 = 21 \cdot 32 = p N_k.$$
+	Daraus folgt:
+	$$\frac{21}{23} = \frac{23 \cdot 29+5}{23 \cdot 32} = \frac{29}{32} + \frac{5}{23 \cdot 32}.$$
+	Aus $$\frac{29}{32} = \frac{16+8+4+1}{32} = \uf{2} + \uf{4} + \uf{8} + \uf{32}$$ und $$\frac{5}{23 \cdot 32} = \frac{4+1}{23 \cdot 32} = \uf{23 \cdot 8} + \uf{23 \cdot 32}$$ folgt:
+	$$\frac{21}{23} = \uf{2} + \uf{4} + \uf{8} + \uf{32} + \uf{184} + \uf{736}.$$
+\end{bsp}

@@ -1,38 +1,47 @@
 % !TeX spellcheck = de_DE_frami
 % !TEX root = document.tex
 \subsection{Der Greedy-Algorithmus}
-Seien $a, b \in \N; b \neq 0$. Eine der bekanntesten Methoden, eine Ägyptische Erweiterungen für Brüche $\frac{a}{b}$ zu finden, ist der Greedy-Algorithmus. Dabei werden solange jeweils die größtmöglichen Stammbrüche $\frac{1}{x_i}$ gesucht, sodass
+Sei $\frac{p}{q} \in \Q_+$. Eine schon seit dem 13. Jahrhundert bekannte Methode, einen Ägyptischen Bruch für rationale Brüche $\frac{p}{q}$ zu finden, ist der Greedy-Algorithmus. Dieser wurde zuerst 1202 von Fibonacci entwickelt und 1880 von James Joseph Sylvester wiederentdeckt und weiterentwickelt, weswegen er auch den Namen ''Fibonacci-Sylvester-Algorithmus'' trägt. Dabei werden solange jeweils die größtmöglichen Stammbrüche $\frac{1}{x_i}$ gesucht, sodass
 \begin{equation}\label{eq:greedy_fracNorm}
-\frac{1}{x_i} \leq \frac{a}{b} - \sum_{j=1}^{i-1} \frac{1}{x_j} < \frac{1}{x_{i}-1},
+\frac{1}{x_i} \leq \frac{p}{q} - \sum_{j=1}^{i-1} \frac{1}{x_j} < \frac{1}{x_{i}-1},
 \end{equation}
 wobei gilt, dass
-$$x_j \neq x_k; \forall j \neq k; j,k \in \{1,..,i\},$$ 
+$$x_j \neq x_k,\, \forall j \neq k;\, j,k \in \{1,..,i\},$$ 
 bis
 $$\frac{a}{b} = \frac{1}{x_1} + \frac{1}{x_2} + ... + \frac{1}{x_i} = \sum_{j=1}^{i} \frac{1}{x_j}.$$
-\todo[inline]{Als $\backslash$begin\{algorithm\} aufschreiben}
-Da in jedem Fall der größtmögliche, noch nicht vorhandene Bruch gesucht wird, der noch in die Summe der Stammbrüche passt, ohne dass diese zu groß wird, kann es zu sehr ungünstigen Ergebnissen mit extrem langen Divisoren kommen; ein anschauliches Beispiel dafür ist:
+Als Anweisungsfolge lässt sich der Algorithmus folgendermaßen formulieren.
+\begin{algorithm}\label{algo:greedy}
+	Der Greedy-Algorithmus.
+	\begin{enumerate}
+		\item finde den größten, noch nicht verwendeten Stammbruch $\uf{x}$, sodass $\uf{x} \leq \frac{p}{q}$.
+		\item setze $\uf{x}$ als weiteren Summanden des Ergebnisses
+		\item falls $\frac{p}{q} - \uf{x} > 0$, gehe zu Schritt 1 mit $\left(\frac{p}{q}\right) \leftarrow \left(\frac{p}{q}-\uf{x}\right)$.
+	\end{enumerate}
+\end{algorithm}
+
+Da in jedem Fall der größtmögliche, noch nicht vorhandene Bruch gesucht wird, der noch in die Summe der Stammbrüche passt, ohne dass diese zu groß wird, kann es zu sehr ungünstigen Ergebnissen mit extrem langen Nennern kommen; ein anschauliches Beispiel dafür ist:
 $$\frac{5}{121} = \uf{25} + \uf{757} + \uf{763.309} + \uf{873.960.180.913} + \uf{1.527.612.795.642.093.418.846.225},$$
 wobei man den Bruch auch folgendermaßen zerlegen kann:
 $$\frac{5}{121} = \uf{33} + \uf{121} + \uf{363}.$$
-Aufgrund dieser Komplexitätsprobleme scheint es unsinnig, den Greedy-Algorithmus zu verwenden. Nichtsdestotrotz lässt sich beweisen, dass der Greedy-Algorithmus immer terminiert.
+Aufgrund dieser Umstände scheint es unsinnig, den Greedy-Algorithmus zu verwenden; immerhin lässt sich beweisen, dass dieser immer terminiert.
 Im Anhang \ref{code:greedy} findet sich eine eigene Implementierung des Greedy-Algorithmus.
 
 \begin{satz}
 	Der Greedy-Algorithmus, wie oben beschrieben, terminiert für jede Eingabe.
 \end{satz}
 \begin{bew}
-	Für die erste Iteration des Greedy-Algorithmus ergibt sich aus \ref{eq:greedy_fracNorm}:
+	Zur Verkürzung der Schreibweise sei  $x = x_1$.
+	Für die erste Iteration des Greedy-Algorithmus ergibt sich aus Gleichung (\ref{eq:greedy_fracNorm}):
 	\begin{equation}\label{eqn:Greedy_Voraussetzungen}
-		\uf{x} \leq \frac{a}{b} < \uf{x-1}
+		\uf{x} \leq \frac{p}{q} < \uf{x-1}.
 	\end{equation}
 	Daraus folgt ein Rest $r$ von
-	$$ r = \frac{a}{b}-\uf{x} = \frac{ax-b}{bx},$$
-	der den Zähler $(ax-b)$ hat. Aus \ref{eqn:Greedy_Voraussetzungen} folgt:
-	% Äquivalenzkette, die zeigt, dass $ax-b<a
+	$$ r = \frac{p}{q}-\uf{x} = \frac{px-q}{qx},$$
+	der den Zähler $(px-q)$ hat, welcher kleiner als p ist. Dies folgt aus (\ref{eqn:Greedy_Voraussetzungen}):
 	\begin{eqnarray*}
-		\frac{a}{b} < \uf{x-1}& \gdw & a(x-1)<b\\
-		& \gdw & ax-a < b\\
-		& \gdw & ax-b < a.\\
+		\frac{p}{q} < \uf{x-1}& \gdw & p(x-1)<q\\
+		& \gdw & px-p < q\\
+		& \gdw & px-q < p.\\
 	\end{eqnarray*}
-	Somit ist dieser Rest kleiner als $a$, verkleinert sich mit jedem Schritt und erreicht nach endlich vielen Schritten Null, wie gefordert.
+	Somit verkleinert sich der Rest $r$ mit jedem Schritt und erreicht nach endlich vielen Schritten Null, wie gefordert.
 \end{bew}
