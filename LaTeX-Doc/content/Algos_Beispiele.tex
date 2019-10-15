@@ -1,0 +1,91 @@
+\subsection{Beispielrechnungen}
+
+Anhand von drei Beispielen soll die Rechnung der einzelnen Methoden zur besseren Vergleichbarkeit verdeutlicht werden. Am Ende dieses Abschnitts sind die Ergebnisse tabellarisch gegenübergestellt.
+
+\begin{bsp}
+	Wir wollen zunächst einen einfachen Bruch zerlegen, für den alle drei der aufgezeigten Algorithmen das gleiche Ergebnis liefern, auch wenn sie dieses auf unterschiedlichem Wege erreichen.
+	Sei $\frac{5}{9}$ der betrachtete Bruch.
+	\paragraph{Greedy-Algorithmus} Es wird der größte Stammbruch $\uf{x_1} \in \Q_+$ gesucht mit $\uf{x_1} \leq \frac{5}{9} < \uf{x_1-1}$. Es folgt $$\uf{x_1} = \uf{2} \text{, da }
+	\uf{2} \leq \frac{5}{9} < \uf{1}.$$
+	Der verbleibende Rest $r$ ist dann $$r = \frac{5}{9} - \uf{2} = \uf{18}$$
+	und der Algorithmus terminiert, da die Summe dieser beiden Stammbrüche genau $\frac{5}{9}$ entspricht.
+	
+	\paragraph{Farey-Folgen-Algorithmus}Wir bilden den notwendigen Teil der Farey-Folge mit Ordnung $9$: $$F_{9rel} = \left\{ \frac{0}{1}, \uf{2}, \frac{5}{9}, \frac{4}{7}, \frac{3}{5}, \frac{2}{3}, \uf{1}\right\},$$ woraus folgt, dass $\uf{2}$ der zu $\frac{5}{9}$ adjazente Bruch in $F_9$ ist. Daraus folgt 
+	$$\frac{5}{9} = \uf{9 \cdot 2} + \uf{2} = \uf{2} + \uf{18}$$ und der Algorithmus terminiert nach dem ersten Schritt, da der Rest $\frac{r}{s} = \uf{2}$ schon Stammbruch ist.
+	
+	\paragraph{Binäralgorithmus}die kleinste Zweierpotenz, die größer als der Nenner $9$ ist, ist $16$, da $8<9<16$; somit ist $N_k = 16$. Da der Nenner keine Zweierpotenz ist, springen wir zu Schritt 3 des Algorithmus \ref{algo:binary} und schreiben:
+	$$\frac{5}{9} = \frac{5\cdot16}{9 \cdot 16} = \frac{9 \cdot 8 + 8}{9 \cdot 16} = \frac{8}{16} + \frac{8}{144} = \uf{2} + \uf{18}.$$
+	
+	\begin{table}[p]
+		\centering
+		\begin{tabular}{|Sc | Sc | Sc | Sc|}
+			\hline
+			Algorithmus & Anzahl der Terme & Größter Nenner & Zerlegung \\ \hline
+			Greedy & 2 & 18 & $\uf{2}+\uf{18}$ \\ \hline
+			Farey-Folgen-Algorithmus & 2 & 18 & $\uf{2}+\uf{18}$ \\ \hline
+			Binär-Algorithmus & 2 & 18 & $\uf{2}+\uf{18}$ \\ \hline
+		\end{tabular}
+		\caption{Die Zerlegung von $\frac{5}{9}$ im Vergleich}
+		\label{table:vgl5/9}
+	\end{table}
+	
+	Die Ergebnisse sind nochmals in Tabelle \ref{table:vgl5/9} zusammengefasst.
+\end{bsp}
+
+Es ergibt sich also bei allen Algorithmen das gleiche Ergebnis, obwohl die Herangehensweise sehr unterschiedlich ist. Das ist aber nur ein Ausnahmefall, die folgenden Beispiele werden zeigen, wie unterschiedlich die Ergebnisse werden können.
+\vspace{2cm}
+\begin{bsp}
+	Sei $\frac{24}{31}$ der zu zerlegende Bruch. Um Zeit zu sparen, werden hier die Lösungswege nur noch angeschnitten.
+	
+	\paragraph{Greedy-Algorithmus} Wieder suchen wir iterativ die größten Stammbrüche, bis diese in ihrer Summe $\frac{24}{31}$ ergeben. Nach 4 Schritten erhält man das Ergebnis:
+	$$\frac{24}{31} = \uf{2} + \uf{4} + \uf{42} + \uf{2604}.$$
+	
+	\paragraph{Farey-Folgen-Algorithmus}Wie bisher wird zunächst der zu $\frac{24}{31}$ in $F_31$ adjazente Bruch gsucht, mit dem nach Rechenvorschrift fortgefahren wird, sodass sich nach der ersten Iteration
+	$$\frac{24}{31}=\uf{31 \cdot 22}+ \frac{17}{22} = \uf{682} + \frac{17}{22}$$
+	ergibt. Mit den folgenden 5 Iterationen ergibt sich:
+	$$\frac{24}{31}=\uf{2}+\uf{6}+\uf{12}+\uf{52}+\uf{286}+\uf{682}$$
+	
+	\paragraph{Binäralgorithmus}Schritt 1 liefert $N_k = 32$. Schritt 3 zufolge gilt
+	$$\frac{24}{31} = \frac{24 \cdot 31 + 24}{31\cdot32} = \frac{16+8}{32} + \frac{16+8}{31 \cdot 32} = \uf{2} + \uf{4} + \uf{62} + \uf{124}.$$
+	
+	Die Ergebnisse, die in Tabelle \ref{table:vgl24/31} aufgelistet sind, zeigen einige signifikante Unterschiede: Vergleicht man den Greedy- mit dem Farey-Folgen-Algorithmus,  wird deutlich, dass durch die Erhöhung der Anzahl der Terme von 4 auf 6 der größte vorkommende Nenner um mehr als den Faktor 3 verringert werden kann. Es geht aber offensichtlich noch besser, denn der Binäralgorithmus liefert nur 4 Terme, deren größter Nenner aber um den Faktor 21 kleiner ist als der des Greedy-Algorithmus und um den Faktor $5,5$ kleiner als der des Farey-Folgen-Algorithmus. Ersteres ist allein der Habgier\footnote{greedy, engl. für: habgierig, gierig, gefräßig} des Greedy-Algorithmus geschuldet, da er an dritter Stelle statt der besseren Wahl $\uf{62}$ den größeren Bruch $\uf{42}$ wählt und somit den Rest so stark verkleinert, dass dieser nur durch einen relativ großen Nenner ausgedrückt werden kann. Hier ist also der Binäralgorithmus den anderen beiden deutlich überlegen.
+\end{bsp}
+
+\begin{table}[p]
+	\centering
+	\begin{tabular}{|Sc | Sc | Sc | Sl|}
+		\hline
+		Algorithmus & Anzahl der Terme & Größter Nenner & Zerlegung \\ \hline
+		Greedy & 4 & 2604 & $\uf{2} + \uf{4} + \uf{42} + \uf{2604}$ \\ \hline
+		Farey-Folgen-Algorithmus & 6 & 682 & $\uf{2}+\uf{6}+\uf{12}+\uf{52}+\uf{286}+\uf{682}$ \\ \hline
+		Binär-Algorithmus & 4 & 124 & $\uf{2} + \uf{4} + \uf{62} + \uf{124}$ \\ \hline
+	\end{tabular}
+	\caption{Die Zerlegung von $\frac{24}{31}$ im Vergleich}
+	\label{table:vgl24/31}
+\end{table}
+\vspace{2cm}
+\begin{bsp}
+	Dass der Greedy-Algorithmus nicht grundsätzlich der schlechteste ist, zeigt das Beispiel $\frac{12}{17}$.
+	\paragraph{Der Greedy-Algorithmus} liefert
+	$$\frac{12}{17} = \uf{2}+\uf{5}+\uf{170}.$$
+	\paragraph{Der Farey-Folgen-Algorithmus} liefert
+	$$\frac{12}{17}=\uf{2}+\uf{6}+\uf{30}+\uf{170}.$$
+	\paragraph{Der Binäralgorithmus} liefert
+	$$\frac{12}{17} = \uf{2}+\uf{8}+\uf{16}+\uf{68}+\uf{272}.$$
+	Wie die Zusammenfassung in Tabelle \ref{table:vgl12/17} zeigt, ist in diesem Beispiel der Greedy-Algorithmus leicht überlegen. An den Zweierpotenzen der ersten Temre des Binäralgorithmus lässt sich sehr gut dessen Natur erkennen, die ihm aber in diesem Beispiel nicht zu sonderlicher Effizienz verhilft.
+\end{bsp}
+
+\begin{table}[p]
+	\centering
+	\begin{tabular}{|Sc | Sc | Sc | Sl|}
+		\hline
+		Algorithmus & Anzahl der Terme & Größter Nenner & Zerlegung \\ \hline
+		Greedy & 3 & 170 & $\uf{2}+\uf{5}+\uf{170}$ \\ \hline
+		Farey-Folgen-Algorithmus & 4 & 170 & $\uf{2}+\uf{6}+\uf{30}+\uf{170}$ \\ \hline
+		Binär-Algorithmus & 5 & 272 & $\uf{2}+\uf{8}+\uf{16}+\uf{68}+\uf{272}$ \\ \hline
+	\end{tabular}
+	\caption{Die Zerlegung von $\frac{12}{17}$ im Vergleich}
+	\label{table:vgl12/17}
+\end{table}
+
+Es zeigt sich also, dass sich anhand relativ weniger Beispiele nicht sagen lässt, ob ein Algorithmus besser ist als ein anderer. Dazu braucht es einen großen, systematisch aufgebauten Datensatz, der dann statistisch ausgewertet wird. Trotzdem lässt sich daraus nicht ableiten, welcher Algorithmus im Einzelfall besser funktioniert. Viele Algorithmen sind mit aufwändigen Beweisen ihrer Schranken bezüglich ''Länge des größten Nenners'' und ''Anzahl der entstehenden Terme'' verbunden, diese sagen aber selten etwas über die durchschnittlichen Ergebnisse aus.
