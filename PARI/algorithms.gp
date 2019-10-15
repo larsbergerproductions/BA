@@ -104,11 +104,24 @@ reverse_vecsort(vect)={
 }
 
 findAdjacent(Fs, fraction)={
-	for(i=2, #Fs-1,
-		if(fraction == Fs[i],
-			return(Fs[i-1]);
+	local(lb,ub,index);
+	if(fraction == Fs[#Fs],
+		print("direct");
+		return(Fs[#Fs-1]);
+	);
+	lb=1;
+	ub=#Fs;
+	index = #Fs\2;
+	while(Fs[index] != fraction,
+		if(Fs[index] > fraction,
+			ub=index;
+			index = (ub-lb)\2+lb,
+		/*else*/
+			lb = index;
+			index = (ub-lb)\2+lb;
 		);
 	);
+	return(Fs[index-1]);
 }
 
 FareySeries(order)={
@@ -116,12 +129,10 @@ FareySeries(order)={
 	result = List();
 	for(den=1,order,
 		for(num=0, den,
-			if(contains(result, num/den)==0,
-				listput(result, num/den);
-			);
+			listput(result, num/den);
 		);
 	);
-	result = vecsort(Vec(result));
+	result = vecsort(Vec(Set(result)));
 	return(result);
 }
 
@@ -189,9 +200,7 @@ binary_algo(fraction)={
 		summands = findDivisorsOf_k_addingup_n(Nk,p);
 		for(i=1, #summands, listput(result, 1/(Nk/summands[i]))),
 	/*else*/
-		s=1;
-		while(q*(s+1)<=p*Nk, s+=1);
-		r = (p*Nk)-(q*s);
+		[s,r] = divrem(p*Nk,q);
 		summands = findDivisorsOf_k_addingup_n(Nk,s);
 		for(i=1, #summands, listput(result, 1/(Nk/summands[i])));
 		summands = findDivisorsOf_k_addingup_n(q*Nk,r);
@@ -224,8 +233,11 @@ printEgypFrac(arguments)={
 test_main(fraction)={
 	local(res_greedy, res_farey, res_binary);
 	res_greedy = greedy_fast(fraction);
+	print("Greedy fast: ", fraction, " = ", printEgypFrac(res_greedy));
 	res_farey = FS(fraction);
+	print("FareySequence: ", fraction, " = ", printEgypFrac(res_farey));
 	res_binary = binary_algo(fraction);
+	print("Binary: ", fraction, " = ", printEgypFrac(res_binary));
 
 	print("\nAlgorithm \t\t\t#terms \t\tmaximum denominator\n---------\t\t\t------ \t\t-------------------");
 	print("Greedy Algorithm \t\t", #res_greedy, "\t\t", 1/res_greedy[#res_greedy]);
@@ -261,6 +273,25 @@ automatic_test_greedy(start,end)={
 }
 
 
+FS_automatic(fraction, fareyseries)={
+	local(adjacent, remainder, result, current_fraction);
+	result = List();
+	current_fraction = fraction;
+	while(1,
+		adjacent = findAdjacent(fareyseries, current_fraction);
+		remainder = 1/(denominator(current_fraction)*denominator(adjacent));
+		listput(result, remainder);
+		if(numerator(adjacent) == 1,
+			listput(result, adjacent);
+			result = reverse_vecsort(Vec(result));
+			/*print("Farey_Sequence: ", fraction, " = ", printEgypFrac(result));*/
+			return(result);
+		);
+		current_fraction = adjacent;
+	);
+	return(-1);
+}
+
 automatic_test_farey(start,end)={
 	local(t, result, LenDenom, Terms, Time);
 	LenDenom = List();
@@ -269,11 +300,12 @@ automatic_test_farey(start,end)={
 
 	write("results_farey.csv", "Nenner,AVG #Terms,MIN #Terms,MAX #Terms,MIN longest Denominator,MAX longest Denominator,Time");
 	for(denom=start,end,
+		fareysequenceOfDenom = FareySeries(denom);
 		if(denom%10==0, print(denom));
 		for(num=2, denom,
 			if(gcd(denom,num) == 1,
 				t = getabstime();
-				result = FS(num/denom);
+				result = FS_automatic(num/denom, fareysequenceOfDenom);
 				listput(Time, getabstime()-t);
 				listput(LenDenom, denominator(result[#result]));
 				listput(Terms, #result);
@@ -334,3 +366,11 @@ print("Available secondary functions:\n - Farey_Series(order)\n - largestUnitFra
 */
 print("Available Algorithms for Egyptian Fractions:\n - greedy(frac)\n - greedy_odd(frac)\n - greedy_even(frac)\n - greedy_fast(frac)\n - FS(frac): Farey-Sequence-Algorithm\n - binary_algo(fraction): Binary Algorithm");
 print("Please use \";\" after the commands since every algorithm produces a custom output.");
+
+/*****************************************************
+
+LAST EDITED:
+
+				2019/10/15; 10:19:09
+
+*****************************************************/
