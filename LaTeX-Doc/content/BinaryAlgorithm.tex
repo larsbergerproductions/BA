@@ -19,6 +19,18 @@ Seien $m, n \in \N$ und $N = 2^n$. Alle $m < N$ lassen sich als Summe paarweise 
 	\end{enumerate}
 \end{algorithm}
 
+\begin{satz}
+	Der Binäralgorithmus, wie in \ref{algo:binary} beschrieben, terminiert für jede Eingabe.
+\end{satz}
+
+\begin{bew}
+	Falls $q = N_k$, hat das Ergebnis offensichtlich maximal k Terme, da sich $N_k$ als Summe seiner $\log_2 N = k$ schreiben lässt; in der Summe sind die $d_i$ paarweise verschieden, somit auch die $\frac{N_k}{d_i}$ und es gibt keinen Term mehrfach.\\
+	Falls $q < N_k$, gilt
+	$$qs+r = p N_k < q N_k.$$
+	Somit gibt es eine Zerlegung in Ägyptische Brüche jeweils für s und r. Diese beiden Zerlegungen liefern für sich genommen nach dem Argument aus Fall ''$q = N_k$'' paarweise verschiedene Stammbrüche. Dass diese sogar zusammengenommen paarweise verschieden sind, folgt daraus, dass die zu s gehörenden Nenner immer Zweierpotenzen sind, die zu r gehörigen aber niemals.
+\end{bew}
+
+
 Sei $\frac{p}{q} \in \Q_+, \frac{p}{q} < 1$. Gong zeigte, dass 
 \todo[inline]{Komplexitätsabschätzung!}
 
