@@ -230,16 +230,16 @@ printEgypFrac(arguments)={
 }
 
 test_main(fraction)={
-	local(res_greedy, res_farey, res_binary);
-	res_greedy = greedy_fast(fraction);
-	print("Greedy fast: ", fraction, " = ", printEgypFrac(res_greedy));
+	local(res_greedy_fast, res_farey, res_binary);
+	res_greedy_fast = greedy_fast(fraction);
+	print("Greedy fast: ", fraction, " = ", printEgypFrac(res_greedy_fast));
 	res_farey = FS(fraction);
-	print("FareySequence: ", fraction, " = ", printEgypFrac(res_farey));
+	print("FareySequence (partial Fq): ", fraction, " = ", printEgypFrac(res_farey));
 	res_binary = binary_algo(fraction);
 	print("Binary: ", fraction, " = ", printEgypFrac(res_binary));
 
 	print("\nAlgorithm \t\t\t#terms \t\tmaximum denominator\n---------\t\t\t------ \t\t-------------------");
-	print("Greedy Algorithm \t\t", #res_greedy, "\t\t", 1/res_greedy[#res_greedy]);
+	print("Greedy Algorithm \t\t", #res_greedy, "\t\t", 1/res_greedy_fast[#res_greedy_fast]);
 	print("Farey-Sequence Algorithm \t", #res_farey, "\t\t", 1/res_farey[#res_farey]);
 	print("Binary Algorithm \t\t", #res_binary, "\t\t", 1/res_binary[#res_binary]);
 
@@ -333,7 +333,7 @@ automatic_test_fastfarey(start,end)={
 				listput(Terms, #result);
 			);
 		);
-		write("results_farey.csv", denom, ",", round(listsum(Terms)/#Terms), ",", listmin(Terms), ",", listmax(Terms), ",", listmin(LenDenom), ",", listmax(LenDenom),"," round(listsum(Time)/#Time));
+		write("results_fastfarey.csv", denom, ",", round(listsum(Terms)/#Terms), ",", listmin(Terms), ",", listmax(Terms), ",", listmin(LenDenom), ",", listmax(LenDenom),"," round(listsum(Time)/#Time));
 		LenDenom = List();
 		Terms = List();
 		Time = List();
