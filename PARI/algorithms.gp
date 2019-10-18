@@ -158,10 +158,8 @@ FS(fraction)={
 	result = List();
 	current_fraction = fraction;
 	while(1,
+/* old:	adjacent = findAdjacent(FareySeries(denominator(current_fraction)), current_fraction);	*/
 		adjacent = adjacentFrel(current_fraction);
-		/* OLD
-		adjacent = findAdjacent(FareySeries(denominator(current_fraction)), current_fraction);
-		*/
 		remainder = 1/(denominator(current_fraction)*denominator(adjacent));
 		listput(result, remainder);
 		if(numerator(adjacent) == 1,
@@ -252,7 +250,7 @@ automatic_test_greedy(start,end)={
 	Terms=List();
 	Time=List();
 
-	write("/home/lars/Programming/Bachelorarbeit/PARI/results_greedy.csv", "Nenner,AVG #Terms,MIN #Terms,MAX #Terms,MIN longest Denominator,MAX longest Denominator,Time");
+	write("/home/lars/Schreibtisch/results_greedy.csv", "Nenner,AVG #Terms,MIN #Terms,MAX #Terms,MIN longest Denominator,MAX longest Denominator,Time");
 	for(denom=start,end,
 		if(denom%10==0, print(denom));
 		for(num=2, denom,
@@ -264,7 +262,7 @@ automatic_test_greedy(start,end)={
 				listput(Terms, #result);
 			);
 		);
-		write("results_greedy.csv", denom, ",", round(listsum(Terms)/#Terms), ",", listmin(Terms), ",", listmax(Terms), ",", listmin(LenDenom), ",", listmax(LenDenom),"," round(listsum(Time)/#Time));
+		write("/home/lars/Schreibtisch/results_greedy.csv", denom, ",", round(listsum(Terms)/#Terms), ",", listmin(Terms), ",", listmax(Terms), ",", listmin(LenDenom), ",", listmax(LenDenom),"," round(listsum(Time)/#Time));
 		LenDenom = List();
 		Terms = List();
 		Time = List();
@@ -310,19 +308,19 @@ automatic_test_farey(start,end)={
 				listput(Terms, #result);
 			);
 		);
-		write("results_farey.csv", denom, ",", round(listsum(Terms)/#Terms), ",", listmin(Terms), ",", listmax(Terms), ",", listmin(LenDenom), ",", listmax(LenDenom),"," round(listsum(Time)/#Time));
+		write("/home/lars/Schreibtisch/results_farey.csv", denom, ",", round(listsum(Terms)/#Terms), ",", listmin(Terms), ",", listmax(Terms), ",", listmin(LenDenom), ",", listmax(LenDenom),"," round(listsum(Time)/#Time));
 		LenDenom = List();
 		Terms = List();
 		Time = List();
 	);
 }
 
-automatic_test_fastfarey(start,end)={
+automatic_test_fastfarey(start,end,path)={
 	local(result, LenDenom, Terms, Time);
 	LenDenom = List();
 	Terms=List();
 	Time=List();
-	write("results_fastfarey.csv", "Nenner,AVG #Terms,MIN #Terms,MAX #Terms,MIN longest Denominator,MAX longest Denominator,Time");
+	write(path, "Nenner,AVG #Terms,MIN #Terms,MAX #Terms,MIN longest Denominator,MAX longest Denominator,Time");
 	for(denom=start,end,
 		for(num=2,denom,
 			if(gcd(num,denom)==1,
@@ -333,12 +331,23 @@ automatic_test_fastfarey(start,end)={
 				listput(Terms, #result);
 			);
 		);
-		write("results_fastfarey.csv", denom, ",", round(listsum(Terms)/#Terms), ",", listmin(Terms), ",", listmax(Terms), ",", listmin(LenDenom), ",", listmax(LenDenom),"," round(listsum(Time)/#Time));
+		write(path, denom, ",", round(listsum(Terms)/#Terms), ",", listmin(Terms), ",", listmax(Terms), ",", listmin(LenDenom), ",", listmax(LenDenom),"," round(listsum(Time)/#Time));
 		LenDenom = List();
 		Terms = List();
 		Time = List();
 	);
 }
+/*fastfarey1()=automatic_test_fastfarey(3,1000,"/home/lars/Schreibtisch/fastfarey3-1000.csv");*/
+
+fastfarey1_stube()=automatic_test_fastfarey(7802,8000, "/home/lars/Programming/Bachelorarbeit/PARI/fastfarey7802-8000.csv");
+fastfarey2()=automatic_test_fastfarey(8001,8500, "/home/lars/Schreibtisch/fastfarey8001-8500.csv");
+fastfarey3()=automatic_test_fastfarey(8501,9000, "/home/lars/Schreibtisch/fastfarey8501-9000.csv");
+fastfarey4()=automatic_test_fastfarey(9001,9500, "/home/lars/Schreibtisch/fastfarey9001-9500.csv");
+fastfarey5()=automatic_test_fastfarey(9501,10000, "/home/lars/Schreibtisch/fastfarey9501-10000.csv");
+
+
+
+
 
 automatic_test_binary(start,end)={
 	local(t, result, LenDenom, Terms, Time);
@@ -346,7 +355,7 @@ automatic_test_binary(start,end)={
 	Terms=List();
 	Time=List();
 
-	write("/home/lars/Programming/Bachelorarbeit/PARI/results_binary.csv", "Nenner,AVG #Terms,MIN #Terms,MAX #Terms,MIN longest Denominator,MAX longest Denominator,Time");
+	write("/home/lars/Schreibtisch/results_binary.csv", "Nenner,AVG #Terms,MIN #Terms,MAX #Terms,MIN longest Denominator,MAX longest Denominator,Time");
 	for(denom=start,end,
 		if(denom%10==0, print(denom));
 		for(num=2, denom,
@@ -358,7 +367,7 @@ automatic_test_binary(start,end)={
 				listput(Terms, #result);
 			);
 		);
-		write("results_binary.csv", denom, ",", round(listsum(Terms)/#Terms), ",", listmin(Terms), ",", listmax(Terms), ",", listmin(LenDenom), ",", listmax(LenDenom),"," round(listsum(Time)/#Time));
+		write("/home/lars/Schreibtisch/results_binary.csv", denom, ",", round(listsum(Terms)/#Terms), ",", listmin(Terms), ",", listmax(Terms), ",", listmin(LenDenom), ",", listmax(LenDenom),"," round(listsum(Time)/#Time));
 		LenDenom = List();
 		Terms = List();
 		Time = List();
@@ -379,6 +388,6 @@ print("Please use \";\" after the commands since every algorithm produces a cust
 
 LAST EDITED:
 
-				2019/10/16; 23:08:01
+				2019/10/18; 15:31:00
 
 *****************************************************/
