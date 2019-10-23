@@ -1,7 +1,9 @@
 from matplotlib import pyplot as plt
+import matplotlib.ticker
 import csv
 import sys
 import json
+import numpy as np
 
 csv.field_size_limit(sys.maxsize)
 
@@ -16,6 +18,7 @@ def write_data_to_json():
 	farey_rows = []
 	binary_rows = []
 	
+	print("reading data...")
 	with open(greedy_file, 'r', newline='') as greedy_csv:
 		csvreader = csv.reader(greedy_csv, delimiter=',')
 		for row in csvreader:
@@ -54,25 +57,28 @@ def write_data_to_json():
 		}
 	}
 	
+	print("sorting data for:\ngreedy...")
 	for row in greedy_rows[1:]:
-		data["greedy"]["avgTerms"].append(row[1])
-		data["greedy"]["minTerms"].append(row[2])
-		data["greedy"]["maxTerms"].append(row[3])
-		data["greedy"]["minDenom"].append(row[4])
-		data["greedy"]["maxDenom"].append(row[5])
+		data["greedy"]["avgTerms"].append(int(row[1]))
+		data["greedy"]["minTerms"].append(int(row[2]))
+		data["greedy"]["maxTerms"].append(int(row[3]))
+		data["greedy"]["minDenom"].append(int(row[4]))
+		data["greedy"]["maxDenom"].append(int(row[5]))
+	print("farey...")
 	for row in farey_rows[1:]:
-		data["farey"]["avgTerms"].append(row[1])
-		data["farey"]["minTerms"].append(row[2])
-		data["farey"]["maxTerms"].append(row[3])
-		data["farey"]["minDenom"].append(row[4])
-		data["farey"]["maxDenom"].append(row[5])
+		data["farey"]["avgTerms"].append(int(row[1]))
+		data["farey"]["minTerms"].append(int(row[2]))
+		data["farey"]["maxTerms"].append(int(row[3]))
+		data["farey"]["minDenom"].append(int(row[4]))
+		data["farey"]["maxDenom"].append(int(row[5]))
+	print("binary...")
 	for row in binary_rows[1:]:
-		data["binary"]["avgTerms"].append(row[1])
-		data["binary"]["minTerms"].append(row[2])
-		data["binary"]["maxTerms"].append(row[3])
-		data["binary"]["minDenom"].append(row[4])
-		data["binary"]["maxDenom"].append(row[5])
-		
+		data["binary"]["avgTerms"].append(int(row[1]))
+		data["binary"]["minTerms"].append(int(row[2]))
+		data["binary"]["maxTerms"].append(int(row[3]))
+		data["binary"]["minDenom"].append(int(row[4]))
+		data["binary"]["maxDenom"].append(int(row[5]))
+	print("done, dumping .json file")
 	with open(data_json_file, 'w') as file:
 		json.dump(data, file)
 
@@ -83,81 +89,67 @@ def load_data_from_json():
 	return data
 
 
-def print_avg_terms(data, start, end, step, color_greedy="r", color_binary="g", color_farey="b", linestyle="-"):
-	print("plotting Average Number of Terms...", end="")
+consideration_dict={
+	"avgTerms": "Average Number of Terms",
+	"minTerms": "Minimum Number of Terms",
+	"maxTerms": "Maximum Number of Terms",
+	"minDenom": "Minimum of the largest Denominators",
+	"maxDenom": "Maximum of the largest Denominators"
+}
+
+
+def plot_to_file(whattoconsider, start=1, end=-1, step=1, color_greedy="r", color_binary="g", color_farey="b", linestyle=".", logscale=False):
+	print("plotting " + consideration_dict[whattoconsider] + "...", end="")
+	x = data["n"][start:end:step]
+	y1 = data["greedy"][whattoconsider][start:end:step]
+	y2 = data["farey"][whattoconsider][start:end:step]
+	y3 = data["binary"][whattoconsider][start:end:step]
 	plt.figure(figsize=(15, 10), dpi=500)
-	plt.plot(data["n"][start:end:step], data["greedy"]["avgTerms"][start:end:step], color_greedy + linestyle, data["binary"]["avgTerms"][start:end:step],
-			 color_binary + linestyle, data["farey"]["avgTerms"][start:end:step], color_farey + linestyle)
-	plt.yscale('linear')
-	plt.title("Average Number of Terms")
-	plt.savefig('plots/avgTerms.png')
+	# plt.plot(x, y1, color_greedy + linestyle, label="greedy")
+	plt.plot(x, y2, color_farey + linestyle, label="farey")
+	plt.plot(x, y3, color_binary + linestyle, label="binary")
+	if logscale:
+		plt.yscale("log")
+	plt.xlabel("n")
+	plt.ylabel(whattoconsider + "(n)")
+	plt.title(consideration_dict[whattoconsider])
+	plt.legend(loc="upper left")
+	plt.savefig('plots/' + whattoconsider + '.png')
 	print(" done.")
-
-
-def print_min_terms(data, start, end, step, color_greedy="r", color_binary="g", color_farey="b", linestyle="-"):
-	print("plotting Minimum Number of Terms...", end="")
-	plt.figure(figsize=(15, 10), dpi=500)
-	plt.plot(data["n"][start:end:step], data["greedy"]["minTerms"][start:end:step], color_greedy+linestyle, data["binary"]["minTerms"][start:end:step],
-	         color_binary+linestyle, data["farey"]["minTerms"][start:end:step], color_farey+linestyle)
-	plt.yscale('linear')
-	plt.title("Minimum Number of Terms")
-	plt.savefig('plots/minTerms.png')
-	print("done.")
-
-
-def print_max_terms(data, start, end, step, color_greedy="r", color_binary="g", color_farey="b", linestyle="-"):
-	print("plotting Maximum Number of Terms...", end="")
-	plt.figure(figsize=(15, 10), dpi=500)
-	plt.plot(data["n"][start:end:step], data["greedy"]["maxTerms"][start:end:step], color_greedy+linestyle, data["binary"]["maxTerms"][start:end:step],
-	         color_binary+linestyle, data["farey"]["maxTerms"][start:end:step], color_farey+linestyle)
-	plt.yscale('log')
-	plt.title("Maximum Number of Terms")
-	plt.savefig('plots/maxTerms.png')
-	print("done.")
-
-
-def print_min_denom(data, start, end, step, color_greedy="r", color_binary="g", color_farey="b", linestyle="-"):
-	print("plotting Minimum of Largest Denominator...", end="")
-	plt.figure(figsize=(15, 10), dpi=500)
-	plt.plot(data["n"][start:end:step], data["greedy"]["minDenom"][start:end:step], color_greedy+linestyle, data["binary"]["minDenom"][start:end:step],
-	         color_binary+linestyle, data["farey"]["minDenom"][start:end:step], color_farey+linestyle)
-	plt.yscale('linear')
-	plt.savefig('plots/minDenom.png')
-	print("done.")
-
-
-def print_max_denom(data, start, end, step, color_greedy="r", color_binary="g", color_farey="b", linestyle="-"):
-	print("plotting Maximum of Largest Denominator...", end="")
-	plt.figure(figsize=(15, 10), dpi=500)
-	plt.plot(data["n"][start:end:step], data["greedy"]["maxDenom"][start:end:step], color_greedy+linestyle, data["binary"]["maxDenom"][start:end:step],
-	         color_binary+linestyle, data["farey"]["maxDenom"][start:end:step], color_farey+linestyle)
-	plt.title("maxDenom")
-	plt.yscale("log")
-	plt.savefig('plots/maxDenom.png')
-	print("done.")
 
 
 # write_data_to_json()
 
 data = load_data_from_json()
 
+# norm greedy max numbers
+gmaxD = data["greedy"]["maxDenom"]
+for i in range(0,len(gmaxD)-1):
+	if gmaxD[i] > 1e250:
+		gmaxD[i] = 1e+250
+
+
+plot_to_file("maxDenom")
+
+
 start = 0
 end = -1
-step = 500
-my_linestyle = "."
-# print_avg_terms(data, start, end, step, linestyle=my_linestyle)
-# print_min_terms(data, start, end, step, linestyle=my_linestyle)
-# print_max_terms(data, start, end, step, linestyle=my_linestyle)
-# print_min_denom(data, start, end, step, linestyle=my_linestyle)
-# print_max_denom(data, start, end, step, linestyle=my_linestyle)
+step = 1
 
-plt.figure(figsize=(15, 10), dpi=200)
-# plt.axis(min(data["n"][start:end:step]), max(data["n"][start:end:step]), min(data["greedy"]["avgTerms"][start:end:step]), max(data["greedy"]["avgTerms"][start:end:step]))
-plt.plot(data["n"][start:end:step], data["binary"]["minDenom"][start:end:step], "b-")
-# plt.plot(data["greedy"]["maxDenom"][start:end:step], "r.")
-# plt.plot(data["farey"]["maxDenom"][start:end:step], "g.")
-# plt.ylim(1, 10^100)
-# plt.yscale("linear")
-# plt.yticks()
+
+what = "maxDenom"
+x = data["n"][start:end:step]
+y1 = data["greedy"][what][start:end:step]
+y2 = data["farey"][what][start:end:step]
+y3 = data["binary"][what][start:end:step]
+
+plt.plot(x, y1, "r.", label="greedy")
+plt.plot(x, y2, "b.", label="farey")
+plt.plot(x, y3, "g.", label="binary")
+
+plt.xlabel("n")
+plt.ylabel(what + "(n)")
+plt.title(consideration_dict[what])
+plt.legend()
+plt.yscale("log")
 plt.show()
-print(data["binary"]["minDenom"][start:end:1000])
