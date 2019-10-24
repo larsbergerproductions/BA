@@ -124,9 +124,10 @@ data = load_data_from_json()
 
 # norm greedy max numbers
 gmaxD = data["greedy"]["maxDenom"]
-for i in range(0,len(gmaxD)-1):
-	if gmaxD[i] > 1e250:
-		gmaxD[i] = 1e+250
+norm = 1e250                        # max 1e+261
+for i in range(0, len(gmaxD)-1):
+	if gmaxD[i] > norm:
+		gmaxD[i] = 'inf'
 
 
 plot_to_file("maxDenom")

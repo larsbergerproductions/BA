@@ -19,8 +19,12 @@ def is_power_of_two(n):
 
 
 data = load_data_from_json()
-
-for i in range(0, len(data["binary"]["minTerms"])-1):
-	if data["binary"]["minDenom"][i] % 2 == 1:
-		if data["binary"]["minDenom"][i] == data["farey"]["minDenom"][i]:
-			print(data["n"][i])
+reslist = []
+print(data["n"][0])
+currmax = data["greedy"]["maxTerms"][0]
+for i in range(0, len(data["greedy"]["maxDenom"])-1):
+	if data["greedy"]["maxDenom"][i] < currmax:
+		currmax = data["greedy"]["maxDenom"][i]
+		# print("reset with " + str(currmax))
+		print(data["n"][i])
+print(currmax)
