@@ -104,7 +104,7 @@ def plot_to_file(whattoconsider, start=1, end=-1, step=1, color_greedy="r", colo
 	y1 = data["greedy"][whattoconsider][start:end:step]
 	y2 = data["farey"][whattoconsider][start:end:step]
 	y3 = data["binary"][whattoconsider][start:end:step]
-	plt.figure(figsize=(15, 10), dpi=500)
+	plt.figure(figsize=(15, 10), dpi=300)
 	# plt.plot(x, y1, color_greedy + linestyle, label="greedy")
 	plt.plot(x, y2, color_farey + linestyle, label="farey")
 	plt.plot(x, y3, color_binary + linestyle, label="binary")
@@ -130,7 +130,7 @@ for i in range(0, len(gmaxD)-1):
 		gmaxD[i] = 'inf'
 
 
-plot_to_file("maxDenom")
+# plot_to_file("maxDenom")
 
 
 start = 0

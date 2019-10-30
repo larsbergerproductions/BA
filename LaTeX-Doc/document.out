@@ -9,29 +9,30 @@
 \BOOKMARK [2][-]{subsection.23}{2.3 Ermittlung \304gyptischer Zerlegungen von Br\374chen}{section.10}% 9
 \BOOKMARK [1][-]{section.25}{3 Algorithmen zur Erstellung \304gyptischer Br\374che}{}% 10
 \BOOKMARK [2][-]{subsection.27}{3.1 Der Greedy-Algorithmus}{section.25}% 11
-\BOOKMARK [2][-]{subsection.36}{3.2 Der Farey-Folgen-Algorithmus}{section.25}% 12
-\BOOKMARK [2][-]{subsection.47}{3.3 Bin\344ralgorithmus}{section.25}% 13
-\BOOKMARK [2][-]{subsection.58}{3.4 Beispielrechnungen}{section.25}% 14
-\BOOKMARK [2][-]{subsection.75}{3.5 Fazit und Vergleich}{section.25}% 15
-\BOOKMARK [1][-]{section.77}{4 Auswertung einiger Testreihen}{}% 16
-\BOOKMARK [2][-]{subsection.78}{4.1 Methodik}{section.77}% 17
-\BOOKMARK [2][-]{subsection.79}{4.2 Anf\344ngliche Probleme und Effizienzsteigerung w\344hrend der Implementierung}{section.77}% 18
-\BOOKMARK [2][-]{subsection.82}{4.3 Auswertung der Daten}{section.77}% 19
-\BOOKMARK [3][-]{subsubsection.83}{4.3.1 Laufzeiten}{subsection.82}% 20
-\BOOKMARK [3][-]{subsubsection.85}{4.3.2 Durchschnittliche Anzahl der Terme}{subsection.82}% 21
-\BOOKMARK [3][-]{subsubsection.87}{4.3.3 Minimale Anzahl der Terme}{subsection.82}% 22
-\BOOKMARK [3][-]{subsubsection.89}{4.3.4 Maximale Anzahl der Terme}{subsection.82}% 23
-\BOOKMARK [3][-]{subsubsection.92}{4.3.5 Minimum der gr\366\337ten Nenner}{subsection.82}% 24
-\BOOKMARK [3][-]{subsubsection.94}{4.3.6 Maximum der gr\366\337ten Nenner}{subsection.82}% 25
-\BOOKMARK [3][-]{subsubsection.96}{4.3.7 Zusammenhang innerhalb des Binary-Algorithmus}{subsection.82}% 26
-\BOOKMARK [2][-]{subsection.97}{4.4 Zusammenfassung}{section.77}% 27
-\BOOKMARK [1][-]{section.98}{5 Theoretische Grenzen}{}% 28
-\BOOKMARK [2][-]{subsection.99}{5.1 Theoretische Grenzen f\374r 2n}{section.98}% 29
-\BOOKMARK [1][-]{section.100}{6 Anhang}{}% 30
-\BOOKMARK [2][-]{subsection.101}{6.1 Hilfsfunktionen}{section.100}% 31
-\BOOKMARK [2][-]{subsection.213}{6.2 PARI/GP Code f\374r den Greedy-Algorithmus}{section.100}% 32
-\BOOKMARK [3][-]{subsubsection.249}{6.2.1 Optimierter Greedy-Algorithmus}{subsection.213}% 33
-\BOOKMARK [2][-]{subsection.299}{6.3 PARI/GP Code f\374r den Farey-Folgen-Algorithmus}{section.100}% 34
-\BOOKMARK [2][-]{subsection.320}{6.4 PARI/GP Code f\374r den Bin\344ralgorithmus}{section.100}% 35
-\BOOKMARK [1][-]{section*.342}{Literaturverzeichnis}{}% 36
-\BOOKMARK [1][-]{section*.343}{Eidesstattliche Erkl\344rung}{}% 37
+\BOOKMARK [2][-]{subsection.37}{3.2 Der Farey-Folgen-Algorithmus}{section.25}% 12
+\BOOKMARK [2][-]{subsection.48}{3.3 Bin\344ralgorithmus}{section.25}% 13
+\BOOKMARK [2][-]{subsection.59}{3.4 Beispielrechnungen}{section.25}% 14
+\BOOKMARK [2][-]{subsection.76}{3.5 Fazit und Vergleich}{section.25}% 15
+\BOOKMARK [1][-]{section.78}{4 Auswertung einiger Testreihen}{}% 16
+\BOOKMARK [2][-]{subsection.79}{4.1 Methodik}{section.78}% 17
+\BOOKMARK [2][-]{subsection.80}{4.2 Anf\344ngliche Probleme und Effizienzsteigerung w\344hrend der Implementierung}{section.78}% 18
+\BOOKMARK [2][-]{subsection.83}{4.3 Auswertung der Daten}{section.78}% 19
+\BOOKMARK [3][-]{subsubsection.84}{4.3.1 Laufzeiten}{subsection.83}% 20
+\BOOKMARK [3][-]{subsubsection.86}{4.3.2 Durchschnittliche Anzahl der Terme}{subsection.83}% 21
+\BOOKMARK [3][-]{subsubsection.87}{4.3.3 Minimale Anzahl der Terme}{subsection.83}% 22
+\BOOKMARK [3][-]{subsubsection.88}{4.3.4 Maximale Anzahl der Terme}{subsection.83}% 23
+\BOOKMARK [3][-]{subsubsection.90}{4.3.5 Minimum der gr\366\337ten Nenner}{subsection.83}% 24
+\BOOKMARK [3][-]{subsubsection.91}{4.3.6 Maximum der gr\366\337ten Nenner}{subsection.83}% 25
+\BOOKMARK [3][-]{subsubsection.92}{4.3.7 Zusammenhang innerhalb des Binary-Algorithmus}{subsection.83}% 26
+\BOOKMARK [3][-]{subsubsection.93}{4.3.8 Vergleich mit Erwartungswerten}{subsection.83}% 27
+\BOOKMARK [2][-]{subsection.94}{4.4 Zusammenfassung}{section.78}% 28
+\BOOKMARK [1][-]{section.95}{5 Theoretische Grenzen}{}% 29
+\BOOKMARK [2][-]{subsection.96}{5.1 Theoretische Grenzen f\374r 2n}{section.95}% 30
+\BOOKMARK [1][-]{section.98}{6 Anhang}{}% 31
+\BOOKMARK [2][-]{subsection.99}{6.1 Hilfsfunktionen}{section.98}% 32
+\BOOKMARK [2][-]{subsection.211}{6.2 PARI/GP Code f\374r den Greedy-Algorithmus}{section.98}% 33
+\BOOKMARK [3][-]{subsubsection.247}{6.2.1 Optimierter Greedy-Algorithmus}{subsection.211}% 34
+\BOOKMARK [2][-]{subsection.297}{6.3 PARI/GP Code f\374r den Farey-Folgen-Algorithmus}{section.98}% 35
+\BOOKMARK [2][-]{subsection.318}{6.4 PARI/GP Code f\374r den Bin\344ralgorithmus}{section.98}% 36
+\BOOKMARK [1][-]{section*.340}{Literaturverzeichnis}{}% 37
+\BOOKMARK [1][-]{section*.341}{Eidesstattliche Erkl\344rung}{}% 38

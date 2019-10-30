@@ -1,5 +1,21 @@
-\section{Theoretische Grenzen}
-Nachdem untersucht wurde, was in der Praxis mit ausgewählten Methoden erreicht werden kann, soll nun das Licht auf einen weiteren sehr interessanten Aspekt Ägyptischer Brüche gelenkt werden, nämlich den Dingen, die theoretische Grenzen haben. \emph{Bemühungen Vieler, Grenzen für bestimmte Fälle zu finden => Quellen auslutschen}.
+\section{Theoretische Grenzen}\label{sec:theorie}
+Nachdem untersucht wurde, was in der Praxis mit ausgewählten Methoden erreicht werden kann, soll nun das Licht auf einen weiteren sehr interessanten Aspekt Ägyptischer Brüche gelenkt werden, nämlich den Dingen, die theoretische Grenzen haben. \emph{Bemühungen Vieler, Grenzen für bestimmte Fälle zu finden}.
 
-\subsection{Theoretische Grenzen für $\frac{2}{n}$}
-$$\frac{2}{n} = \uf{\lceil \frac{n}{2} \rceil} + \uf{n \cdot \lceil \frac{n}{2} \rceil}$$
+\subsection{Theoretische Grenzen für $\frac{2}{n}$}\label{subsec:two/n}
+\begin{satz}\label{satz:two/n}
+	Sei $n \in \N$ ungerade. $\frac{2}{n}$ lässt sich für jedes $n$ als Summe zweier Stammbrüche notieren, nämlich:
+	$$\frac{2}{n} = \uf{\lceil \frac{n}{2} \rceil} + \uf{n \cdot \lceil \frac{n}{2} \rceil}.$$
+\end{satz}
+\begin{bew}
+	Sei $m \in \N$ so gewählt, dass $n=2m+1$. Es folgt:
+	\begin{eqnarray*}
+		\uf{\lceil \frac{n}{2} \rceil} + \uf{n \cdot \lceil \frac{n}{2} \rceil} & = & \uf{m+1} + \uf{(2m+1)(m+1)}\\
+		& = & \frac{2m+1}{(2m+1)(m+1)} + \frac{1}{(2m+1)(m+1)}\\
+		& = & \frac{2m+2}{(2m+1)(m+1)}\\
+		& = & \frac{2(m+1)}{(2m+1)(m+1)}\\
+		& = & \frac{2}{2m+1}\\
+		& = & \frac{2}{n}.
+	\end{eqnarray*}
+\end{bew}
+
+Da der Term $\uf{\lceil \frac{n}{2} \rceil}$ genau dem größten Stammbruch entspricht, der kleiner als $\frac{2}{n}$ ist, liefert der Greedy-Algorithmus hier für alle $\frac{2}{n}$ das gleiche Ergebnis wie die Rechenvorschrift aus \ref{satz:two/n}

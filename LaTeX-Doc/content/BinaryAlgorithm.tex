@@ -9,7 +9,7 @@ Seien $m, n \in \N$ und $N = 2^n$. Alle $m < N$ lassen sich als Summe paarweise 
 		\item Finde $N_{k-1} < q \leq N_k$ wobei $N_k=2^k$ ist.
 		\item Falls $q = N_k$, schreibe $p$ als Summe von Teilern von $N_k$, hier $d_i$ genannt:
 		$$\frac{p}{q} = \sum_{i=1}^{j} \frac{d_i}{N_k}=  \sum_{i = 1}^{j}\frac{1}{\frac{N_k}{d_i}}$$
-		\item Sonst seien $s, r \in \N, 0 < r < N_k$ so gewählt, dass:
+		\item Sonst seien $s, r \in \N, 0 \leq r < q$ so gewählt, dass:
 		$$pN_k = qs+r.$$
 		Es folgt:
 		$$\frac{p}{q} = \frac{p N_k}{q N_k} = \frac{qs + r}{q N_k} = \frac{s}{N_k} + \frac{r}{q N_k}$$.
@@ -24,15 +24,14 @@ Seien $m, n \in \N$ und $N = 2^n$. Alle $m < N$ lassen sich als Summe paarweise 
 \end{satz}
 
 \begin{bew}
-	Falls $q = N_k$, hat das Ergebnis offensichtlich maximal k Terme, da sich $N_k$ als Summe seiner $\log_2 N = k$ schreiben lässt; in der Summe sind die $d_i$ paarweise verschieden, somit auch die $\frac{N_k}{d_i}$ und es gibt keinen Term mehrfach.\\
+	Falls $q = N_k$, hat das Ergebnis offensichtlich maximal $k$ Terme, da sich $N_k$ als Summe seiner $\log_2 N = k$ Terme schreiben lässt; in der Summe sind die $d_i$ paarweise verschieden, somit auch die $\frac{N_k}{d_i}$ und es gibt keinen Term mehrfach.\\
 	Falls $q < N_k$, gilt
 	$$qs+r = p N_k < q N_k.$$
 	Somit gibt es eine Zerlegung in Ägyptische Brüche jeweils für s und r. Diese beiden Zerlegungen liefern für sich genommen nach dem Argument aus Fall ''$q = N_k$'' paarweise verschiedene Stammbrüche. Dass diese sogar zusammengenommen paarweise verschieden sind, folgt daraus, dass die zu s gehörenden Nenner immer Zweierpotenzen sind, die zu r gehörigen aber niemals.
 \end{bew}
 
 
-Sei $\frac{p}{q} \in \Q_+, \frac{p}{q} < 1$. Gong zeigte, dass 
-\todo[inline]{Komplexitätsabschätzung!}
+\paragraph{Abschätzung}Sei $\frac{p}{q} \in \Q_+, \frac{p}{q} < 1$. Gong zeigte, dass die Komplexitätsklasse für die Anzahl der Terme $O(\log n)$ ist und der maximale Nenner des erzeugten Ägyptischen Bruchs durch $q^2$ beschränkt ist. \cite[S. 12]{Gong1992}
 
 Da es für diesen Algorithmus zwei Fälle gibt, soll für jeden Fall ein Beispiel gezeigt werden. Dafür beginnen wir mit dem einfachen Fall.
 

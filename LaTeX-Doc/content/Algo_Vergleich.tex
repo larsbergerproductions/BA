@@ -1,7 +1,8 @@
 \subsection{Fazit und Vergleich}
 Wie in den vorangegangenen Beispielen zu sehen, liefern verschiedene Methoden z.T. stark voneinander abweichende Ergebnisse. Wie optimal zwei Ergebnisse im Vergleich zueinander sind, wird oft in den Maßeinheiten der oberen Schranken der ''Länge des größten Nenners'' \bzw der ''Anzahl der Summanden'' angegeben. Sei $\frac{p}{q} \in \Q_+$ der untersuchte Bruch. In Tabelle \ref{table:Algo_Vergleich} sind die entsprechenden Werte zum Vergleich aufgelistet.\cite[S. 343]{Bleicher1972}
 
-\begin{table}[p]
+\vspace{0.5cm}
+\begin{table}[H]
 	\centering
 	\begin{tabular}{|Sc | Sc | Sc|}
 		\hline
@@ -11,7 +12,7 @@ Wie in den vorangegangenen Beispielen zu sehen, liefern verschiedene Methoden z.
 		\hline
 		Farey-Folgen-Algorithmus & $p$ & $q(q-1)$\\
 		\hline
-		Binäralgorithmus & $\log q$ & $q^2$\\
+		Binäralgorithmus & $O(\log q)$ & $q^2$\\
 		\hline
 	\end{tabular}
 	\caption{Vergleich der beschriebenen Algorithmen (obere Schranken)}

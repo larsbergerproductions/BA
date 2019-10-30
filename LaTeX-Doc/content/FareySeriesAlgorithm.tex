@@ -30,6 +30,8 @@ Der Algorithmus funktioniert dann wie folgt.
 	Sonst wird der Algorithmus für $\frac{r}{s}$ in $F_s$ wiederholt. Es gilt $s<q$, da kein Nenner in $F_q$ größer als $q$ ist und zwei beliebige Brüche mit demselben Nenner niemals adjazent zueinander sind. Somit wird nach endlich vielen Schritten $r=0$ erreicht. Da in jeder Farey-Folge der einzige Bruch mit Zähler Null $\frac{0}{1}$ ist, ist dies der Abbruchfall.
 \end{bew}
 
+\paragraph{Abschätzung}Sei $\frac{p}{q} \in \Q_+$ der zu zerlegende Bruch. Der Farey-Folgen-Algorithmus liefert dafür eine Zerlegung mit maximal $p$ Termen und einem größten Nenner von höchstens $q(q-1)$. \cite[S.343]{Bleicher1972}
+
 Da die Farey-Folge $F_q$ schon für mäßig große $q$ sehr groß wird, bietet sich für das tatsächliche Berechnen eine Optimierung an, indem nur der relevante Teil der Farey-Folge konstruiert wird. Anwendung findet dabei das Bisektionsverfahren.
 \begin{def1}\label{def:mediant}
 	Die im Folgenden verwendete Mediante zweier rationaler Brüche $\frac{a}{b}, \frac{c}{d} \in \Q_+$ $mediant: \Q_+ \times \Q_+ \rightarrow \Q_+$ sei definiert als:
@@ -41,5 +43,3 @@ Da die Farey-Folge $F_q$ schon für mäßig große $q$ sehr groß wird, bietet s
 	Weil für die Adjazenzberechnung von $\frac{p}{q}$ nur die unmittelbare Umgebung nötig ist, fallen alle Brüche, die größer als der größere der zu $\frac{p}{q}$ adjazenten Brüche sind, aus der gekürzten Farey-Folge heraus; im Beispiel betrifft dies $\uf{1}$.
 	Somit enthält die gekürzte Farey-Folge nur noch 12 der andererseits 173 zu berechnenden Elemente von $F_{23}$.
 \end{bsp}
-
-\todo[inline]{Beispielrechnung}
