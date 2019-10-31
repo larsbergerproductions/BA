@@ -3,6 +3,7 @@ listmin(list) = {local(minimum); minimum=list[1]; for(i=1,#list,if(list[i]<minim
 listmax(list) = {local(maximum); maximum=list[1]; for(i=1,#list,if(list[i]>maximum, maximum = list[i])); return(maximum)}
 
 fibonacci_sylvester(fraction, stepsize, start)={
+	/*candidate: current candidate, result: list with resulting unit fractions*/
 	local(candidate, result);
 	result=List();
 	candidate = start;
@@ -25,10 +26,10 @@ fibonacci_sylvester(fraction, stepsize, start)={
 		while (1/candidate > fraction - listsum(result),
 			candidate += stepsize;
 		);
-		/*print("adding ", 1/candidate);*/
+		print("adding ", 1/candidate);
 		listput(result, 1/candidate);
 	);
-	/*print("Greedy: ", fraction, " = ", printEgypFrac(result));*/
+	print("Greedy: ", fraction, " = ", printEgypFrac(result));
 	return(Vec(result));
 }
 
@@ -82,7 +83,7 @@ greedy_fast(fraction)={
 	while (listsum(result) < fraction,
 		listput(result, largestUnitFractionLEQ(fraction-listsum(result)));
 	);
-	/*print("Greedy fast: ", fraction, " = ", printEgypFrac(result));*/
+	print("Greedy fast:\t", fraction, " = ", printEgypFrac(result));
 	return(Vec(result));
 }
 
@@ -116,6 +117,7 @@ FareySeries(order)={
 }
 
 findAdjacent(Fs, fraction)={
+	/*lb: lower bound, ub: upper bound, index: index of currently examiined fraction in Fq*/
 	local(lb,ub,index);
 	if(fraction == Fs[#Fs],
 		return(Fs[#Fs-1]);
@@ -138,6 +140,7 @@ findAdjacent(Fs, fraction)={
 mediant(frac1, frac2)={return((numerator(frac1)+numerator(frac2))/(denominator(frac1)+denominator(frac2)));}
 
 adjacentFrel(fract)={
+	/*lb: lower bound, ub: upper bound, med: mediant fraction of ub and lb*/
 	local(lb,ub,med);
 	if(fract <= 0/1 || fract >= 1/1, return(0/1););
 	lb=0/1;
@@ -154,18 +157,19 @@ adjacentFrel(fract)={
 }
 
 FS(fraction)={
+	/*adjacent: the adjacent fraction to current_fraction, remainder: 1/qs */
 	local(adjacent, remainder, result, current_fraction);
 	result = List();
 	current_fraction = fraction;
 	while(1,
-/* old:	adjacent = findAdjacent(FareySeries(denominator(current_fraction)), current_fraction);	*/
+		/*old: adjacent = findAdjacent(FareySeries(denominator(current_fraction)), current_fraction);*/
 		adjacent = adjacentFrel(current_fraction);
 		remainder = 1/(denominator(current_fraction)*denominator(adjacent));
 		listput(result, remainder);
 		if(numerator(adjacent) == 1,
 			listput(result, adjacent);
 			result = reverse_vecsort(Vec(result));
-			/*print("Farey_Sequence: ", fraction, " = ", printEgypFrac(result));*/
+			print("Farey_Sequence:\t", fraction, " = ", printEgypFrac(result));
 			return(result);
 		);
 		current_fraction = adjacent;
@@ -187,6 +191,7 @@ findDivisorsOf_k_addingup_n(k,n)={
 }
 
 binary_algo(fraction)={
+	/*summands: the divisors of Nk which add up to p or s, r respectively*/
 	local(p,q,r,s,Nk,summands,result);
 	result = List();
 	p = numerator(fraction);
@@ -203,7 +208,7 @@ binary_algo(fraction)={
 		summands = findDivisorsOf_k_addingup_n(Nk,r);
 		for(i=1, #summands, listput(result, 1/((q*Nk)/summands[i])));
 	);
-	/*print("Binary: ", fraction, " = ", printEgypFrac(result));*/
+	/*print("Binary:\t\t", fraction, " = ", printEgypFrac(result));*/
 	return(reverse_vecsort(Vec(result)));
 }
 
@@ -230,11 +235,8 @@ printEgypFrac(arguments)={
 test_main(fraction)={
 	local(res_greedy_fast, res_farey, res_binary);
 	res_greedy_fast = greedy_fast(fraction);
-	print("Greedy fast: ", fraction, " = ", printEgypFrac(res_greedy_fast));
 	res_farey = FS(fraction);
-	print("FareySequence (partial Fq): ", fraction, " = ", printEgypFrac(res_farey));
 	res_binary = binary_algo(fraction);
-	print("Binary: ", fraction, " = ", printEgypFrac(res_binary));
 
 	print("\nAlgorithm \t\t\t#terms \t\tmaximum denominator\n---------\t\t\t------ \t\t-------------------");
 	print("Greedy Algorithm \t\t", #res_greedy, "\t\t", 1/res_greedy_fast[#res_greedy_fast]);
@@ -346,9 +348,6 @@ fastfarey4()=automatic_test_fastfarey(9001,9500, "/home/lars/Schreibtisch/fastfa
 fastfarey5()=automatic_test_fastfarey(9501,10000, "/home/lars/Schreibtisch/fastfarey9501-10000.csv");
 
 
-
-
-
 automatic_test_binary(start,end)={
 	local(t, result, LenDenom, Terms, Time);
 	LenDenom = List();
@@ -374,6 +373,20 @@ automatic_test_binary(start,end)={
 	);
 }
 
+test_binary_corr(start,end)={
+	local(den,res);
+	den=start;
+	while(den<=end,
+		for(num=1,den-1,
+			if(gcd(num,den)==1,
+				res = binary_algo(num/den);
+				if(den*2==denominator(res[#res]), print("works for: ", num/den));
+			);
+		);
+	den++;
+	);
+}
+
 /* show timer for each calculation */
 #
 print("\n\n\n#########################\n#    Script provided    #\n#           by          #\n#    Lt. Lars Berger    #\n#    Universität der    #\n#   Bundeswehr München  #\n#########################\n\n")
@@ -388,6 +401,6 @@ print("Please use \";\" after the commands since every algorithm produces a cust
 
 LAST EDITED:
 
-				2019/10/18; 15:31:00
+				2019/10/31; 09:15:00
 
 *****************************************************/

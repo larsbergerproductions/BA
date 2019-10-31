@@ -1,7 +1,7 @@
 \section{Theoretische Grenzen}\label{sec:theorie}
-Nachdem untersucht wurde, was in der Praxis mit ausgewählten Methoden erreicht werden kann, soll nun das Licht auf einen weiteren sehr interessanten Aspekt Ägyptischer Brüche gelenkt werden, nämlich den Dingen, die theoretische Grenzen haben. \emph{Bemühungen Vieler, Grenzen für bestimmte Fälle zu finden}.
+Nachdem untersucht wurde, was in der Praxis mit ausgewählten Methoden erreicht werden kann, soll nun das Licht auf einen weiteren sehr interessanten Aspekt Ägyptischer Brüche gelenkt werden, nämlich den Dingen, die theoretische Grenzen haben. Vor Allem im 20. Jahrhundert wurde von zahlreichen Mathematikern an dem Problem, solche theoretischen Grenzen zu finden und zu beweisen, gearbeitet, unter ihnen Bleicher, Erdös, Graham und andere \cite[S.87 ff]{Guy1981}.
 
-\subsection{Theoretische Grenzen für $\frac{2}{n}$}\label{subsec:two/n}
+\subsection{Maximal benötigte Anzahl der Stammbrüche}
 \begin{satz}\label{satz:two/n}
 	Sei $n \in \N$ ungerade. $\frac{2}{n}$ lässt sich für jedes $n$ als Summe zweier Stammbrüche notieren, nämlich:
 	$$\frac{2}{n} = \uf{\lceil \frac{n}{2} \rceil} + \uf{n \cdot \lceil \frac{n}{2} \rceil}.$$
@@ -18,4 +18,14 @@ Nachdem untersucht wurde, was in der Praxis mit ausgewählten Methoden erreicht 
 	\end{eqnarray*}
 \end{bew}
 
-Da der Term $\uf{\lceil \frac{n}{2} \rceil}$ genau dem größten Stammbruch entspricht, der kleiner als $\frac{2}{n}$ ist, liefert der Greedy-Algorithmus hier für alle $\frac{2}{n}$ das gleiche Ergebnis wie die Rechenvorschrift aus \ref{satz:two/n}
+Da der Term $\uf{\lceil \frac{n}{2} \rceil}$ genau dem größten Stammbruch entspricht, der kleiner als $\frac{2}{n}$ ist, liefert der Greedy-Algorithmus hier für alle $\frac{2}{n}$ das gleiche Ergebnis wie die Rechenvorschrift aus Satz \ref{satz:two/n}. Damit lässt sich auch sofort eine weiterer Satz aufstellen, diesmal für $\frac{3}{n}$.
+
+\begin{satz}
+	Für jedes beliebige $n \in \N$ lässt sich $\frac{3}{n}$ als Summe von höchstens 3 Stammbrüchen schreiben.
+\end{satz}
+\begin{bew}
+	Es gilt
+	$$\frac{3}{n} = \uf{n} + \frac{2}{n}.$$
+	Falls $n$ gerade ist, reichen sogar nur zwei Stammbrüche, denn dann kann $\frac{2}{n} = \uf{\frac{n}{2}}$ geschrieben werden; anderenfalls wird $\frac{2}{n}$ wie nach Satz \ref{satz:two/n} zerlegt und es ergeben sich genau drei Stammbrüche:
+	$$\frac{3}{n} = \uf{n} + \uf{\lceil \frac{n}{2} \rceil} + \uf{n \cdot \lceil \frac{n}{2} \rceil}.$$
+\end{bew}

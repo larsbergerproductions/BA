@@ -1,6 +1,7 @@
 \section{Auswertung einiger Testreihen}\label{sec:Testreihen}
 Zur effizienten Untersuchung und Rechnung zahlreicher Beispiele wurden die in Kapitel \ref{sec:algorithmen} aufgezeigten Algorithmen in PARI/GP umgesetzt. (\cite{PARI2018})\\
 Alle Beispiele wurden dabei ausschließlich mit dem in Abschnitt \ref{sec:code} gelisteten Programmcode \bzw mithilfe der darin aufgerufenen, nativ in PARI/GP enthaltenen Funktionen gerechnet.
+Visualisierungen wurden mit \emph{pyplot} aus dem \emph{matplotlib 3.1.1}-Paket für Python 3.7 erstellt. Es sei darauf hingewiesen, dass einige der folgenden Grafiken mit logarithmischer, andere mit linearer Skala dargestellt wurden.
 
 \subsection{Methodik}
 Zur Testung der genannten Algorithmen wurde die folgende Methodik umgesetzt.
@@ -52,12 +53,13 @@ Anhand der Graphen wird das logarithmische Wachstum der Werte erkenntlich. Dabei
 \ifthenelse{\boolean{printGraphics}}{
 \begin{figure}[H]
 	\label{img:avgTerms}
+	\caption{Durchschnittliche Anzahl der Terme in Abhängigkeit von $n$}
 	\includegraphics[width=\textwidth]{images/avgTerms.png}
 \end{figure}
 }{}
 
 \subsubsection{Minimale Anzahl der Terme}
-Bezüglich der minimalen Anzahl der produzierten Terme liefert der Greedy-Algorithmus für alle $n$ den gleichen Wert $minTerms_{greedy}(n) = 2$, was jeweils am Ergebnis des Bruchs $\frac{2}{n}$, liegt, welches immer 2 Summanden hat, da der Greedy-Algorithmus jeweils nach der Rechenvorschrift aus \ref{subsec:two/n} vorgeht. Der Farey-Folgen-Algorithmus liefert ständig zwischen $2$ und $3$ alternierende Werte, wobei $n=6$ eine Ausnahme liefert mit $minTerms_{farey}(6) = 5$, da aufgrund der vielen Kürzungen im Datensatz für $n=6$ nur $\frac{5}{6}$ betrachtet wird, welcher in der Farey-Zerlegung 5 Terme benötigt. Beim Binär-Algorithmus erreichen die meisten Tests ein Minimum von 2 Termen pro Datensatz, in ca. $0,7\%$ der Fälle liegt das Minimum jedoch bei 3 Termen. Ein besonderer Zusammenhang zwischen solchen Datensätzen wurde nicht gefunden.
+Bezüglich der minimalen Anzahl der produzierten Terme liefert der Greedy-Algorithmus für alle $n$ den gleichen Wert $minTerms_{greedy}(n) = 2$, was jeweils am Ergebnis des Bruchs $\frac{2}{n}$, liegt, welches immer 2 Summanden hat, da der Greedy-Algorithmus jeweils nach der Rechenvorschrift aus Abschnitt \ref{subsec:two/n} vorgeht. Der Farey-Folgen-Algorithmus liefert ständig zwischen $2$ und $3$ alternierende Werte, wobei $n=6$ eine Ausnahme liefert mit $minTerms_{farey}(6) = 5$, da aufgrund der vielen Kürzungen im Datensatz für $n=6$ nur $\frac{5}{6}$ betrachtet wird, welcher in der Farey-Zerlegung 5 Terme benötigt. Beim Binär-Algorithmus erreichen die meisten Tests ein Minimum von 2 Termen pro Datensatz, in ca. $0,7\%$ der Fälle liegt das Minimum jedoch bei 3 Termen. Ein besonderer Zusammenhang zwischen solchen Datensätzen wurde nicht gefunden.
 
 %\ifthenelse{\boolean{printGraphics}}{
 %\begin{figure}[H]
@@ -74,6 +76,7 @@ für \todo{finde Erklärung}alle getesteten Datensätze.
 \ifthenelse{\boolean{printGraphics}}{
 \begin{figure}[H]
 	\label{img:maxTerms}
+	\caption{Maximale Anzahl der Terme im Datensatz für jedes $n$}
 	\includegraphics[width=\textwidth]{images/maxTerms.png}
 \end{figure}
 }{}
@@ -84,18 +87,20 @@ In dieser Hinsicht zeichnet sich ein besonders interessantes Bild ab. Alle Algor
 \ifthenelse{\boolean{printGraphics}}{
 \begin{figure}[H]
 	\label{img:minDenom}
+	\caption{Minimum des größten Nenners im Datensatz für jedes $n$}
 	\includegraphics[width=\textwidth]{images/minDenom.png}
 \end{figure}
 }{}
 
 
 \subsubsection{Maximum der größten Nenner}
-Dieses Kriterium ist jenes, in welchem sich die Algorithmen wohl am stärksten voneinander unterscheiden. Während sich die Werte von Binär- und Farey-Folgen-Algorithmus unter $10^{19}$ halten, streuen sich die Werte des Greedy-Algorithmus von $maxDenom_{greed}(3) = 2$ bis zu einem Maximum von $maxDenom_{greedy}(4967) \approx 7,3378 \times 10^{225.516}$ ohne jegliche erkennbare Regelmäßigkeit. \emph{binary \& farey relativ regelmäßig (Vgl. quadratisch o.ä.?)}
+Dieses Kriterium ist jenes, in welchem sich die Algorithmen wohl am stärksten voneinander unterscheiden. Während sich die Werte von Binär- und Farey-Folgen-Algorithmus unter $10^{19}$ halten, streuen sich die Werte des Greedy-Algorithmus von $maxDenom_{greed}(3) = 2$ bis zu einem Maximum von $maxDenom_{greedy}(4967) \approx 7,3378 \times 10^{225.516}$ ohne jegliche erkennbare Regelmäßigkeit. In Abbildung \ref{img:maxDenom} musste auf die Darstellung der 4991 größten Werte des Greedy-Algorithmus verzichtet werden, da diese Werte größer als $10^{250}$ und somit für die Verarbeitung mit \emph{pyplot} zu groß waren. \emph{binary \& farey relativ regelmäßig (Vgl. quadratisch o.ä.?)}
 \ifthenelse{\boolean{printGraphics}}{
-\begin{figure}[H]
-	\label{img:maxDenom}
-	\includegraphics[width=\textwidth]{images/maxDenom_withGreedy_logscale_1e250.png}
-\end{figure}
+	\begin{figure}[H]
+		\label{img:maxDenom}
+		\caption{Maximum der größten Nenner pro Datensatz, links: mit Graph für den Greedy-Algorithmus, rechts: ohne}
+		\includegraphics[width=\textwidth]{images/maxDenom2in1.png}
+	\end{figure}
 }{}
 
 \subsubsection{Zusammenhang innerhalb des Binary-Algorithmus}
@@ -107,6 +112,7 @@ Im Binary-Algorithmus konnte eine unerwartete Korrelation zwischen $n$ und $minD
 		2n & \text{sonst.}
 	\end{cases}
 \end{equation*}
+Begründen lässt sich das mit der Zerlegung des Zählers im Schritt 2 des Algorithmus \ref{algo:binary}, für den bei ungeraden Nennern in der Zerlegung immer eine 1 vorkommt, die nicht mit dem Zähler $n$ gekürzt werden kann und somit den kleinsten Bruch $\uf{n}$ bildet. Falls der Zähler des zu zerlegenden Bruchs gerade ist, kann durch das Kürzen der Nenner nur kleiner werden. $\forall n \in \left\{2^i : i\in \N \right\}$ folgt $minDenom(n) = n$. Für den Fall, dass n keine Zweierpotenz ist, war kein direkter Zusammenhang erkenntlich, mittels welcher Brüche das Ergebnis $minDenom(n) = 2n$ zustande kommt.
 
 \subsubsection{Vergleich mit Erwartungswerten}
 

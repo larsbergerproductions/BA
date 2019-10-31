@@ -10,45 +10,45 @@ Alle genutzten, nicht in PARI/GP enthaltenen Funktionen sind im Folgenden aufgel
 \lstinputlisting[language=gp, firstline=1, lastline=3]{../PARI/algorithms.gp}
 
 \emph{contains(list, element)} durchsucht einen Verbunddatentyp und gibt 1 zurück, falls \emph{element} in \emph{list} enthalten ist, 0 sonst.
-\lstinputlisting[language=gp, firstline=89, lastline=96]{../PARI/algorithms.gp}
+\lstinputlisting[language=gp, firstline=90, lastline=97]{../PARI/algorithms.gp}
 
 \emph{reversevecsort(vect)} sortiert \emph{vect} in absteigender Reihenfolge.
-\lstinputlisting[language=gp, firstline=98, lastline=104]{../PARI/algorithms.gp}
+\lstinputlisting[language=gp, firstline=99, lastline=105]{../PARI/algorithms.gp}
 
 \emph{FareySeries(order)} berechnet die Farey-Folge der Ordnung \emph{order} und gibt diese als Vektor zurück.
-\lstinputlisting[language=gp, firstline=156, lastline=174]{../PARI/algorithms.gp}
+\lstinputlisting[language=gp, firstline=107, lastline=117]{../PARI/algorithms.gp}
 
 \emph{findAdjacent(Fs, fraction)} sucht in der Farey-Folge \emph{Fs} den adjazenten Bruch zu \emph{fraction}, der kleiner ist. Diese Funktion wird seit der Implementierung von \emph{findAdjacentFrel} nicht mehr verwendet und dient seither nur dem Vergleich.
-\lstinputlisting[language=gp, firstline=118, lastline=136]{../PARI/algorithms.gp}
+\lstinputlisting[language=gp, firstline=119, lastline=138]{../PARI/algorithms.gp}
 
 \emph{findAdjacentFrel(fract)} berechnet den kleineren der zu \emph{fract} adjazenten Brüche mithilfe des relevanten Teils der Farey-Fogle, wie in Beispiel \ref{bsp:Frel} gezeigt und stellt damit die wesentlich effizientere Alternative zu \emph{findAdjacent(Fs,fraction)} dar.
-\lstinputlisting[language=gp, firstline=140, lastline=154]{../PARI/algorithms.gp}
+\lstinputlisting[language=gp, firstline=142, lastline=156]{../PARI/algorithms.gp}
 
 \emph{mediant(frac1, frac2)} berechnet die Mediante zweier Brüche nach Definition \ref{def:mediant}.
-\lstinputlisting[language=gp, firstline=138, lastline=138]{../PARI/algorithms.gp}
+\lstinputlisting[language=gp, firstline=140, lastline=140]{../PARI/algorithms.gp}
 
 \emph{findDivisorsOf\_k\_addingup\_n(k,n)} sucht jene Teiler von $k$ heraus, die in ihrer Summe $n$ ergeben.
-\lstinputlisting[language=gp, firstline=176, lastline=187]{../PARI/algorithms.gp}
+\lstinputlisting[language=gp, firstline=180, lastline=191]{../PARI/algorithms.gp}
 
-\emph{printEgypFrac(arguments)} nimmt eine Liste mit Argumenten entgegen, die die Funktion dann als Summe aller Elemente als String sowohl ausgibt als auch für eventuelle weitere Verarbeitung zurückgibt.
-\lstinputlisting[language=gp, firstline=211, lastline=228]{../PARI/algorithms.gp}
+\emph{printEgypFrac(arguments)} nimmt eine Liste mit Argumenten entgegen, die die Funktion dann als Summe aller Elemente als String zurückgibt.
+\lstinputlisting[language=gp, firstline=216, lastline=233]{../PARI/algorithms.gp}
 
 
 \subsection{PARI/GP Code für den Greedy-Algorithmus}\label{code:greedy}
 Die Funktion \emph{fibonacci\_sylvester(fraction, stepsize, start)} berechnet mittels des gleichnamigen Algorithmus die entsprechende Ägyptische Darstellung des Bruchs \emph{fraction}. Das Argument \emph{stepsize} gibt an, um wie viel der Nenner eines Kandidaten bei Bedarf mindestens erhöht wird. $\uf{\text{start}}$ gibt den zuerst untersuchten Kandidaten an. Damit wird die Funktionalität zur Verfügung gestellt, \bspw nur nach Stammbrüchen mit geraden oder ungeraden Nennern zu suchen.\\
 Letztendlich ruft der Nutzer aber nur die Stellvertreterfunktionen \emph{greedy}, \emph{greedy\_odd} oder \emph{greedy\_even} auf, die die Hauptfunktion \emph{fibonacci\_sylvester} mit Standardwerten für \emph{stepsize} und \emph{start} nutzen.
-\lstinputlisting[language=gp, firstline=5, lastline=38]{../PARI/algorithms.gp}
+\lstinputlisting[language=gp, firstline=5, lastline=39]{../PARI/algorithms.gp}
 
 
 \subsubsection{Optimierter Greedy-Algorithmus}\label{code:greedy_fast}
 Zur Effizienzsteigerung wurde der Greedy-Algorithmus nochmals mit einer wesentlich effizienteren Suche der Nenner umgesetzt, die sich mit dem Namen ''Double \& Add'' beschreiben lässt und dem Prinzip der Ägyptischen Multiplikation aus Abschnitt \ref{subsec:egypMult} entspricht. Die Funktionalität der Suche des größten Stammbruchs $max\{\uf{n}: n \in \N\}$, der kleiner als ein gegebener rationaler Bruch ist, wurde in die Funktion \emph{largestUnitFractionLEQ} ausgelagert. Der Rest des Algorithmus läuft ab wie im Anhang \ref{code:greedy} beschrieben.
-\lstinputlisting[language=gp, firstline=40, lastline=87]{../PARI/algorithms.gp}
+\lstinputlisting[language=gp, firstline=41, lastline=88]{../PARI/algorithms.gp}
 
 
 \subsection{PARI/GP Code für den Farey-Folgen-Algorithmus}\label{code:fareyseries}
 Die Implementierung des Farey-Folgen-Algorithmus greift auf eine Dauerschleife zurück, aus der ausgebrochen wird, sobald der Nenner des betrachteten adjazenten Bruchs $1$ ist, was laut Algorithmus \ref{algo:FareySeries} das Abbruchkriterium ist. \emph{adjacent} ist dem Namen entsprechend der aktuelle, kleinere adjazente Bruch zum aktuell untersuchten Bruch \emph{current\_fraction}, \emph{remainder} ist $\uf{qs}$ aus demselben Algorithmus. Wie üblich stellt \emph{result} die Liste der Ergebnissummanden dar.
-\lstinputlisting[language=gp, firstline=156, lastline=174]{../PARI/algorithms.gp}
+\lstinputlisting[language=gp, firstline=159, lastline=178]{../PARI/algorithms.gp}
 
 \subsection{PARI/GP Code für den Binäralgorithmus}
 \emph{p} und \emph{q} entsprechen Zähler und Nenner des Bruchs \emph{fraction}; \emph{r} und \emph{s} sind die natürlichen Zahlen, aus denen sich gemäß Algorithmus \ref{algo:binary} $qs+r = pN_k$ ergibt. \emph{summands} enthält die Summanden der Zweierpotenzen, die in Summe den Zähler des aktuell betrachteten Bruchs ergeben. \emph{result} ist die Liste der Summanden des Ägyptischen Bruchs.
-\lstinputlisting[language=gp, firstline=189, lastline=208]{../PARI/algorithms.gp}
+\lstinputlisting[language=gp, firstline=193, lastline=213]{../PARI/algorithms.gp}

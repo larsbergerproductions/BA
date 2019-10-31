@@ -9,30 +9,30 @@
 \BOOKMARK [2][-]{subsection.23}{2.3 Ermittlung \304gyptischer Zerlegungen von Br\374chen}{section.10}% 9
 \BOOKMARK [1][-]{section.25}{3 Algorithmen zur Erstellung \304gyptischer Br\374che}{}% 10
 \BOOKMARK [2][-]{subsection.27}{3.1 Der Greedy-Algorithmus}{section.25}% 11
-\BOOKMARK [2][-]{subsection.37}{3.2 Der Farey-Folgen-Algorithmus}{section.25}% 12
-\BOOKMARK [2][-]{subsection.48}{3.3 Bin\344ralgorithmus}{section.25}% 13
-\BOOKMARK [2][-]{subsection.59}{3.4 Beispielrechnungen}{section.25}% 14
-\BOOKMARK [2][-]{subsection.76}{3.5 Fazit und Vergleich}{section.25}% 15
+\BOOKMARK [2][-]{subsection.36}{3.2 Der Farey-Folgen-Algorithmus}{section.25}% 12
+\BOOKMARK [2][-]{subsection.47}{3.3 Bin\344ralgorithmus}{section.25}% 13
+\BOOKMARK [2][-]{subsection.58}{3.4 Beispielrechnungen}{section.25}% 14
+\BOOKMARK [2][-]{subsection.75}{3.5 Fazit und Vergleich}{section.25}% 15
 \BOOKMARK [1][-]{section.78}{4 Auswertung einiger Testreihen}{}% 16
 \BOOKMARK [2][-]{subsection.79}{4.1 Methodik}{section.78}% 17
 \BOOKMARK [2][-]{subsection.80}{4.2 Anf\344ngliche Probleme und Effizienzsteigerung w\344hrend der Implementierung}{section.78}% 18
 \BOOKMARK [2][-]{subsection.83}{4.3 Auswertung der Daten}{section.78}% 19
 \BOOKMARK [3][-]{subsubsection.84}{4.3.1 Laufzeiten}{subsection.83}% 20
 \BOOKMARK [3][-]{subsubsection.86}{4.3.2 Durchschnittliche Anzahl der Terme}{subsection.83}% 21
-\BOOKMARK [3][-]{subsubsection.87}{4.3.3 Minimale Anzahl der Terme}{subsection.83}% 22
-\BOOKMARK [3][-]{subsubsection.88}{4.3.4 Maximale Anzahl der Terme}{subsection.83}% 23
-\BOOKMARK [3][-]{subsubsection.90}{4.3.5 Minimum der gr\366\337ten Nenner}{subsection.83}% 24
-\BOOKMARK [3][-]{subsubsection.91}{4.3.6 Maximum der gr\366\337ten Nenner}{subsection.83}% 25
-\BOOKMARK [3][-]{subsubsection.92}{4.3.7 Zusammenhang innerhalb des Binary-Algorithmus}{subsection.83}% 26
-\BOOKMARK [3][-]{subsubsection.93}{4.3.8 Vergleich mit Erwartungswerten}{subsection.83}% 27
-\BOOKMARK [2][-]{subsection.94}{4.4 Zusammenfassung}{section.78}% 28
-\BOOKMARK [1][-]{section.95}{5 Theoretische Grenzen}{}% 29
-\BOOKMARK [2][-]{subsection.96}{5.1 Theoretische Grenzen f\374r 2n}{section.95}% 30
-\BOOKMARK [1][-]{section.98}{6 Anhang}{}% 31
-\BOOKMARK [2][-]{subsection.99}{6.1 Hilfsfunktionen}{section.98}% 32
-\BOOKMARK [2][-]{subsection.211}{6.2 PARI/GP Code f\374r den Greedy-Algorithmus}{section.98}% 33
-\BOOKMARK [3][-]{subsubsection.247}{6.2.1 Optimierter Greedy-Algorithmus}{subsection.211}% 34
-\BOOKMARK [2][-]{subsection.297}{6.3 PARI/GP Code f\374r den Farey-Folgen-Algorithmus}{section.98}% 35
-\BOOKMARK [2][-]{subsection.318}{6.4 PARI/GP Code f\374r den Bin\344ralgorithmus}{section.98}% 36
-\BOOKMARK [1][-]{section*.340}{Literaturverzeichnis}{}% 37
-\BOOKMARK [1][-]{section*.341}{Eidesstattliche Erkl\344rung}{}% 38
+\BOOKMARK [3][-]{subsubsection.88}{4.3.3 Minimale Anzahl der Terme}{subsection.83}% 22
+\BOOKMARK [3][-]{subsubsection.89}{4.3.4 Maximale Anzahl der Terme}{subsection.83}% 23
+\BOOKMARK [3][-]{subsubsection.92}{4.3.5 Minimum der gr\366\337ten Nenner}{subsection.83}% 24
+\BOOKMARK [3][-]{subsubsection.94}{4.3.6 Maximum der gr\366\337ten Nenner}{subsection.83}% 25
+\BOOKMARK [3][-]{subsubsection.96}{4.3.7 Zusammenhang innerhalb des Binary-Algorithmus}{subsection.83}% 26
+\BOOKMARK [3][-]{subsubsection.97}{4.3.8 Vergleich mit Erwartungswerten}{subsection.83}% 27
+\BOOKMARK [2][-]{subsection.98}{4.4 Zusammenfassung}{section.78}% 28
+\BOOKMARK [1][-]{section.99}{5 Theoretische Grenzen}{}% 29
+\BOOKMARK [2][-]{subsection.100}{5.1 Maximal ben\366tigte Anzahl der Stammbr\374che}{section.99}% 30
+\BOOKMARK [1][-]{section.103}{6 Anhang}{}% 31
+\BOOKMARK [2][-]{subsection.104}{6.1 Hilfsfunktionen}{section.103}% 32
+\BOOKMARK [2][-]{subsection.209}{6.2 PARI/GP Code f\374r den Greedy-Algorithmus}{section.103}% 33
+\BOOKMARK [3][-]{subsubsection.246}{6.2.1 Optimierter Greedy-Algorithmus}{subsection.209}% 34
+\BOOKMARK [2][-]{subsection.296}{6.3 PARI/GP Code f\374r den Farey-Folgen-Algorithmus}{section.103}% 35
+\BOOKMARK [2][-]{subsection.318}{6.4 PARI/GP Code f\374r den Bin\344ralgorithmus}{section.103}% 36
+\BOOKMARK [1][-]{section*.341}{Literaturverzeichnis}{}% 37
+\BOOKMARK [1][-]{section*.342}{Eidesstattliche Erkl\344rung}{}% 38

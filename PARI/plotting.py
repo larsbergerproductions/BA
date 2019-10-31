@@ -105,7 +105,7 @@ def plot_to_file(whattoconsider, start=1, end=-1, step=1, color_greedy="r", colo
 	y2 = data["farey"][whattoconsider][start:end:step]
 	y3 = data["binary"][whattoconsider][start:end:step]
 	plt.figure(figsize=(15, 10), dpi=300)
-	# plt.plot(x, y1, color_greedy + linestyle, label="greedy")
+	plt.plot(x, y1, color_greedy + linestyle, label="greedy")
 	plt.plot(x, y2, color_farey + linestyle, label="farey")
 	plt.plot(x, y3, color_binary + linestyle, label="binary")
 	if logscale:
@@ -115,6 +115,40 @@ def plot_to_file(whattoconsider, start=1, end=-1, step=1, color_greedy="r", colo
 	plt.title(consideration_dict[whattoconsider])
 	plt.legend(loc="upper left")
 	plt.savefig('plots/' + whattoconsider + '.png')
+	print(" done.")
+
+
+def plot_2in1_to_file(whattoconsider, start=1, end=-1, step=1, color_greedy="r", color_binary="g", color_farey="b", linestyle=".", logscale=False):
+	print("plotting " + consideration_dict[whattoconsider] + "...", end="")
+	x = data["n"][start:end:step]
+	y1 = data["greedy"][whattoconsider][start:end:step]
+	y2 = data["farey"][whattoconsider][start:end:step]
+	y3 = data["binary"][whattoconsider][start:end:step]
+	fig = plt.figure(figsize=(18, 9), dpi=300)
+	
+	sp1 = fig.add_subplot(121)
+	plt.plot(x, y1, color_greedy + linestyle, label="greedy")
+	plt.plot(x, y2, color_farey + linestyle, label="farey")
+	plt.plot(x, y3, color_binary + linestyle, label="binary")
+	if logscale:
+		plt.yscale("log")
+	plt.xlabel("n")
+	plt.ylabel(whattoconsider + "(n)")
+	plt.legend(loc="upper left")
+	
+	sp2 = fig.add_subplot(122)
+	plt.plot(x, y2, color_farey + linestyle, label="farey")
+	plt.plot(x, y3, color_binary + linestyle, label="binary")
+	plt.yscale("linear")
+	# plt.suptitle(consideration_dict[whattoconsider])
+	plt.xlabel("n")
+	plt.ylabel(whattoconsider + "(n)")
+	plt.legend(loc="upper left")
+	sp2.yaxis.set_label_position("right")
+	sp2.yaxis.tick_right()
+	
+	plt.tight_layout()
+	plt.savefig('plots/' + whattoconsider + '2in1' + '.png', bbox_inches='tight')
 	print(" done.")
 
 
@@ -129,10 +163,12 @@ for i in range(0, len(gmaxD)-1):
 	if gmaxD[i] > norm:
 		gmaxD[i] = 'inf'
 
+# toplot = ["avgTerms", "minTerms", "maxTerms", "minDenom", "maxDenom"]
+# for target in toplot:
+# 	plot_to_file(target)
+plot_2in1_to_file("maxDenom", logscale=True)
 
-# plot_to_file("maxDenom")
-
-
+"""
 start = 0
 end = -1
 step = 1
@@ -154,3 +190,4 @@ plt.title(consideration_dict[what])
 plt.legend()
 plt.yscale("log")
 plt.show()
+"""

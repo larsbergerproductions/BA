@@ -1,20 +1,20 @@
 \subsection{Fazit und Vergleich}
 Wie in den vorangegangenen Beispielen zu sehen, liefern verschiedene Methoden z.T. stark voneinander abweichende Ergebnisse. Wie optimal zwei Ergebnisse im Vergleich zueinander sind, wird oft in den Maßeinheiten der oberen Schranken der ''Länge des größten Nenners'' \bzw der ''Anzahl der Summanden'' angegeben. Sei $\frac{p}{q} \in \Q_+$ der untersuchte Bruch. In Tabelle \ref{table:Algo_Vergleich} sind die entsprechenden Werte zum Vergleich aufgelistet.\cite[S. 343]{Bleicher1972}
-
 \vspace{0.5cm}
 \begin{table}[H]
 	\centering
-	\begin{tabular}{|Sc | Sc | Sc|}
+	\begin{longtable}{|Sc | Sc | Sc|}
 		\hline
-		Algorithmus & Anzahl der Summanden & Länge des längsten Nenners\\
+		Algorithmus & Anzahl der Summanden & Größtmöglicher Nenner\\
 		\hline
-		Fibonacci-Sylvester\newline(Greedy) & $p$ & exponentiell\\
+		Fibonacci-Sylvester\newline(Greedy) & $p$ & - \\
 		\hline
 		Farey-Folgen-Algorithmus & $p$ & $q(q-1)$\\
 		\hline
 		Binäralgorithmus & $O(\log q)$ & $q^2$\\
 		\hline
-	\end{tabular}
+	\end{longtable}
 	\caption{Vergleich der beschriebenen Algorithmen (obere Schranken)}
 	\label{table:Algo_Vergleich}
 \end{table}
+Für den größtmöglichen Nenner beim Greedy-Algorithmus gibt es eine Besonderheit, denn die Nenner dort wachsen exponentiell, weshalb sich keine genaue obere Schranke angeben lässt \cite[S. 157]{BleicherErdoes1976}.
