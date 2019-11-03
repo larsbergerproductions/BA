@@ -15,6 +15,7 @@ Der Datensatz für ein gewähltes $n$ definiert sich durch die Menge der betrach
 	\item das Minimum des jeweils größten Nenners, \emph{minDenom(n)}
 	\item das Maximum des jeweils größten Nenners, \emph{maxDenom(n)}.
 \end{itemize}
+Wird das entsprechende Kriterium nur für einen einzelnen Algorithmus betrachtet, ist dies am Index ersichtlich, der Datenpunkt $n$ der maximalen Anzahl der Terme für den Farey-Folgen-Algorithmus wird beispielsweise durch $maxTerms_{farey}(n)$ angegeben.
 Somit entstanden 10.000 Datensätze pro Algorithmus mit jeweils 5 nutzbaren Parametern, insgesamt also 150.000 Datenpunkte, die im Folgenden ausgewertet werden sollen.
 
 \subsection{Anfängliche Probleme und Effizienzsteigerung während der Implementierung}
@@ -94,7 +95,11 @@ In dieser Hinsicht zeichnet sich ein besonders interessantes Bild ab. Alle Algor
 
 
 \subsubsection{Maximum der größten Nenner}
-Dieses Kriterium ist jenes, in welchem sich die Algorithmen wohl am stärksten voneinander unterscheiden. Während sich die Werte von Binär- und Farey-Folgen-Algorithmus unter $10^{19}$ halten, streuen sich die Werte des Greedy-Algorithmus von $maxDenom_{greed}(3) = 2$ bis zu einem Maximum von $maxDenom_{greedy}(4967) \approx 7,3378 \times 10^{225.516}$ ohne jegliche erkennbare Regelmäßigkeit. In Abbildung \ref{img:maxDenom} musste auf die Darstellung der 4991 größten Werte des Greedy-Algorithmus verzichtet werden, da diese Werte größer als $10^{250}$ und somit für die Verarbeitung mit \emph{pyplot} zu groß waren. \emph{binary \& farey relativ regelmäßig (Vgl. quadratisch o.ä.?)}
+Dieses Kriterium ist jenes, in welchem sich die Algorithmen wohl am stärksten voneinander unterscheiden. Während sich die Werte von Binär- und Farey-Folgen-Algorithmus unter $10^{19}$ halten, streuen sich die Werte des Greedy-Algorithmus von $maxDenom_{greed}(3) = 2$ bis zu einem Maximum von $maxDenom_{greedy}(4967) \approx 7,3378 \times 10^{225.516}$ ohne jegliche erkennbare Regelmäßigkeit. In Abbildung \ref{img:maxDenom} musste auf die Darstellung der 4991 größten Werte des Greedy-Algorithmus verzichtet werden, da diese Werte größer als $10^{250}$ und somit für die Verarbeitung mit \emph{pyplot} zu groß waren.\\
+Das Wachstumsverhalten des Binäralgorithmus scheint hier besonders interessant, da sich mehrere Geraden ergeben, die zudem ein sprunghaftes Verhalten aufweisen. Das liegt daran, dass sich der größte Nenner im Binäralgorithmus aus dem Produkt $qN_k$ ergibt, wobei das im Diagramm beschriebene $n=1$ ist. Das $N_k$ ist immer die nächstgrößere Zweierpotenz von $q$, falls $q$ nicht selbst schon eine solche ist. Daher springen die Werte immer bei $q$, falls $q$ Zweierpotenz ist. Das stetig steigende $q$ sorgt zudem für das lineare Wachstum der Geraden, den Anstieg bestimmt $N_k$.\\
+Der Farey-Folgen-Algorithmus zeigt für dieses Kriterium ein quadratisches Wachstum auf.
+
+\emph{binary \& farey relativ regelmäßig (Vgl. quadratisch o.ä.?)}
 \ifthenelse{\boolean{printGraphics}}{
 	\begin{figure}[H]
 		\label{img:maxDenom}

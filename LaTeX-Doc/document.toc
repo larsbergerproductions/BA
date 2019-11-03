@@ -1,51 +1,51 @@
 \babel@toc {ngerman}{}
-\contentsline {section}{\numberline {1}Einleitung}{2}{section.6}
-\contentsline {section}{\numberline {2}\IeC {\"A}gyptische Arithmetik}{3}{section.10}
-\contentsline {subsection}{\numberline {2.1}\IeC {\"A}gyptische Multiplikation}{3}{subsection.11}
-\contentsline {subsection}{\numberline {2.2}\IeC {\"A}gyptische Division}{3}{subsection.13}
-\contentsline {subsubsection}{\numberline {2.2.1}Ganzzahlige Division}{3}{subsubsection.14}
-\contentsline {subsubsection}{\numberline {2.2.2}Division mit Rest}{4}{subsubsection.16}
-\contentsline {subsection}{\numberline {2.3}Ermittlung \IeC {\"A}gyptischer Zerlegungen von Br\IeC {\"u}chen}{5}{subsection.23}
-\contentsline {section}{\numberline {3}Algorithmen zur Erstellung \IeC {\"A}gyptischer Br\IeC {\"u}che}{7}{section.25}
-\contentsline {subsection}{\numberline {3.1}Der Greedy-Algorithmus}{7}{subsection.27}
-\contentsline {paragraph}{\nonumberline Absch\IeC {\"a}tzung}{8}{section*.35}
-\contentsline {subsection}{\numberline {3.2}Der Farey-Folgen-Algorithmus}{9}{subsection.36}
-\contentsline {paragraph}{\nonumberline Absch\IeC {\"a}tzung}{9}{section*.44}
-\contentsline {subsection}{\numberline {3.3}Bin\IeC {\"a}ralgorithmus}{10}{subsection.47}
-\contentsline {paragraph}{\nonumberline Absch\IeC {\"a}tzung}{11}{section*.55}
-\contentsline {subsection}{\numberline {3.4}Beispielrechnungen}{12}{subsection.58}
-\contentsline {paragraph}{\nonumberline Greedy-Algorithmus}{12}{section*.60}
-\contentsline {paragraph}{\nonumberline Farey-Folgen-Algorithmus}{12}{section*.61}
-\contentsline {paragraph}{\nonumberline Bin\IeC {\"a}ralgorithmus}{12}{section*.62}
-\contentsline {paragraph}{\nonumberline Greedy-Algorithmus}{13}{section*.65}
-\contentsline {paragraph}{\nonumberline Farey-Folgen-Algorithmus}{13}{section*.66}
-\contentsline {paragraph}{\nonumberline Bin\IeC {\"a}ralgorithmus}{13}{section*.67}
-\contentsline {paragraph}{\nonumberline Der Greedy-Algorithmus}{14}{section*.71}
-\contentsline {paragraph}{\nonumberline Der Farey-Folgen-Algorithmus}{14}{section*.72}
-\contentsline {paragraph}{\nonumberline Der Bin\IeC {\"a}ralgorithmus}{14}{section*.73}
-\contentsline {subsection}{\numberline {3.5}Fazit und Vergleich}{15}{subsection.75}
-\contentsline {section}{\numberline {4}Auswertung einiger Testreihen}{16}{section.78}
-\contentsline {subsection}{\numberline {4.1}Methodik}{16}{subsection.79}
-\contentsline {subsection}{\numberline {4.2}Anf\IeC {\"a}ngliche Probleme und Effizienzsteigerung w\IeC {\"a}hrend der Implementierung}{16}{subsection.80}
-\contentsline {paragraph}{\nonumberline Suche nach Nennern im Greedy-Algorithmus}{17}{section*.81}
-\contentsline {paragraph}{\nonumberline Konstruktion der Farey-Folgen}{17}{section*.82}
-\contentsline {subsection}{\numberline {4.3}Auswertung der Daten}{17}{subsection.83}
-\contentsline {subsubsection}{\numberline {4.3.1}Laufzeiten}{17}{subsubsection.84}
-\contentsline {subsubsection}{\numberline {4.3.2}Durchschnittliche Anzahl der Terme}{18}{subsubsection.86}
-\contentsline {subsubsection}{\numberline {4.3.3}Minimale Anzahl der Terme}{19}{subsubsection.88}
-\contentsline {subsubsection}{\numberline {4.3.4}Maximale Anzahl der Terme}{19}{subsubsection.89}
-\contentsline {subsubsection}{\numberline {4.3.5}Minimum der gr\IeC {\"o}\IeC {\ss }ten Nenner}{20}{subsubsection.92}
-\contentsline {subsubsection}{\numberline {4.3.6}Maximum der gr\IeC {\"o}\IeC {\ss }ten Nenner}{21}{subsubsection.94}
-\contentsline {subsubsection}{\numberline {4.3.7}Zusammenhang innerhalb des Binary-Algorithmus}{22}{subsubsection.96}
-\contentsline {subsubsection}{\numberline {4.3.8}Vergleich mit Erwartungswerten}{22}{subsubsection.97}
-\contentsline {subsection}{\numberline {4.4}Zusammenfassung}{22}{subsection.98}
-\contentsline {section}{\numberline {5}Theoretische Grenzen}{24}{section.99}
-\contentsline {subsection}{\numberline {5.1}Maximal ben\IeC {\"o}tigte Anzahl der Stammbr\IeC {\"u}che}{24}{subsection.100}
-\contentsline {section}{\numberline {6}Anhang}{26}{section.103}
-\contentsline {subsection}{\numberline {6.1}Hilfsfunktionen}{26}{subsection.104}
-\contentsline {subsection}{\numberline {6.2}PARI/GP Code f\IeC {\"u}r den Greedy-Algorithmus}{28}{subsection.209}
-\contentsline {subsubsection}{\numberline {6.2.1}Optimierter Greedy-Algorithmus}{29}{subsubsection.246}
-\contentsline {subsection}{\numberline {6.3}PARI/GP Code f\IeC {\"u}r den Farey-Folgen-Algorithmus}{31}{subsection.296}
-\contentsline {subsection}{\numberline {6.4}PARI/GP Code f\IeC {\"u}r den Bin\IeC {\"a}ralgorithmus}{31}{subsection.318}
-\contentsline {section}{\nonumberline Literaturverzeichnis}{33}{section*.341}
-\contentsline {section}{\nonumberline Eidesstattliche Erkl\IeC {\"a}rung}{34}{section*.342}
+\contentsline {section}{\numberline {1}Einleitung}{2}{section.6}% 
+\contentsline {section}{\numberline {2}\IeC {\"A}gyptische Arithmetik}{3}{section.10}% 
+\contentsline {subsection}{\numberline {2.1}\IeC {\"A}gyptische Multiplikation}{3}{subsection.11}% 
+\contentsline {subsection}{\numberline {2.2}\IeC {\"A}gyptische Division}{3}{subsection.13}% 
+\contentsline {subsubsection}{\numberline {2.2.1}Ganzzahlige Division}{3}{subsubsection.14}% 
+\contentsline {subsubsection}{\numberline {2.2.2}Division mit Rest}{4}{subsubsection.16}% 
+\contentsline {subsection}{\numberline {2.3}Ermittlung \IeC {\"A}gyptischer Zerlegungen von Br\IeC {\"u}chen}{5}{subsection.23}% 
+\contentsline {section}{\numberline {3}Algorithmen zur Erstellung \IeC {\"A}gyptischer Br\IeC {\"u}che}{7}{section.25}% 
+\contentsline {subsection}{\numberline {3.1}Der Greedy-Algorithmus}{7}{subsection.27}% 
+\contentsline {paragraph}{\nonumberline Absch\IeC {\"a}tzung}{8}{section*.35}% 
+\contentsline {subsection}{\numberline {3.2}Der Farey-Folgen-Algorithmus}{9}{subsection.36}% 
+\contentsline {paragraph}{\nonumberline Absch\IeC {\"a}tzung}{9}{section*.44}% 
+\contentsline {subsection}{\numberline {3.3}Bin\IeC {\"a}ralgorithmus}{10}{subsection.47}% 
+\contentsline {paragraph}{\nonumberline Absch\IeC {\"a}tzung}{11}{section*.55}% 
+\contentsline {subsection}{\numberline {3.4}Beispielrechnungen}{12}{subsection.58}% 
+\contentsline {paragraph}{\nonumberline Greedy-Algorithmus}{12}{section*.60}% 
+\contentsline {paragraph}{\nonumberline Farey-Folgen-Algorithmus}{12}{section*.61}% 
+\contentsline {paragraph}{\nonumberline Bin\IeC {\"a}ralgorithmus}{12}{section*.62}% 
+\contentsline {paragraph}{\nonumberline Greedy-Algorithmus}{13}{section*.65}% 
+\contentsline {paragraph}{\nonumberline Farey-Folgen-Algorithmus}{13}{section*.66}% 
+\contentsline {paragraph}{\nonumberline Bin\IeC {\"a}ralgorithmus}{13}{section*.67}% 
+\contentsline {paragraph}{\nonumberline Der Greedy-Algorithmus}{14}{section*.71}% 
+\contentsline {paragraph}{\nonumberline Der Farey-Folgen-Algorithmus}{14}{section*.72}% 
+\contentsline {paragraph}{\nonumberline Der Bin\IeC {\"a}ralgorithmus}{14}{section*.73}% 
+\contentsline {subsection}{\numberline {3.5}Fazit und Vergleich}{15}{subsection.75}% 
+\contentsline {section}{\numberline {4}Auswertung einiger Testreihen}{16}{section.78}% 
+\contentsline {subsection}{\numberline {4.1}Methodik}{16}{subsection.79}% 
+\contentsline {subsection}{\numberline {4.2}Anf\IeC {\"a}ngliche Probleme und Effizienzsteigerung w\IeC {\"a}hrend der Implementierung}{16}{subsection.80}% 
+\contentsline {paragraph}{\nonumberline Suche nach Nennern im Greedy-Algorithmus}{17}{section*.81}% 
+\contentsline {paragraph}{\nonumberline Konstruktion der Farey-Folgen}{17}{section*.82}% 
+\contentsline {subsection}{\numberline {4.3}Auswertung der Daten}{17}{subsection.83}% 
+\contentsline {subsubsection}{\numberline {4.3.1}Laufzeiten}{17}{subsubsection.84}% 
+\contentsline {subsubsection}{\numberline {4.3.2}Durchschnittliche Anzahl der Terme}{18}{subsubsection.86}% 
+\contentsline {subsubsection}{\numberline {4.3.3}Minimale Anzahl der Terme}{19}{subsubsection.88}% 
+\contentsline {subsubsection}{\numberline {4.3.4}Maximale Anzahl der Terme}{19}{subsubsection.89}% 
+\contentsline {subsubsection}{\numberline {4.3.5}Minimum der gr\IeC {\"o}\IeC {\ss }ten Nenner}{20}{subsubsection.92}% 
+\contentsline {subsubsection}{\numberline {4.3.6}Maximum der gr\IeC {\"o}\IeC {\ss }ten Nenner}{21}{subsubsection.94}% 
+\contentsline {subsubsection}{\numberline {4.3.7}Zusammenhang innerhalb des Binary-Algorithmus}{22}{subsubsection.96}% 
+\contentsline {subsubsection}{\numberline {4.3.8}Vergleich mit Erwartungswerten}{22}{subsubsection.97}% 
+\contentsline {subsection}{\numberline {4.4}Zusammenfassung}{22}{subsection.98}% 
+\contentsline {section}{\numberline {5}Theoretische Grenzen}{24}{section.99}% 
+\contentsline {subsection}{\numberline {5.1}Maximal ben\IeC {\"o}tigte Anzahl der Stammbr\IeC {\"u}che}{24}{subsection.100}% 
+\contentsline {section}{\numberline {6}Anhang}{26}{section.103}% 
+\contentsline {subsection}{\numberline {6.1}Hilfsfunktionen}{26}{subsection.104}% 
+\contentsline {subsection}{\numberline {6.2}PARI/GP Code f\IeC {\"u}r den Greedy-Algorithmus}{28}{subsection.209}% 
+\contentsline {subsubsection}{\numberline {6.2.1}Optimierter Greedy-Algorithmus}{29}{subsubsection.246}% 
+\contentsline {subsection}{\numberline {6.3}PARI/GP Code f\IeC {\"u}r den Farey-Folgen-Algorithmus}{31}{subsection.296}% 
+\contentsline {subsection}{\numberline {6.4}PARI/GP Code f\IeC {\"u}r den Bin\IeC {\"a}ralgorithmus}{31}{subsection.318}% 
+\contentsline {section}{\nonumberline Literaturverzeichnis}{33}{section*.341}% 
+\contentsline {section}{\nonumberline Eidesstattliche Erkl\IeC {\"a}rung}{34}{section*.342}% 
