@@ -166,28 +166,38 @@ for i in range(0, len(gmaxD)-1):
 # toplot = ["avgTerms", "minTerms", "maxTerms", "minDenom", "maxDenom"]
 # for target in toplot:
 # 	plot_to_file(target)
-plot_2in1_to_file("maxDenom", logscale=True)
+# plot_2in1_to_file("maxDenom", logscale=True)
 
-"""
+
 start = 0
 end = -1
 step = 1
 
-
-what = "maxDenom"
+"""
+what = "minDenom"
 x = data["n"][start:end:step]
-y1 = data["greedy"][what][start:end:step]
-y2 = data["farey"][what][start:end:step]
+# y1 = data["greedy"][what][start:end:step]
+# y2 = data["farey"][what][start:end:step]
 y3 = data["binary"][what][start:end:step]
+linear = np.array(data["n"][start:end:step]) * 2
 
-plt.plot(x, y1, "r.", label="greedy")
-plt.plot(x, y2, "b.", label="farey")
+plt.figure(figsize=(15,10), dpi=200)
+
+# plt.plot(x, y1, "r.", label="greedy")
+# plt.plot(x, y2, "b.", label="farey")
 plt.plot(x, y3, "g.", label="binary")
+plt.plot(x, linear, "k-", label="x")
+
 
 plt.xlabel("n")
 plt.ylabel(what + "(n)")
 plt.title(consideration_dict[what])
 plt.legend()
-plt.yscale("log")
+plt.yscale("linear")
 plt.show()
 """
+
+x = [2, 3, 5, 7, 11, 13]
+y = [4998, 3332, 1333, 286, 43, 4]
+plt.plot(x,y, "k-")
+plt.show()

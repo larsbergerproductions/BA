@@ -53,8 +53,8 @@ Eines der wichtigsten Ergebnisse zur realistischen Abschätzung der Algorithmen 
 Anhand der Graphen wird das logarithmische Wachstum der Werte erkenntlich. Dabei wird schnell deutlich, dass das Wachstum des Farey-Folgen-Algorithmus bedeutend größer ist als das der anderen beiden Algorithmen. Der Greedy- und der Binär-Algorithmus unterscheiden sich voneinander nicht so stark, offensichtlich schneidet in diesem Kriterium aber der Greedy-Algorithmus mit dem besten Ergebnis ab.
 \ifthenelse{\boolean{printGraphics}}{
 \begin{figure}[H]
-	\label{img:avgTerms}
 	\caption{Durchschnittliche Anzahl der Terme in Abhängigkeit von $n$}
+	\label{img:avgTerms}
 	\includegraphics[width=\textwidth]{images/avgTerms.png}
 \end{figure}
 }{}
@@ -76,19 +76,23 @@ $$maxTerms_{farey}(n) = n + 1, \, \forall n$$
 für \todo{finde Erklärung}alle getesteten Datensätze. 
 \ifthenelse{\boolean{printGraphics}}{
 \begin{figure}[H]
-	\label{img:maxTerms}
 	\caption{Maximale Anzahl der Terme im Datensatz für jedes $n$}
+	\label{img:maxTerms}
 	\includegraphics[width=\textwidth]{images/maxTerms.png}
 \end{figure}
 }{}
 
 
 \subsubsection{Minimum der größten Nenner}
-In dieser Hinsicht zeichnet sich ein besonders interessantes Bild ab. Alle Algorithmen zeigen klares lineares Wachstum bezüglich $minDenom(n)$, allerdings in sehr unterschiedlichen Ausprägungen. Der Binäralgorithmus bewegt sich zwischen den Werten der anderen Algorithmen und ist, bis auf wenige Ausnahmen, durch eine einzige Gerade erkenntlich. Der Greedy-Algorithmus, dessen Werte bzgl. dieses Kriteriums unterhalb derer des Binäralgorithmus liegen, zeigt hingegen mehrere Geraden auf, also entwickeln sich bestimmte Folgen innerhalb der Testreihe dieses Algorithmus gleich, die Folgen sind aber in ihrer Entwicklung voneinander unterscheidbar. Gleiches gilt für den mit größeren Werten ergebenden Farey-Folgen-Algorithmus, für den sich 5 Geraden ergeben, allerdings wird hier die Anzahl der Datenpunkte, die jeweils eine Gerade ergeben, mit wachsendem Anstieg selbiger, immer weniger. \emph{Es ist zu vermuten, dass dies von gewissen Modulae abhängt, weitere Erkenntnisse fehlen noch.}
+Bezeichne im Folgenden $u \in \Q$ den Anstieg der Geraden in der Funktion $f(n)=u \cdot n$.\\
+Bezüglich dieses Kriteriums zeigen alle Algorithmen klares lineares Wachstum, allerdings in sehr unterschiedlichen Ausprägungen.\\ 
+Die Datenpunkte für den Binäralgorithmus ergeben zwei Geraden, eine für alle Werte, bei denen $n$ Zweierpotenz ist, und eine für alle anderen Werte. Das liegt am Sonderfall 2 aus Algorithmus \ref{algo:binary}, der Brüche mit Nennern, die Zweierpotenzen sind, gesondert behandelt und dadurch kleinere Nenner in der Zerlegung produziert. Das lineare Wachstum der beiden Geraden entsteht durch das wachsende $q$ in der Gleichung $\frac{p}{q} = \frac{s}{N_k} + \frac{r}{qN_k}$. Die Gerade der Zweierpotenzen wächst dabei mit Anstieg $u = 1$, die der nicht-Zweierpotenzen mit Anstieg $u=2$.\\
+Der Greedy-Algorithmus, dessen Werte bzgl. dieses Kriteriums unterhalb und zum Teil auf denen des Binäralgorithmus liegen, zeigt hingegen mehr als zwei Geraden auf, also entwickeln sich bestimmte Folgen innerhalb der Testreihe dieses Algorithmus gleich, die Folgen sind aber in ihrer Entwicklung voneinander unterscheidbar. Die sich ergebenden Geraden haben einen Anstieg $u \in \left\{ 2, 1, \uf{2}, \uf{4}, ... \right\}$, einige Werte liegen aber auch zwischen diesen Geraden. Genaue Gründe hierfür konnten nicht gefunden werden.\\
+Gleiches gilt für den mit größeren Werten ergebenden Farey-Folgen-Algorithmus, für den sich 5 Geraden ergeben, allerdings wird hier die Anzahl der Datenpunkte, die jeweils eine Gerade ergeben mit wachsendem Anstieg immer weniger. Der Anstieg der Geraden ist dabei immer eine Primzahl, die unterste Datenreihe liegt auf der Funktion $f(x)=2x$, die oberste auf der Funktion $f(x) = 13x$. \todo{warum?}
 \ifthenelse{\boolean{printGraphics}}{
 \begin{figure}[H]
-	\label{img:minDenom}
 	\caption{Minimum des größten Nenners im Datensatz für jedes $n$}
+	\label{img:minDenom}
 	\includegraphics[width=\textwidth]{images/minDenom.png}
 \end{figure}
 }{}
@@ -99,16 +103,15 @@ Dieses Kriterium ist jenes, in welchem sich die Algorithmen wohl am stärksten v
 Das Wachstumsverhalten des Binäralgorithmus scheint hier besonders interessant, da sich mehrere Geraden ergeben, die zudem ein sprunghaftes Verhalten aufweisen. Das liegt daran, dass sich der größte Nenner im Binäralgorithmus aus dem Produkt $qN_k$ ergibt, wobei das im Diagramm beschriebene $n=1$ ist. Das $N_k$ ist immer die nächstgrößere Zweierpotenz von $q$, falls $q$ nicht selbst schon eine solche ist. Daher springen die Werte immer bei $q$, falls $q$ Zweierpotenz ist. Das stetig steigende $q$ sorgt zudem für das lineare Wachstum der Geraden, den Anstieg bestimmt $N_k$.\\
 Der Farey-Folgen-Algorithmus zeigt für dieses Kriterium ein quadratisches Wachstum auf.
 
-\emph{binary \& farey relativ regelmäßig (Vgl. quadratisch o.ä.?)}
 \ifthenelse{\boolean{printGraphics}}{
 	\begin{figure}[H]
-		\label{img:maxDenom}
 		\caption{Maximum der größten Nenner pro Datensatz, links: mit Graph für den Greedy-Algorithmus, rechts: ohne}
+		\label{img:maxDenom}
 		\includegraphics[width=\textwidth]{images/maxDenom2in1.png}
 	\end{figure}
 }{}
 
-\subsubsection{Zusammenhang innerhalb des Binary-Algorithmus}
+\subsubsection{Zusammenhang innerhalb des Binäralgorithmus}
 Im Binary-Algorithmus konnte eine unerwartete Korrelation zwischen $n$ und $minDenom(n)$ gemacht werden:
 \begin{equation*}
 	minDenom(n) = 
@@ -120,6 +123,10 @@ Im Binary-Algorithmus konnte eine unerwartete Korrelation zwischen $n$ und $minD
 Begründen lässt sich das mit der Zerlegung des Zählers im Schritt 2 des Algorithmus \ref{algo:binary}, für den bei ungeraden Nennern in der Zerlegung immer eine 1 vorkommt, die nicht mit dem Zähler $n$ gekürzt werden kann und somit den kleinsten Bruch $\uf{n}$ bildet. Falls der Zähler des zu zerlegenden Bruchs gerade ist, kann durch das Kürzen der Nenner nur kleiner werden. $\forall n \in \left\{2^i : i\in \N \right\}$ folgt $minDenom(n) = n$. Für den Fall, dass n keine Zweierpotenz ist, war kein direkter Zusammenhang erkenntlich, mittels welcher Brüche das Ergebnis $minDenom(n) = 2n$ zustande kommt.
 
 \subsubsection{Vergleich mit Erwartungswerten}
+Zur Überprüfung der in Tabelle \ref{table:Algo_Vergleich} aufgezeigten oberen Schranken sollen diese Werte mit den Ergebnissen der zuvor beschriebenen Testreihen verglichen werden.
+
+\paragraph{Anzahl der Summanden}Die oberen Schranken für sowohl Greedy- als auch Farey-Folgen-Algorithmus sind hier mit $p$, der Zähler des betrachteten Bruchs, angegeben, beim Binäralgorithmus ist hier nur die Komplexitätsklasse $O(\log q)$ angegeben. Bei Betrachtung der Ergebnisse, die in \ref{img:maxTerms} zusammengefasst sind, zeigen sich der Farey-Folgen- und der Binäralgorithmus mit genau dem erwarteten Verhalten, nur der Greedy-Algorithmus bleibt weit unter seiner theoretischen Schranke anstelle eines linearen Wachstums nur logarithmisches auf.
+\paragraph{Größe der Nenner}Die größtmöglichen Nenner für den Binäralgorithmus werden mit $q^2$, für den Farey-Folgen-Algorithmus mit $q(q-1)$, angegeben. Wie an Abbildung \ref{img:maxDenom} zu erkennen ist, hält der Farey-Algorithmus diese Grenze genau ein, der Binäralgorithmus hingegen \todo{waruumm???!!?!}übersteigt die erwartete Grenze von $q^2$, die theoretische Grenze konnte also nicht eingehalten werden. Der Greedy-Algorithmus liefert, wie Bleicher und Erdös in ihrem Artikel über Nenner von Ägyptischen Brüchen schon berichteten, ein exponentielles Wachstum der Nenner, die aufgrund ihrer Größe in Abbildung \ref{img:maxDenom} teilweise nicht dargestellt werden konnten.
 
 \subsection{Zusammenfassung}
 Der Greedy-Algorithmus ist der wohl schlechteste der Algorithmen, obwohl er bezüglich der Anzahl der Terme die besten Ergebnisse liefert. Grund dafür ist die Wahl des jeweils größten Nenners, wodurch es zu den extremen numerischen Ausbrüchen der Nenner kommt, die eine effiziente Nutzung des Algorithmus mittels normaler Computersysteme unmöglich macht, da die Standards vieler Programmiersprachen solch große \bzw kleine Zahlen nicht unterstützen. Durch die großen Schwankungen zwischen den Werten des Greedy-Algorithmus ist dieser zudem sehr unvorhersehbar. Obwohl er in den meisten Fällen durchaus brauchbare Ergebnisse liefert, ist nicht vorhersagbar, wann dies nicht der Fall ist. Im Vergleich dazu tendiert der Farey-Folgen-Algorithmus eher dazu, kleinere Nenner zu erzeugen, benötigt dafür im Durchschnitt aber deutlich mehr Terme. Der Binäralgorithmus bewegt sich in den verglichenen Kriterien meist zwischen den Werten der anderen Algorithmen, aber immer zum geringeren tendierend, von wenigen Punkten der maximalen Nenner abgesehen, in denen er dem Farey-Folgen-Algorithmus leicht unterlegen ist. Zudem hatte er im Vergleich die beste Laufzeit und nach allem Anschein auch den stabilsten Gesamtverlauf. Damit ist diese Berechnungsmethode wohl die gewinnbringendste, da sie mit relativ wenig Aufwand durchaus brauchbare Zerlegungen gemeiner in Ägyptische Brüche erzeugt.

@@ -18,8 +18,41 @@ def is_power_of_two(n):
 
 
 data = load_data_from_json()
-for i in range(8192, len(data["greedy"]["maxDenom"])-1):
-	if data["binary"]["maxDenom"][i] < 1e6:
-		print(str(data["n"][i]) + " : " + str(data["binary"]["maxDenom"][i]))
-		if is_power_of_two(data["binary"]["maxDenom"][i]):
-			print("is power of 2")
+"""
+line2 = []
+line3 = []
+line5 = []
+line7 = []
+line11 = []
+line13 = []
+
+for i in range(1, len(data["farey"]["minDenom"])-1):
+	if data["farey"]["minDenom"][i] == 13 * data["n"][i]:
+		line13.append(data["farey"]["minDenom"][i])
+	elif data["farey"]["minDenom"][i] == 11 * data["n"][i]:
+		line11.append(data["farey"]["minDenom"][i])
+	elif data["farey"]["minDenom"][i] == 7 * data["n"][i]:
+		line7.append(data["farey"]["minDenom"][i])
+	elif data["farey"]["minDenom"][i] == 5 * data["n"][i]:
+		line5.append(data["farey"]["minDenom"][i])
+	elif data["farey"]["minDenom"][i] == 3 * data["n"][i]:
+		line3.append(data["farey"]["minDenom"][i])
+	elif data["farey"]["minDenom"][i] == 2 * data["n"][i]:
+		line2.append(data["farey"]["minDenom"][i])
+	else:
+		continue
+
+lines = [line2, line3, line5, line7, line11, line13]
+
+for line in lines:
+	print(str(len(line)) + ": " + str(line))
+"""
+maxi = (0, data["binary"]["maxDenom"][0])
+
+for i in range(1,len(data["binary"]["maxDenom"])-1):
+	if data["binary"]["maxDenom"][i] > maxi[1]:
+		maxi = (data["n"][i], data["binary"]["maxDenom"][i])
+		
+print(str(maxi) + "; " + str(maxi[0]^2 > maxi[1]))
+# for i in range(9995, 9999):
+# 	print(str(i) + ": " + str(data["binary"][""]))

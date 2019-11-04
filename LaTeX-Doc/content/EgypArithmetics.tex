@@ -74,7 +74,6 @@
 			\end{tabular}
 		\end{center}
 		Offensichtlich ist das Ergebnis hier noch nicht erreicht, allerdings kann keine weitere Zahl der rechten Spalte ausgewählt werden, ohne 117 zu überschreiten. Folglich sind also kleinere Zahlen als 7 notwendig. Die - aus heutiger Sicht betrachtet - einfache Mathematik des alten Ägypten würde nun, statt die 7 fortlaufend zu verdoppeln, diese zunächst durch sich selbst teilen, um eine 1 zu generieren und dann weiter halbieren, woraus sich diese unvollständige Tabelle ergäbe:~\\
-		\todo[inline]{Tabellen \ref{table:Division_HalbEins} und \ref{table:Division_HalbSieben} nebeneinander anordnen(?)}
 		\begin{table}[H]
 			\centering
 			\begin{tabular}{Sr Sr Sr}
@@ -84,12 +83,11 @@
 				& $\uf{28}$ & $\uf{4}$\\
 				& \vdots & \vdots \\
 			\end{tabular}
-		\caption{Teilen durch $7$, dann Fortgesetzte Halbierung von $1$}
-		\label{table:Division_HalbEins}
-		\end{table}
-		Zudem ist auch das bloße fortgesetzte Halbieren der Zahl oben rechts praktisch angewendet worden:~	
-		\begin{table}[H]
-			\centering
+			\qquad \quad
+			\begin{tabular}{c | c}
+					&\\&\\&\\&\\&\\&\\
+			\end{tabular}
+			\qquad
 			\begin{tabular}[h]{Sr Sr Sr}
 				& 1 & \textcolor{OliveGreen}{7}\\
 				& $\uf{2}$ & $3+\uf{2}$\\
@@ -97,10 +95,10 @@
 				& $\uf{8}$ & $\uf{2}+\uf{4}+\uf{8}$\\
 				&\vdots&\vdots
 			\end{tabular}
-		\caption{Fortgesetzte Halbierung von $7$}
-		\label{table:Division_HalbSieben}
+			\caption{links: Teilen durch 7, dann fortgesetzte Halbierung von 1; rechts: fortgesetzte Halbierung von 7}
+			\label{table:Division_HalbEins}
 		\end{table}
-		Verfahren wird hier nach einem systematisierten trial-and-error-Verfahren. Da sich aus Tabelle \ref{table:Division_HalbEins} die Harmonische Reihe ergibt, aber ein Gesamtwert von $117-112 = 5$ benötigt wird, fällt die Wahl zunächst auf das größte Element in Tabelle \ref{table:Division_HalbSieben} mit Wert $3+\uf{2}$. Es folgt nun ein Rest von $5-(3+\uf{2})=1 +\uf{2}$, welcher durch die Tabelle \ref{table:Division_HalbEins} mit den Werten $1$ und $\uf{2}$ genau erfüllt wird. Es folgt die Gesamttabelle:
+		Verfahren wird hier nach einem systematisierten trial-and-error-Verfahren. Da sich aus Tabelle \ref{table:Division_HalbEins} (links) die Harmonische Reihe ergibt, aber ein Gesamtwert von $117-112 = 5$ benötigt wird, fällt die Wahl zunächst auf das größte Element in Tabelle \ref{table:Division_HalbEins} (rechts) mit Wert $3+\uf{2}$. Es folgt nun ein Rest von $5-(3+\uf{2})=1 +\uf{2}$, welcher durch die Tabelle \ref{table:Division_HalbEins} (links) mit den Werten $1$ und $\uf{2}$ genau erfüllt wird. Es folgt die Gesamttabelle:
 		\begin{table}[H]
 			\centering
 			\begin{tabular}{Sr Sr Sr}
@@ -118,11 +116,9 @@
 		\label{table:Division_mitRest_full}
 		\end{table}
 	\end{bsp}
-	Sei $x \in \N$ und $n$ der Divisor der gewählten Division. Typische Brüche, die in der linken Spalte verwendet wurden, weil einfach zu berechnen, waren $\uf{2^x}$,  sowie $\uf{n \cdot 2^x}$.
+	Sei $x \in \N$ und $n$ der Divisor der gewählten Division. Typische Brüche, die in der linken Spalte verwendet wurden, weil diese einfach zu berechnen sind, waren $\uf{2^x}$,  sowie $\uf{n \cdot 2^x}$.
 	
-	Aus dieser Methodik heraus ergibt sich die Notation der Ägyptischen Brüche. Selbstverständlich wurde auch mit solchen Brüchen multipliziert und dividiert, solche Beispiele würden aber den Rahmen dieser Arbeit sprengen, 
-	\improvement{vielleicht\\doch?}
-	weshalb diese nicht weiter betrachtet werden.
+	Aus dieser Methodik heraus ergibt sich die Notation der Ägyptischen Brüche. Im Folgenden soll die Frage geklärt werden, wie man gemeine Brüche in Brüche ägyptischer Form umwandeln kann und wie das im alten Ägypten umgesetzt wurde.
 	
 \subsection{Ermittlung Ägyptischer Zerlegungen von Brüchen}
 Die Ägypter brauchten nun also ein System, mit dessen Hilfe sie die Zerlegung von Brüchen in eine Summe von Stammbrüchen mit paarweise verschiedenen Nennern berechnen konnten. Die einfache Zerlegung

@@ -1,0 +1,10 @@
+Anstieg der Geraden minDenom_{farey}(n):
+1. (oberste): f(x) = 13x
+2. f(x) = 11x
+3. f(x) = 7x
+4. f(x) = 5x
+//Primzahlen??
+5. f(x) = 3x
+6. f(x) = 2x
+//=> ja, Primzahlen
+//aber warum???

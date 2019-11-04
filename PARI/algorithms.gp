@@ -169,7 +169,7 @@ FS(fraction)={
 		if(numerator(adjacent) == 1,
 			listput(result, adjacent);
 			result = reverse_vecsort(Vec(result));
-			print("Farey_Sequence:\t", fraction, " = ", printEgypFrac(result));
+			/*print("Farey_Sequence:\t", fraction, " = ", printEgypFrac(result));*/
 			return(result);
 		);
 		current_fraction = adjacent;
@@ -239,7 +239,7 @@ test_main(fraction)={
 	res_binary = binary_algo(fraction);
 
 	print("\nAlgorithm \t\t\t#terms \t\tmaximum denominator\n---------\t\t\t------ \t\t-------------------");
-	print("Greedy Algorithm \t\t", #res_greedy, "\t\t", 1/res_greedy_fast[#res_greedy_fast]);
+	print("Greedy Algorithm \t\t", #res_greedy_fast, "\t\t", 1/res_greedy_fast[#res_greedy_fast]);
 	print("Farey-Sequence Algorithm \t", #res_farey, "\t\t", 1/res_farey[#res_farey]);
 	print("Binary Algorithm \t\t", #res_binary, "\t\t", 1/res_binary[#res_binary]);
 
