@@ -27,11 +27,14 @@ Seien $m, n \in \N$ und $N = 2^n$. Alle $m < N$ lassen sich als Summe paarweise 
 	Falls $q = N_k$, hat das Ergebnis offensichtlich maximal $k$ Terme, da sich $N_k$ als Summe seiner $\log_2 N = k$ Terme schreiben lässt; in der Summe sind die $d_i$ paarweise verschieden, somit auch die $\frac{N_k}{d_i}$ und es gibt keinen Term mehrfach.\\
 	Falls $q < N_k$, gilt
 	$$qs+r = p N_k < q N_k.$$
-	Somit gibt es eine Zerlegung in Ägyptische Brüche jeweils für s und r. Diese beiden Zerlegungen liefern für sich genommen nach dem Argument aus Fall ''$q = N_k$'' paarweise verschiedene Stammbrüche. Dass diese sogar zusammengenommen paarweise verschieden sind, folgt daraus, dass die zu s gehörenden Nenner immer Zweierpotenzen sind, die zu r gehörigen aber niemals.
+	Somit gibt es eine Zerlegung in Ägyptische Brüche jeweils für s und r. Diese beiden Zerlegungen liefern für sich genommen nach dem Argument aus Fall ''$q = N_k$'' paarweise verschiedene Stammbrüche. Dass diese sogar zusammengenommen paarweise verschieden sind, folgt daraus, dass die zu $s$ gehörenden Nenner immer Zweierpotenzen sind, die zu $r$ gehörigen aber niemals.
 \end{bew}
 
 
-\paragraph{Abschätzung}Sei $\frac{p}{q} \in \Q_+, \frac{p}{q} < 1$. Gong zeigte, dass die Komplexitätsklasse für die Anzahl der Terme $O(\log n)$ ist und der maximale Nenner des erzeugten Ägyptischen Bruchs durch $q^2$ beschränkt ist. \cite[S. 12]{Gong1992}
+\paragraph{Abschätzung}Sei $\frac{p}{q} \in \Q_+, \frac{p}{q} < 1$. Gong zeigte, dass die Komplexitätsklasse für die Anzahl der Terme $O(\log n)$ ist \cite[S. 12]{Gong1992}. \\
+Falls $q = N_k$ ist, folgt, dass der maximale Nenner $q$ ist. Anderenfalls definiert sich dieser aus dem Term $\frac{r}{qN_k}$ mit einer $1$ in der Zerlegung von $r$ in Teiler von $N_k$. Schlimmstenfalls ist $q$ dann der Nachfolger einer Zweierpotenz und es gilt 
+$$N_k = 2(q-1).$$
+Daraus folgt als kleinstmöglicher Bruch $\uf{q \cdot 2(q-1)} = \uf{2(q^2-q)}$, was die obere Schranke für den größten Nenner $2(q^2-q)$ impliziert, die in der Komplexitätsklasse $O(q^2)$ enthalten ist.
 
 Da es für diesen Algorithmus zwei Fälle gibt, soll für jeden Fall ein Beispiel gezeigt werden. Dafür beginnen wir mit dem einfachen Fall.
 

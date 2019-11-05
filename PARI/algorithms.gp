@@ -387,6 +387,27 @@ test_binary_corr(start,end)={
 	);
 }
 
+reverse_farey()={
+	local(as);
+	write("/home/lars/Desktop/reverse_farey11.csv", "Numerator,Denominator,minDenom_farey");
+	as = List();
+	list11=[210, 420, 630, 840, 1050, 1260, 1470, 1680, 1890, 2100, 2520, 2730, 2940, 3150, 3360, 3570, 3780, 3990, 4200, 4410, 4830, 5040, 5250, 5460, 5670, 5880, 6090, 6300, 6510, 6720, 7140, 7350, 7560, 7770, 7980, 8190, 8400, 8610, 8820, 9030, 9450, 9660, 9870];
+	for(i=1, #list11,
+		den=list11[i];
+		for(num=2, den-1,
+			if(gcd(num,den)==1,
+				result = FS(num/den);
+				if(denominator(result[#result]) == 11*list11[i],
+					listput(as, num);
+					print(num/den, ": ", denominator(result[#result]));
+					write("/home/lars/Desktop/reverse_farey11.csv", num, ",", den, ",", denominator(result[#result]));
+				);
+			);
+		);
+	);
+	return(as);
+}
+
 /* show timer for each calculation */
 #
 print("\n\n\n#########################\n#    Script provided    #\n#           by          #\n#    Lt. Lars Berger    #\n#    Universität der    #\n#   Bundeswehr München  #\n#########################\n\n")

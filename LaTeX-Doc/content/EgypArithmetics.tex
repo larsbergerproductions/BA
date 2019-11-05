@@ -43,7 +43,7 @@
 \subsection{Ägyptische Division}
 	\subsubsection{Ganzzahlige Division}
 	Der einfachere Fall der ganzzahligen Division ohne Rest ist dem Prinzip der Multiplikation sehr ähnlich, nur die Herangehensweise ist verändert. Um das Prinzip der Multiplikation anzuwenden zu können, verändert man dafür die Fragestellung. 
-	Seien $x \in \Q; a,b\in \N; b \neq 0$. Statt die Lösung für $x$ in der Gleichung $x=\frac{a}{b}$ zu suchen, stellt man die Frage, für welches $x$ gilt $b \cdot x = a$. Somit ergibt sich das Problem der Multiplikation, nur dass die unbekannte Variable eine andere ist.
+	Seien $x \in \Q; a,b\in \N; b \neq 0$. Statt die Lösung für $x$ in der Gleichung $x=\frac{a}{b}$ zu suchen, stellt man die Frage, für welches $x$ gilt $b \cdot x = a$; die Essenz der Frage ist also die gleiche wie die der Multiplikation, nur ist sie umformuliert worden.
 	
 	\begin{bsp}
 		Es sei die Division $\textcolor{OliveGreen}{117} \div \textcolor{blue}{9}$ betrachtet. Die Tabelle generiert sich wie oben. Nun wählt man mittels Greedy-Verfahren, also mit jeweils dem größten Wert beginnend, alle Zeilen aus, deren rechte Spalten sich zu $117$ addieren, addiert die Einträge in der linken Spalte der ausgewählten Zeilen und erhält das Ergebnis $117 \div 9 = 13$.
@@ -59,7 +59,7 @@
 	\end{bsp}
 
 	\subsubsection{Division mit Rest}
-	Die Division mit Rest $a \div b$ mit $a, b \in \N$ funktioniert ähnlich wie die ganzzahlige, jedoch fügt man an die Tabelle nun noch die nötigen Bruchteile von $a$ an, die nötig sind.
+	Die Division mit Rest $a \div b$ mit $a, b \in \N$ funktioniert ähnlich wie die ganzzahlige, jedoch fügt man an die Tabelle nun noch die Bruchteile von $a$ an, die nötig sind.
 	
 	\begin{bsp}
 		Wir betrachten hierfür die Division $\textcolor{blue}{117} \div \textcolor{OliveGreen}{7}$ und stellen die Tabelle auf wie oben.
@@ -98,7 +98,7 @@
 			\caption{links: Teilen durch 7, dann fortgesetzte Halbierung von 1; rechts: fortgesetzte Halbierung von 7}
 			\label{table:Division_HalbEins}
 		\end{table}
-		Verfahren wird hier nach einem systematisierten trial-and-error-Verfahren. Da sich aus Tabelle \ref{table:Division_HalbEins} (links) die Harmonische Reihe ergibt, aber ein Gesamtwert von $117-112 = 5$ benötigt wird, fällt die Wahl zunächst auf das größte Element in Tabelle \ref{table:Division_HalbEins} (rechts) mit Wert $3+\uf{2}$. Es folgt nun ein Rest von $5-(3+\uf{2})=1 +\uf{2}$, welcher durch die Tabelle \ref{table:Division_HalbEins} (links) mit den Werten $1$ und $\uf{2}$ genau erfüllt wird. Es folgt die Gesamttabelle:
+		Hier wird ein systematisiertes trial-and-error-Verfahren verwendet. Da sich aus Tabelle \ref{table:Division_HalbEins} (links) die Harmonische Reihe ergibt, aber ein Gesamtwert von $117-112 = 5$ benötigt wird, fällt die Wahl zunächst auf das größte Element in Tabelle \ref{table:Division_HalbEins} (rechts) mit Wert $3+\uf{2}$. Es folgt nun ein Rest von $5-(3+\uf{2})=1 +\uf{2}$, welcher durch die Tabelle \ref{table:Division_HalbEins} (links) mit den Werten $1$ und $\uf{2}$ genau erfüllt wird. Es folgt die Gesamttabelle:
 		\begin{table}[H]
 			\centering
 			\begin{tabular}{Sr Sr Sr}
@@ -124,6 +124,7 @@
 Die Ägypter brauchten nun also ein System, mit dessen Hilfe sie die Zerlegung von Brüchen in eine Summe von Stammbrüchen mit paarweise verschiedenen Nennern berechnen konnten. Die einfache Zerlegung
 $$\frac{a}{b} = \underbrace{\uf{b} + \uf{b} + ... +\uf{b}}_{a-mal}$$
 kam dabei nicht in Frage, da die Ägypter es als ,,unnatürlich'' ansahen, dass es mehr als diesen einen, wahren Teiler $\uf{b}$ einer Zahl geben sollte. \cite[S.39]{Burton2011}\\
-Für z.B. Brüche $\frac{2}{n}$ für $5 \leq n \leq 101$ ungerade findet sich dafür im Rhind-Papyrus eine Tabelle mit der jeweiligen Zerlegung. Auch waren einige Regeln bekannt, beispielsweise
+Für die Brüche $\frac{2}{n}$ für $n \in \N$ ungerade und $5 \leq n \leq 101$ findet sich dafür im Rhind-Papyrus eine Tabelle mit der jeweiligen Zerlegung. Auch waren einige Regeln bekannt, beispielsweise
 $$\frac{2}{n} = \uf{n} + \uf{2n} + \uf{3n} +\uf{6n}.$$
-Tatsächlich wurde diese Regel in der zuvor genannten Tabelle des Papyrus nur einmal, bei $\frac{2}{101} = \uf{101}+\uf{202}+\uf{303}+\uf{606}$, verwendet, sonst wurden kürzere Zerlegungen gewählt. Trotz immenser Bemühungen ist es bisher nicht gelungen, das System zu ermitteln, mittels welchem diese Tabelle zustande kam. \cite[S. 41]{Burton2011}
+Tatsächlich wurde diese Regel in der zuvor genannten Tabelle des Papyrus nur einmal, bei $\frac{2}{101} = \uf{101}+\uf{202}+\uf{303}+\uf{606}$, verwendet, sonst wurden kürzere Zerlegungen gewählt. Trotz immenser Bemühungen ist es bisher nicht gelungen, das System zu ermitteln, mittels welchem diese Tabelle zustande kam. \cite[S. 41]{Burton2011}\\
+Im Zuge der modernen Untersuchungen Ägyptischer Brüche sind aber noch viele weitere Methoden zur Zerlegung jeglicher Dezimalbrüche in Brüche Ägyptische Form gefunden worden, eine Auswahl solcher Zerlegungsalgorithmen sollen im Folgenden aufgezeigt, untersucht und verglichen werden.

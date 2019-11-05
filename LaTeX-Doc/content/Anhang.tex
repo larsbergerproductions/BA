@@ -30,12 +30,12 @@ Alle genutzten, nicht in PARI/GP enthaltenen Funktionen sind im Folgenden aufgel
 \emph{findDivisorsOf\_k\_addingup\_n(k,n)} sucht jene Teiler von $k$ heraus, die in ihrer Summe $n$ ergeben.
 \lstinputlisting[language=gp, firstline=180, lastline=191]{../PARI/algorithms.gp}
 
-\emph{printEgypFrac(arguments)} nimmt eine Liste mit Argumenten entgegen, die die Funktion dann als Summe aller Elemente als String zurückgibt.
+\emph{printEgypFrac(arguments)} nimmt eine Liste mit Argumenten entgegen und gibt die String-Konkatenation dieser zurück.
 \lstinputlisting[language=gp, firstline=216, lastline=233]{../PARI/algorithms.gp}
 
 
 \subsection{PARI/GP Code für den Greedy-Algorithmus}\label{code:greedy}
-Die Funktion \emph{fibonacci\_sylvester(fraction, stepsize, start)} berechnet mittels des gleichnamigen Algorithmus die entsprechende Ägyptische Darstellung des Bruchs \emph{fraction}. Das Argument \emph{stepsize} gibt an, um wie viel der Nenner eines Kandidaten bei Bedarf mindestens erhöht wird. $\uf{\text{start}}$ gibt den zuerst untersuchten Kandidaten an. Damit wird die Funktionalität zur Verfügung gestellt, \bspw nur nach Stammbrüchen mit geraden oder ungeraden Nennern zu suchen.\\
+Die Funktion \emph{fibonacci\_sylvester(fraction, stepsize, start)} berechnet mittels des gleichnamigen Algorithmus die entsprechende Ägyptische Darstellung des Bruchs \emph{fraction}. Das Argument \emph{stepsize} gibt an, um wie viel der Nenner eines Kandidaten bei Bedarf mindestens erhöht wird. Der zuerst untersuchte Kandidat ist $\uf{\text{start}}$. Damit wird die Funktionalität zur Verfügung gestellt, \bspw nur nach Stammbrüchen mit geraden oder ungeraden Nennern zu suchen.\\
 Letztendlich ruft der Nutzer aber nur die Stellvertreterfunktionen \emph{greedy}, \emph{greedy\_odd} oder \emph{greedy\_even} auf, die die Hauptfunktion \emph{fibonacci\_sylvester} mit Standardwerten für \emph{stepsize} und \emph{start} nutzen.
 \lstinputlisting[language=gp, firstline=5, lastline=39]{../PARI/algorithms.gp}
 
@@ -50,5 +50,5 @@ Die Implementierung des Farey-Folgen-Algorithmus greift auf eine Dauerschleife z
 \lstinputlisting[language=gp, firstline=159, lastline=178]{../PARI/algorithms.gp}
 
 \subsection{PARI/GP Code für den Binäralgorithmus}
-\emph{p} und \emph{q} entsprechen Zähler und Nenner des Bruchs \emph{fraction}; \emph{r} und \emph{s} sind die natürlichen Zahlen, aus denen sich gemäß Algorithmus \ref{algo:binary} $qs+r = pN_k$ ergibt. \emph{summands} enthält die Summanden der Zweierpotenzen, die in Summe den Zähler des aktuell betrachteten Bruchs ergeben. \emph{result} ist die Liste der Summanden des Ägyptischen Bruchs.
+\emph{p} und \emph{q} entsprechen Zähler und Nenner des Bruchs \emph{fraction}; \emph{r} und \emph{s} sind die natürlichen Zahlen, aus denen sich gemäß Algorithmus \ref{algo:binary} $qs+r = pN_k$ ergibt. Die Liste \emph{summands} enthält die Summanden der Zweierpotenzen, die in Summe den Zähler des aktuell betrachteten Bruchs ergeben. Das Ergebnis ist die Liste der Summanden des Ägyptischen Bruchs, die in \emph{result} gespeichert wird.
 \lstinputlisting[language=gp, firstline=193, lastline=213]{../PARI/algorithms.gp}

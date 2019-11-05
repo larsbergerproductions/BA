@@ -41,7 +41,7 @@ Anhand von drei Beispielen soll die Rechnung der einzelnen Methoden zur besseren
 	\paragraph{Greedy-Algorithmus} Wieder suchen wir iterativ die größten Stammbrüche, bis diese in ihrer Summe $\frac{24}{31}$ ergeben. Nach 4 Schritten erhält man das Ergebnis:
 	$$\frac{24}{31} = \uf{2} + \uf{4} + \uf{42} + \uf{2604}.$$
 	
-	\paragraph{Farey-Folgen-Algorithmus}Wie bisher wird zunächst der zu $\frac{24}{31}$ in $F_{31}$ adjazente Bruch gsucht, mit dem nach Rechenvorschrift fortgefahren wird, sodass sich nach der ersten Iteration
+	\paragraph{Farey-Folgen-Algorithmus}Wie bisher wird zunächst der zu $\frac{24}{31}$ in $F_{31}$ adjazente Bruch gesucht, mit dem nach Rechenvorschrift fortgefahren wird, sodass sich nach der ersten Iteration
 	$$\frac{24}{31}=\uf{31 \cdot 22}+ \frac{17}{22} = \uf{682} + \frac{17}{22}$$
 	ergibt. Mit den folgenden 5 Iterationen ergibt sich:
 	$$\frac{24}{31}=\uf{2}+\uf{6}+\uf{12}+\uf{52}+\uf{286}+\uf{682}.$$
@@ -49,7 +49,7 @@ Anhand von drei Beispielen soll die Rechnung der einzelnen Methoden zur besseren
 	\paragraph{Binäralgorithmus}Schritt 1 liefert $N_k = 32$. Schritt 3 zufolge gilt
 	$$\frac{24}{31} = \frac{24 \cdot 31 + 24}{31\cdot32} = \frac{16+8}{32} + \frac{16+8}{31 \cdot 32} = \uf{2} + \uf{4} + \uf{62} + \uf{124}.$$
 	
-	Die Ergebnisse, die in Tabelle \ref{table:vgl24/31} aufgelistet sind, zeigen einige signifikante Unterschiede: Vergleicht man den Greedy- mit dem Farey-Folgen-Algorithmus,  wird deutlich, dass durch die Erhöhung der Anzahl der Terme von 4 auf 6 der größte vorkommende Nenner um mehr als den Faktor 3 verringert werden kann. Es geht aber offensichtlich noch besser, denn der Binäralgorithmus liefert nur 4 Terme, deren größter Nenner aber um den Faktor 21 kleiner ist als der des Greedy-Algorithmus und um den Faktor $5,5$ kleiner als der des Farey-Folgen-Algorithmus. Ersteres ist allein der Habgier\footnote{greedy, engl. für: habgierig, gierig, gefräßig} des Greedy-Algorithmus geschuldet, da er an dritter Stelle statt der besseren Wahl $\uf{62}$ den größeren Bruch $\uf{42}$ wählt und somit den Rest so stark verkleinert, dass dieser nur durch einen relativ großen Nenner ausgedrückt werden kann. Hier ist also der Binäralgorithmus den anderen beiden deutlich überlegen.
+	Die Ergebnisse, die in Tabelle \ref{table:vgl24/31} aufgelistet sind, zeigen einige signifikante Unterschiede: Vergleicht man den Greedy- mit dem Farey-Folgen-Algorithmus,  wird deutlich, dass durch die Erhöhung der Anzahl der Terme von 4 auf 6 der größte vorkommende Nenner um mehr als den Faktor 3 verringert werden kann. Es geht aber offensichtlich noch besser, denn der Binäralgorithmus liefert nur 4 Terme, deren größter Nenner aber um den Faktor 21 kleiner ist als der des Greedy-Algorithmus und um den Faktor 5,5 kleiner als der des Farey-Folgen-Algorithmus. Ersteres ist allein der Habgier\footnote{greedy, engl. für: habgierig, gierig, gefräßig} des Greedy-Algorithmus geschuldet, da er an dritter Stelle statt der besseren Wahl $\uf{62}$ den größeren Bruch $\uf{42}$ wählt und somit den Rest so stark verkleinert, dass dieser nur durch einen relativ großen Nenner ausgedrückt werden kann. Hier ist also der Binäralgorithmus den anderen beiden deutlich überlegen.
 
 	\vspace{0.5cm}
 	\begin{table}[H]

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.7.29)  4 NOV 2019 12:43
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.7.29)  5 NOV 2019 17:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1822,7 +1822,7 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 36.
  (./FrontSheet.tex
-<images/unibw.jpg, id=159, 442.2924pt x 84.315pt>
+<images/unibw.jpg, id=155, 442.2924pt x 84.315pt>
 File: images/unibw.jpg Graphic file (type jpg)
 <use images/unibw.jpg>
 Package pdftex.def Info: images/unibw.jpg  used on input line 5.
@@ -1921,15 +1921,15 @@ Package babel Info: Redefining ngerman shorthand "~
 
 File: images/unibw.jpg Graphic file (type jpg)
 <use images/unibw.jpg>
-Package pdftex.def Info: images/unibw.jpg  used on input line 5.
+Package pdftex.def Info: images/unibw.jpg  used on input line 4.
 (pdftex.def)             Requested size: 176.91382pt x 33.72539pt.
 
 Overfull \vbox (1.2785pt too high) has occurred while \output is active []
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 5.
+(babel)             in language  on input line 4.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 5.
+(babel)             in language  on input line 4.
 
 [1
 
@@ -1940,31 +1940,46 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 2.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9> on input line 3.
+(Font)              <9> on input line 4.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 3.
-Package hyperref Info: bookmark level for unknown todo defaults to 0 on input l
-ine 3.
-LaTeX Font Info:    Try loading font information for U+dsrom on input line 10.
+(Font)              <5> on input line 4.
+LaTeX Font Info:    Try loading font information for U+dsrom on input line 8.
 
 (/usr/share/texlive/texmf-dist/tex/latex/doublestroke/Udsrom.fd
 File: Udsrom.fd 1995/08/01 v0.1 Double stroke roman font definitions
-))
+)
+Underfull \hbox (badness 10000) in paragraph at lines 12--14
+
+ []
+
 File: images/unibw.jpg Graphic file (type jpg)
 <use images/unibw.jpg>
-Package pdftex.def Info: images/unibw.jpg  used on input line 7.
+Package pdftex.def Info: images/unibw.jpg  used on input line 14.
 (pdftex.def)             Requested size: 176.91382pt x 33.72539pt.
 
 Overfull \vbox (1.2785pt too high) has occurred while \output is active []
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 7.
+(babel)             in language  on input line 14.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 7.
+(babel)             in language  on input line 14.
 
 [2
 
-] (./content/EgypArithmetics.tex
+])
+File: images/unibw.jpg Graphic file (type jpg)
+<use images/unibw.jpg>
+Package pdftex.def Info: images/unibw.jpg  used on input line 6.
+(pdftex.def)             Requested size: 176.91382pt x 33.72539pt.
+
+Overfull \vbox (1.2785pt too high) has occurred while \output is active []
+
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 6.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 6.
+
+[3] (./content/EgypArithmetics.tex
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 2.
 Package babel Info: Redefining ngerman shorthand "~
@@ -1998,7 +2013,7 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 50.
 
-[3
+[4
 
 ]
 Package babel Info: Redefining ngerman shorthand "|
@@ -2022,7 +2037,7 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 117.
 
-[4]
+[5]
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 123.
 Package babel Info: Redefining ngerman shorthand "~
@@ -2030,17 +2045,30 @@ Package babel Info: Redefining ngerman shorthand "~
 )
 File: images/unibw.jpg Graphic file (type jpg)
 <use images/unibw.jpg>
-Package pdftex.def Info: images/unibw.jpg  used on input line 9.
+Package pdftex.def Info: images/unibw.jpg  used on input line 8.
 (pdftex.def)             Requested size: 176.91382pt x 33.72539pt.
 
 Overfull \vbox (1.2785pt too high) has occurred while \output is active []
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 9.
+(babel)             in language  on input line 8.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 9.
+(babel)             in language  on input line 8.
 
-[5] (./content/Algorithmen.tex
+[6]
+File: images/unibw.jpg Graphic file (type jpg)
+<use images/unibw.jpg>
+Package pdftex.def Info: images/unibw.jpg  used on input line 8.
+(pdftex.def)             Requested size: 176.91382pt x 33.72539pt.
+
+Overfull \vbox (1.2785pt too high) has occurred while \output is active []
+
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 8.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 8.
+
+[7] (./content/Algorithmen.tex
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 1.
 Package babel Info: Redefining ngerman shorthand "~
@@ -2066,19 +2094,13 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 18.
 
-[6
+[8
 
 ]) (./content/FareySeriesAlgorithm.tex
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 1.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 1.
-
-Overfull \hbox (8.5366pt too wide) in paragraph at lines 2--3
-\T1/lmr/m/n/10.95 Eine wei-te-re Me-tho-de zur Er-stel-lung Ägyp-ti-scher Brü-c
-he stellt der so-ge-nann-te Farey-Folgen-Algorithmus
- []
-
 File: images/unibw.jpg Graphic file (type jpg)
 <use images/unibw.jpg>
 Package pdftex.def Info: images/unibw.jpg  used on input line 4.
@@ -2091,93 +2113,93 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 4.
 
-[7]
-File: images/unibw.jpg Graphic file (type jpg)
-<use images/unibw.jpg>
-Package pdftex.def Info: images/unibw.jpg  used on input line 38.
-(pdftex.def)             Requested size: 176.91382pt x 33.72539pt.
-
-Overfull \vbox (1.2785pt too high) has occurred while \output is active []
-
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 38.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 38.
-
-[8]) (./content/BinaryAlgorithm.tex
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 1.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 1.
-File: images/unibw.jpg Graphic file (type jpg)
-<use images/unibw.jpg>
-Package pdftex.def Info: images/unibw.jpg  used on input line 18.
-(pdftex.def)             Requested size: 176.91382pt x 33.72539pt.
-
-Overfull \vbox (1.2785pt too high) has occurred while \output is active []
-
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 18.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 18.
-
 [9]
 File: images/unibw.jpg Graphic file (type jpg)
 <use images/unibw.jpg>
-Package pdftex.def Info: images/unibw.jpg  used on input line 51.
+Package pdftex.def Info: images/unibw.jpg  used on input line 36.
 (pdftex.def)             Requested size: 176.91382pt x 33.72539pt.
 
 Overfull \vbox (1.2785pt too high) has occurred while \output is active []
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 51.
+(babel)             in language  on input line 36.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 51.
+(babel)             in language  on input line 36.
 
-[10]) (./content/Algos_Beispiele.tex
+[10]) (./content/BinaryAlgorithm.tex
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 1.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 1.
 File: images/unibw.jpg Graphic file (type jpg)
 <use images/unibw.jpg>
-Package pdftex.def Info: images/unibw.jpg  used on input line 33.
+Package pdftex.def Info: images/unibw.jpg  used on input line 13.
 (pdftex.def)             Requested size: 176.91382pt x 33.72539pt.
 
 Overfull \vbox (1.2785pt too high) has occurred while \output is active []
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 33.
+(babel)             in language  on input line 13.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 33.
+(babel)             in language  on input line 13.
 
 [11]
 File: images/unibw.jpg Graphic file (type jpg)
 <use images/unibw.jpg>
-Package pdftex.def Info: images/unibw.jpg  used on input line 53.
+Package pdftex.def Info: images/unibw.jpg  used on input line 48.
 (pdftex.def)             Requested size: 176.91382pt x 33.72539pt.
 
 Overfull \vbox (1.2785pt too high) has occurred while \output is active []
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 53.
+(babel)             in language  on input line 48.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 53.
+(babel)             in language  on input line 48.
 
-[12]) (./content/Algo_Vergleich.tex
+[12]) (./content/Algos_Beispiele.tex
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 1.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 1.
 File: images/unibw.jpg Graphic file (type jpg)
 <use images/unibw.jpg>
-Package pdftex.def Info: images/unibw.jpg  used on input line 1.
+Package pdftex.def Info: images/unibw.jpg  used on input line 13.
 (pdftex.def)             Requested size: 176.91382pt x 33.72539pt.
 
 Overfull \vbox (1.2785pt too high) has occurred while \output is active []
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 1.
+(babel)             in language  on input line 13.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 1.
+(babel)             in language  on input line 13.
 
 [13]
+File: images/unibw.jpg Graphic file (type jpg)
+<use images/unibw.jpg>
+Package pdftex.def Info: images/unibw.jpg  used on input line 45.
+(pdftex.def)             Requested size: 176.91382pt x 33.72539pt.
+
+Overfull \vbox (1.2785pt too high) has occurred while \output is active []
+
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 45.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 45.
+
+[14]
+File: images/unibw.jpg Graphic file (type jpg)
+<use images/unibw.jpg>
+Package pdftex.def Info: images/unibw.jpg  used on input line 74.
+(pdftex.def)             Requested size: 176.91382pt x 33.72539pt.
+
+Overfull \vbox (1.2785pt too high) has occurred while \output is active []
+
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 74.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 74.
+
+[15]) (./content/Algo_Vergleich.tex
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 1.
 Package babel Info: Redefining ngerman shorthand "~
@@ -2189,17 +2211,30 @@ Underfull \vbox (badness 10000) detected at line 16
 )
 File: images/unibw.jpg Graphic file (type jpg)
 <use images/unibw.jpg>
-Package pdftex.def Info: images/unibw.jpg  used on input line 16.
+Package pdftex.def Info: images/unibw.jpg  used on input line 15.
 (pdftex.def)             Requested size: 176.91382pt x 33.72539pt.
 
 Overfull \vbox (1.2785pt too high) has occurred while \output is active []
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 16.
+(babel)             in language  on input line 15.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 16.
+(babel)             in language  on input line 15.
 
-[14] (./content/Testreihen.tex
+[16]
+File: images/unibw.jpg Graphic file (type jpg)
+<use images/unibw.jpg>
+Package pdftex.def Info: images/unibw.jpg  used on input line 15.
+(pdftex.def)             Requested size: 176.91382pt x 33.72539pt.
+
+Overfull \vbox (1.2785pt too high) has occurred while \output is active []
+
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 15.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 15.
+
+[17] (./content/Testreihen.tex
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 1.
 Package babel Info: Redefining ngerman shorthand "~
@@ -2224,7 +2259,7 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 26.
 
-[15
+[18
 
 ]
 Package babel Info: Redefining ngerman shorthand "|
@@ -2252,12 +2287,12 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 48.
 
-[16]
+[19]
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 51.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 51.
-<images/avgTerms.png, id=430, 1084.05pt x 722.7pt>
+<images/avgTerms.png, id=442, 1084.05pt x 722.7pt>
 File: images/avgTerms.png Graphic file (type png)
 <use images/avgTerms.png>
 Package pdftex.def Info: images/avgTerms.png  used on input line 60.
@@ -2274,19 +2309,39 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 61.
 
-[17]
+[20]
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 62.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 62.
 
 
-LaTeX Warning: Reference `subsec:two/n' on page 18 undefined on input line 63.
+LaTeX Warning: Reference `subsec:two/n' on page 21 undefined on input line 63.
 
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 73.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 73.
+
+Overfull \hbox (2.31294pt too wide) in paragraph at lines 74--75
+\T1/lmr/m/n/10.95 Der Greedy-Algorithmus pen-delt sich ab $\OT1/lmr/m/n/10.95 3
+\OML/lmm/m/it/10.95 :\OT1/lmr/m/n/10.95 000 \OMS/lmsy/m/n/10.95 ^^T \OML/lmm/m/
+it/10.95 n \OMS/lmsy/m/n/10.95 ^^T \OT1/lmr/m/n/10.95 10\OML/lmm/m/it/10.95 :\O
+T1/lmr/m/n/10.95 000$ \T1/lmr/m/n/10.95 bei Wer-ten von $\OT1/lmr/m/n/10.95 7 \
+OMS/lmsy/m/n/10.95 ^^T \OML/lmm/m/it/10.95 maxTerms[]\OT1/lmr/m/n/10.95 (\OML/l
+mm/m/it/10.95 n\OT1/lmr/m/n/10.95 ) \OMS/lmsy/m/n/10.95 ^^T
+ []
+
+
+Overfull \hbox (27.73178pt too wide) in paragraph at lines 74--75
+\OT1/lmr/m/n/10.95 16$ \T1/lmr/m/n/10.95 ein, wäh-rend der Bi-näral-go-rith-mus
+ sich ab $\OT1/lmr/m/n/10.95 2000 \OMS/lmsy/m/n/10.95 ^^T \OML/lmm/m/it/10.95 n
+ \OMS/lmsy/m/n/10.95 ^^T \OT1/lmr/m/n/10.95 10\OML/lmm/m/it/10.95 :\OT1/lmr/m/n
+/10.95 000$ \T1/lmr/m/n/10.95 mit Wer-ten von $\OT1/lmr/m/n/10.95 15 \OMS/lmsy/
+m/n/10.95 ^^T \OML/lmm/m/it/10.95 maxTerms[]\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/1
+0.95 n\OT1/lmr/m/n/10.95 ) \OMS/lmsy/m/n/10.95 ^^T
+ []
+
 File: images/unibw.jpg Graphic file (type jpg)
 <use images/unibw.jpg>
 Package pdftex.def Info: images/unibw.jpg  used on input line 75.
@@ -2299,8 +2354,10 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 75.
 
-[18 <./images/avgTerms.png>]
-<images/maxTerms.png, id=443, 1084.05pt x 722.7pt>
+[21 <./images/avgTerms.png>]
+Package hyperref Info: bookmark level for unknown todo defaults to 0 on input l
+ine 76.
+<images/maxTerms.png, id=455, 1084.05pt x 722.7pt>
 File: images/maxTerms.png Graphic file (type png)
 <use images/maxTerms.png>
 Package pdftex.def Info: images/maxTerms.png  used on input line 83.
@@ -2309,7 +2366,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 86.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 86.
-<images/minDenom.png, id=445, 1084.05pt x 722.7pt>
+<images/minDenom.png, id=457, 1084.05pt x 722.7pt>
 File: images/minDenom.png Graphic file (type png)
 <use images/minDenom.png>
 Package pdftex.def Info: images/minDenom.png  used on input line 98.
@@ -2326,7 +2383,7 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 98.
 
-[19 <./images/maxTerms.png>]
+[22 <./images/maxTerms.png>]
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 101.
 Package babel Info: Redefining ngerman shorthand "~
@@ -2343,8 +2400,8 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 105.
 
-[20 <./images/minDenom.png>]
-<images/maxDenom2in1.png, id=460, 1293.633pt x 643.203pt>
+[23 <./images/minDenom.png>]
+<images/maxDenom2in1.png, id=473, 1293.633pt x 643.203pt>
 File: images/maxDenom2in1.png Graphic file (type png)
 <use images/maxDenom2in1.png>
 Package pdftex.def Info: images/maxDenom2in1.png  used on input line 112.
@@ -2369,86 +2426,57 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 128.
 
-[21 <./images/maxDenom2in1.png>]
-Overfull \hbox (3.6072pt too wide) in paragraph at lines 128--129
-[] []\T1/lmss/bx/n/10.95 Anzahl der Sum-man-den[][] \T1/lmr/m/n/10.95 Die obe-r
-en Schran-ken für so-wohl Greedy- als auch Farey-Folgen-Algorithmus
- []
-
-
-Overfull \hbox (0.7076pt too wide) in paragraph at lines 129--129
-[][][][]\T1/lmr/m/n/6 waruumm???!!?!  
- []
-
-
-Overfull \hbox (0.7076pt too wide) in paragraph at lines 129--129
-[][][][]\T1/lmr/m/n/6 waruumm???!!?!  
- []
-
-
-Overfull \hbox (0.7076pt too wide) in paragraph at lines 129--129
-[][][][]\T1/lmr/m/n/6 waruumm???!!?!  
- []
-
-
-Overfull \hbox (0.7076pt too wide) in paragraph at lines 129--129
-[][][][]\T1/lmr/m/n/6 waruumm???!!?!  
- []
-
+[24 <./images/maxDenom2in1.png>]
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 131.
+(babel)             in language  on input line 132.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 131.
+(babel)             in language  on input line 132.
 )
 File: images/unibw.jpg Graphic file (type jpg)
 <use images/unibw.jpg>
-Package pdftex.def Info: images/unibw.jpg  used on input line 18.
+Package pdftex.def Info: images/unibw.jpg  used on input line 17.
 (pdftex.def)             Requested size: 176.91382pt x 33.72539pt.
 
 Overfull \vbox (1.2785pt too high) has occurred while \output is active []
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 18.
+(babel)             in language  on input line 17.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 18.
+(babel)             in language  on input line 17.
 
-[22] (./content/Theorie.tex
+[25] (./content/Theorie.tex
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 1.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 1.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 4.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 4.
 File: images/unibw.jpg Graphic file (type jpg)
 <use images/unibw.jpg>
-Package pdftex.def Info: images/unibw.jpg  used on input line 30.
+Package pdftex.def Info: images/unibw.jpg  used on input line 34.
 (pdftex.def)             Requested size: 176.91382pt x 33.72539pt.
 
 Overfull \vbox (1.2785pt too high) has occurred while \output is active []
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 30.
+(babel)             in language  on input line 34.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 30.
+(babel)             in language  on input line 34.
 
-[23
+[26
 
 ])
 File: images/unibw.jpg Graphic file (type jpg)
 <use images/unibw.jpg>
-Package pdftex.def Info: images/unibw.jpg  used on input line 20.
+Package pdftex.def Info: images/unibw.jpg  used on input line 19.
 (pdftex.def)             Requested size: 176.91382pt x 33.72539pt.
 
 Overfull \vbox (1.2785pt too high) has occurred while \output is active []
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 20.
+(babel)             in language  on input line 19.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 20.
+(babel)             in language  on input line 19.
 
-[24] (./content/Anhang.tex
+[27] (./content/Anhang.tex
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 2.
 Package babel Info: Redefining ngerman shorthand "~
@@ -2473,7 +2501,7 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 115.
 
-[25
+[28
 
 ]) (../PARI/algorithms.gp) (../PARI/algorithms.gp)
 File: images/unibw.jpg Graphic file (type jpg)
@@ -2488,7 +2516,13 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 27.
 
-[26] (../PARI/algorithms.gp) (../PARI/algorithms.gp) (../PARI/algorithms.gp)
+[29] (../PARI/algorithms.gp) (../PARI/algorithms.gp)
+Overfull \hbox (11.37325pt too wide) in paragraph at lines 33--34
+[]\T1/lmr/m/it/10.95 printEgypFrac(arguments) \T1/lmr/m/n/10.95 nimmt ei-ne Lis
+-te mit Ar-gu-men-ten ent-ge-gen und gibt die String-Konkatenation
+ []
+
+(../PARI/algorithms.gp)
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 37.
 Package babel Info: Redefining ngerman shorthand "~
@@ -2505,7 +2539,7 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 40.
 
-[27] (../PARI/algorithms.gp)
+[30] (../PARI/algorithms.gp)
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 43.
 Package babel Info: Redefining ngerman shorthand "~
@@ -2522,7 +2556,7 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 45.
 
-[28] (../PARI/algorithms.gp)
+[31] (../PARI/algorithms.gp)
 File: images/unibw.jpg Graphic file (type jpg)
 <use images/unibw.jpg>
 Package pdftex.def Info: images/unibw.jpg  used on input line 45.
@@ -2535,7 +2569,7 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 45.
 
-[29]
+[32]
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 48.
 Package babel Info: Redefining ngerman shorthand "~
@@ -2558,7 +2592,7 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 202.
 
-[30])))
+[33])))
 File: images/unibw.jpg Graphic file (type jpg)
 <use images/unibw.jpg>
 Package pdftex.def Info: images/unibw.jpg  used on input line 67.
@@ -2571,7 +2605,7 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 67.
 
-[31] (./document.bbl
+[34] (./document.bbl
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 1.
 Package babel Info: Redefining ngerman shorthand "~
@@ -2593,7 +2627,7 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 2.
 
-[32
+[35
 
 ]
 Package babel Info: Redefining ngerman shorthand "|
@@ -2623,7 +2657,7 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 81.
 
-[33
+[36
 
 ]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 81.
@@ -2632,7 +2666,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 81.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 81.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 81.
 Package rerunfilecheck Info: File `document.out' has not changed.
-(rerunfilecheck)             Checksum: 8F3FC16644B6DA7CE6E1F9B15C333888;3026.
+(rerunfilecheck)             Checksum: D848941D788EB53999CEC295E0B0EB22;2923.
 
 
 LaTeX Warning: There were undefined references.
@@ -2640,10 +2674,10 @@ LaTeX Warning: There were undefined references.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 81.
  ) 
 Here is how much of TeX's memory you used:
- 33736 strings out of 492982
- 599064 string characters out of 6134896
- 1028297 words of memory out of 5000000
- 36110 multiletter control sequences out of 15000+600000
+ 33738 strings out of 492982
+ 599067 string characters out of 6134896
+ 1028310 words of memory out of 5000000
+ 36109 multiletter control sequences out of 15000+600000
  87821 words of font info for 73 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  76i,17n,106p,8819b,1968s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2667,10 +2701,10 @@ blic/lm/lmsy8.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy9.pfb></usr/share
 /texmf/fonts/type1/public/lm/lmtt10.pfb></usr/share/texmf/fonts/type1/public/lm
 /lmtti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols
 /msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/zapfding/uzdr.pfb>
-Output written on document.pdf (36 pages, 2388461 bytes).
+Output written on document.pdf (39 pages, 2393982 bytes).
 PDF statistics:
- 950 PDF objects out of 1000 (max. 8388607)
- 870 compressed objects within 9 object streams
- 389 named destinations out of 1000 (max. 500000)
- 342 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 969 PDF objects out of 1000 (max. 8388607)
+ 886 compressed objects within 9 object streams
+ 392 named destinations out of 1000 (max. 500000)
+ 334 words of extra memory for PDF output out of 10000 (max. 10000000)
 

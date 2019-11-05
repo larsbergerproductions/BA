@@ -1,7 +1,6 @@
-\section{Theoretische Grenzen}\label{sec:theorie}
-Nachdem untersucht wurde, was in der Praxis mit ausgewählten Methoden erreicht werden kann, soll nun das Licht auf einen weiteren sehr interessanten Aspekt Ägyptischer Brüche gelenkt werden, nämlich den Dingen, die theoretische Grenzen haben. Vor Allem im 20. Jahrhundert wurde von zahlreichen Mathematikern an dem Problem, solche theoretischen Grenzen zu finden und zu beweisen, gearbeitet, unter ihnen Bleicher, Erdös, Graham und andere \cite[S.87 ff]{Guy1981}.
+\section[Theoretische Schranken]{Theoretische Schranken für die maximale Anzahl der Stammbrüche}\label{sec:theorie}
+Nachdem untersucht wurde, was in der Praxis mit ausgewählten Methoden erreicht werden kann, soll nun das Licht auf einen weiteren sehr interessanten Aspekt Ägyptischer Brüche gelenkt werden, nämlich den Dingen, die theoretische herleitbare Schranken haben. Vor allem im 20. Jahrhundert wurde von zahlreichen Mathematikern an dem Problem, solche theoretischen Grenzen zu finden und zu beweisen, gearbeitet, unter ihnen Bleicher, Erdös, Graham und andere \cite[S.87 ff]{Guy1981}.
 
-\subsection{Maximal benötigte Anzahl der Stammbrüche}
 \begin{satz}\label{satz:two/n}
 	Sei $n \in \N$ ungerade. $\frac{2}{n}$ lässt sich für jedes $n$ als Summe zweier Stammbrüche notieren, nämlich:
 	$$\frac{2}{n} = \uf{\lceil \frac{n}{2} \rceil} + \uf{n \cdot \lceil \frac{n}{2} \rceil}.$$
@@ -30,8 +29,9 @@ Da der Term $\uf{\lceil \frac{n}{2} \rceil}$ genau dem größten Stammbruch ents
 	$$\frac{3}{n} = \uf{n} + \uf{\lceil \frac{n}{2} \rceil} + \uf{n \cdot \lceil \frac{n}{2} \rceil}.$$
 \end{bew}
 
-Für die Fälle $\frac{4}{n}$ und $\frac{5}{n}$ wurde ebenfalls vermutet, dass immer 3 Stammbrüche für eine Zerlegung in einen Ägyptischen Bruch ausreichen, das konnte aber in beiden Fällen bisher nicht allgemein bewiesen werden; für $\frac{4}{n}$ zeigte Nicola Franceschine diese Regel $\forall n \leq 10^8$, Palamá zeigte Sierpinskis Annahme für $\frac{5}{n}$ $\forall n \leq 922.321$. Schinzel hat zudem bewiesen, dass der Ausdruck
+Bleicher und Erdös vermuteten, dass für alle $n \in \N$ der Bruch $\frac{4}{n}$ in höchstens 3 Stammbrüche zerlegt werden kann, was nicht formal bewiesen, aber von Nicola Franceschine zumindest für $n < 10^8$ gezeigt wurde. Die gleiche Vermutung für $\frac{5}{n}$ wurde durch W. Sierpiński aufgestellt, zunächst durch G. Palamá für alle $n < 922.321$ gezeigt und später durch Stewart auf alle $n < 1.057.438.801$, $n \not\equiv 1\, (\text{mod } 278.460)$ erweitert.
+Schinzel bewies zudem, dass der Ausdruck
 $$\frac{4}{at+b} = \uf{x(t)} + \uf{y(t)} + \uf{z(t)}$$
-für Polynome $x(t), y(t)$ und $z(t)$ mit ganzzahligen Koeffizienten genau dann gilt, wenn $b$ nicht quadratischer Rest von $a$ ist. \cite[S. 88]{Guy1981}
+für Polynome $x(t), y(t)$ und $z(t)$ mit ganzzahligen Koeffizienten genau dann gilt, wenn $b$ nicht quadratischer Rest modulo $a$ ist. \cite[S. 88]{Guy1981}
 
-Das Beispiel $\frac{4}{n}$, für welches noch immer nicht klar ist, ob sie sich für alle $n \in \N$ durch 3 Stammbrüche als Ägyptischer Bruch darstellen lässt, zeigt auf, wie viel in diesem Bereich der Mathematik noch unbekannt ist. Das Problem der Ägyptischen Brüche, das vor knapp 4000 Jahren aufgeworfen wurde, stellt auch die heutigen Mathematiker noch vor viele ungelöste Aufgaben und Fragen.
+\todo{neu schreiben}Das Beispiel $\frac{4}{n}$, für welches noch immer nicht klar ist, ob es sich für alle $n \in \N$ durch 3 Stammbrüche als Ägyptischer Bruch darstellen lässt, zeigt auf, wie viel in diesem Bereich der Mathematik noch unbekannt ist. Das Problemfeld der Ägyptischen Brüche, das vor knapp 4000 Jahren aufgeworfen wurde, stellt auch die heutigen Mathematiker noch vor viele ungelöste Aufgaben und Fragen.
