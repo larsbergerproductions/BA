@@ -388,19 +388,19 @@ test_binary_corr(start,end)={
 }
 
 reverse_farey()={
-	local(as);
-	write("/home/lars/Desktop/reverse_farey11.csv", "Numerator,Denominator,minDenom_farey");
+	local(as,result);
+	write("/home/lars/Desktop/reverse_farey2_50.csv", "Numerator,Denominator,minDenom_farey");
 	as = List();
-	list11=[210, 420, 630, 840, 1050, 1260, 1470, 1680, 1890, 2100, 2520, 2730, 2940, 3150, 3360, 3570, 3780, 3990, 4200, 4410, 4830, 5040, 5250, 5460, 5670, 5880, 6090, 6300, 6510, 6720, 7140, 7350, 7560, 7770, 7980, 8190, 8400, 8610, 8820, 9030, 9450, 9660, 9870];
-	for(i=1, #list11,
-		den=list11[i];
+	mylist=List([9813,6963, 6965, 6967, 6969, 6971, 6973, 6975, 6977,7423, 7425, 7427, 7429,5203, 5205, 5207, 5209, 5211, 5213, 5215, 5217, 5219, 5221, 5223,3585, 3587, 3589, 3591, 3593, 3595, 3597, 3599, 3601, 3603, 3605,2593, 2595, 2597, 2599, 2601, 2603, 2605, 2607, 2609, 2611, 2613]);
+	for(i=1, 50,
+		den=mylist[i];
 		for(num=2, den-1,
 			if(gcd(num,den)==1,
 				result = FS(num/den);
-				if(denominator(result[#result]) == 11*list11[i],
+				if(denominator(result[#result]) == 11*mylist[i],
 					listput(as, num);
 					print(num/den, ": ", denominator(result[#result]));
-					write("/home/lars/Desktop/reverse_farey11.csv", num, ",", den, ",", denominator(result[#result]));
+					write("/home/lars/Desktop/reverse_farey2_50.csv", num, ",", den, ",", denominator(result[#result]));
 				);
 			);
 		);

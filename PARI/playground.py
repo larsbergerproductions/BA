@@ -18,7 +18,7 @@ def is_power_of_two(n):
 
 
 data = load_data_from_json()
-
+"""
 line2 = []
 line3 = []
 line5 = []
@@ -53,13 +53,16 @@ lines = [line2, line3, line5, line7, line11, line13]
 for line in lines:
 	print(str(len(line)) + ": " + str(line))
 """
-maxi = (0, data["binary"]["maxDenom"][0])
-
-for i in range(1,len(data["binary"]["maxDenom"])-1):
-	if data["binary"]["maxDenom"][i] > maxi[1]:
-		maxi = (data["n"][i], data["binary"]["maxDenom"][i])
+# maxi = (0, data["binary"]["maxDenom"][0])
+myl = []
+diff = []
+for i in range(1, len(data["binary"]["maxDenom"])-1):
+	if data["binary"]["minTerms"][i] == 3:
+		myl.append(data["n"][i])
+rc
+print(str(len(myl)) + ": " + str(myl))
+print(str(len(diff)) + ": " + str(diff))
 		
-print(str(maxi) + "; " + str(maxi[0]^2 > maxi[1]))
+# print(str(maxi) + "; " + str(maxi[0]^2 > maxi[1]))
 # for i in range(9995, 9999):
 # 	print(str(i) + ": " + str(data["binary"][""]))
-"""
