@@ -1,3 +1,4 @@
+% !TeX spellcheck = de_DE_frami
 % Nach Vorlage der Projektdokumentation für Fachinformatiker Anwendungsentwicklung von Stefan Macke (http://fiae.link/LaTeXVorlageFIAE)
 % Deckblatt der UniBwM Fakultät für Informatik 
 % Mathebefehle von Dr. Sören Kleine UniBwM
@@ -8,7 +9,8 @@
 	toc=bibliography,
 	footnotes=multiple,
 	parskip=half,
-	numbers=noendperiod
+	numbers=noendperiod,
+	twoside
 ]{scrartcl}
 
 \usepackage[utf8]{inputenc}
@@ -21,7 +23,9 @@
 \input{Commands}
 \input{Glossary}
 \newboolean{printGraphics}
+\newboolean{printReady}
 \setboolean{printGraphics}{true}
+\setboolean{printReady}{true}
 
 \begin{document}
 	

@@ -59,7 +59,7 @@ diff = []
 for i in range(1, len(data["binary"]["maxDenom"])-1):
 	if data["binary"]["minTerms"][i] == 3:
 		myl.append(data["n"][i])
-rc
+
 print(str(len(myl)) + ": " + str(myl))
 print(str(len(diff)) + ": " + str(diff))
 		

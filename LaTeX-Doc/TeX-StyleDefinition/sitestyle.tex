@@ -2,8 +2,9 @@
 
 % Seitenränder -----------------------------------------------------------------
 \setlength{\topskip}{\ht\strutbox} % behebt Warnung von geometry
-\geometry{a4paper,left=25mm,right=25mm,top=25mm,bottom=40mm}
-
+\geometry{a4paper,left=35mm,right=25mm,top=25mm,bottom=40mm}
+%prevent vertical alignment spaced equally if using twosided layout (happens if page isn't filled down to the bottom)
+\raggedbottom
 \usepackage[
 	automark, % Kapitelangaben in Kopfzeile automatisch erstellen
 	headsepline, % Trennlinie unter Kopfzeile

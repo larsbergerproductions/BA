@@ -6,7 +6,7 @@
 \contentsline {subsection}{\numberline {2.2}\IeC {\"A}gyptische Division}{3}{subsection.11}
 \contentsline {subsubsection}{\numberline {2.2.1}Ganzzahlige Division}{3}{subsubsection.12}
 \contentsline {subsubsection}{\numberline {2.2.2}Division mit Rest}{4}{subsubsection.14}
-\contentsline {subsection}{\numberline {2.3}Ermittlung \IeC {\"A}gyptischer Zerlegungen von Br\IeC {\"u}chen}{5}{subsection.18}
+\contentsline {subsection}{\numberline {2.3}Ermittlung \IeC {\"A}gyptischer Zerlegungen von Br\IeC {\"u}chen}{6}{subsection.18}
 \contentsline {section}{\numberline {3}Algorithmen zur Erstellung \IeC {\"A}gyptischer Br\IeC {\"u}che}{7}{section.19}
 \contentsline {subsection}{\numberline {3.1}Der Greedy-Algorithmus}{7}{subsection.21}
 \contentsline {paragraph}{\nonumberline Absch\IeC {\"a}tzung}{9}{section*.29}
@@ -15,7 +15,7 @@
 \contentsline {subsection}{\numberline {3.3}Der Bin\IeC {\"a}ralgorithmus}{10}{subsection.41}
 \contentsline {paragraph}{\nonumberline Absch\IeC {\"a}tzung}{11}{section*.49}
 \contentsline {subsection}{\numberline {3.4}Beispielrechnungen}{12}{subsection.52}
-\contentsline {paragraph}{\nonumberline Greedy-Algorithmus}{12}{section*.54}
+\contentsline {paragraph}{\nonumberline Greedy-Algorithmus}{13}{section*.54}
 \contentsline {paragraph}{\nonumberline Farey-Folgen-Algorithmus}{13}{section*.55}
 \contentsline {paragraph}{\nonumberline Bin\IeC {\"a}ralgorithmus}{13}{section*.56}
 \contentsline {paragraph}{\nonumberline Greedy-Algorithmus}{14}{section*.59}
@@ -43,12 +43,12 @@
 \contentsline {paragraph}{\nonumberline Gr\IeC {\"o}\IeC {\ss }e der Nenner}{24}{section*.92}
 \contentsline {subsection}{\numberline {4.4}Zusammenfassung}{25}{subsection.94}
 \contentsline {section}{\numberline {5}Theoretische Schranken}{26}{section.95}
-\contentsline {section}{\numberline {6}Zusammenfassende Auswertung}{28}{section.98}
-\contentsline {section}{\numberline {7}Anhang}{29}{section.99}
-\contentsline {subsection}{\numberline {7.1}Hilfsfunktionen}{29}{subsection.100}
-\contentsline {subsection}{\numberline {7.2}PARI/GP Code f\IeC {\"u}r den Greedy-Algorithmus}{32}{subsection.205}
-\contentsline {subsubsection}{\numberline {7.2.1}Optimierter Greedy-Algorithmus}{33}{subsubsection.242}
-\contentsline {subsection}{\numberline {7.3}PARI/GP Code f\IeC {\"u}r den Farey-Folgen-Algorithmus}{34}{subsection.292}
-\contentsline {subsection}{\numberline {7.4}PARI/GP Code f\IeC {\"u}r den Bin\IeC {\"a}ralgorithmus}{34}{subsection.314}
-\contentsline {section}{\nonumberline Literaturverzeichnis}{36}{section*.337}
-\contentsline {section}{\nonumberline Eidesstattliche Erkl\IeC {\"a}rung}{37}{section*.338}
+\contentsline {section}{\numberline {6}Zusammenfassende Auswertung}{28}{section.99}
+\contentsline {section}{\numberline {7}Anhang}{29}{section.100}
+\contentsline {subsection}{\numberline {7.1}Hilfsfunktionen}{29}{subsection.101}
+\contentsline {subsection}{\numberline {7.2}PARI/GP Code f\IeC {\"u}r den Greedy-Algorithmus}{32}{subsection.206}
+\contentsline {subsubsection}{\numberline {7.2.1}Optimierter Greedy-Algorithmus}{33}{subsubsection.243}
+\contentsline {subsection}{\numberline {7.3}PARI/GP Code f\IeC {\"u}r den Farey-Folgen-Algorithmus}{34}{subsection.293}
+\contentsline {subsection}{\numberline {7.4}PARI/GP Code f\IeC {\"u}r den Bin\IeC {\"a}ralgorithmus}{35}{subsection.315}
+\contentsline {section}{\nonumberline Literaturverzeichnis}{36}{section*.338}
+\contentsline {section}{\nonumberline Eidesstattliche Erkl\IeC {\"a}rung}{37}{section*.339}

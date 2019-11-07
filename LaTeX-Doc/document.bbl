@@ -15,29 +15,27 @@
 \bibitem[\scshape{}Beck(2000)]{Beck2000}
 \dinatlabel{\upshape{}Beck 2000} \textsc{Beck}, Anatole:
 \newblock \emph{Excursions Into Mathematics - The Millennium Edition}.
-\newblock Wellesley, Massachusetts : Peters, 2000. --
-\newblock ISBN 978--1--568--81115--4
+\newblock Wellesley, Massachusetts : Peters, 2000
 
 \bibitem[\scshape{}{Bleicher}(1972)]{Bleicher1972}
 \dinatlabel{\upshape{}{Bleicher} 1972} \textsc{{Bleicher}}, M.~N.:
 \newblock {A new algorithm for the expansion of Egyptian fractions}.
-\newblock {In: }\emph{Journal of Number Theory, vol.~4, no.~4, pp.~342-382} 4
-  (1972), August, S. 342--382
+\newblock {In: }\emph{Journal of Number Theory, vol.~4, no.~4, pp.~342-382}
+  (1972), S. 342--382
 
 \bibitem[\scshape{}{Bleicher} und {Erdös}(1976)]{BleicherErdoes1976}
 \dinatlabel{\upshape{}{Bleicher} und {Erdös} 1976} \textsc{{Bleicher}}, M.~N.
   ; \textsc{{Erdös}}, P.:
 \newblock {Denominators of Egyptian Fractions}.
-\newblock {In: }\emph{Journal of Number Theory, vol.~8, no.~8, pp.~157-168} 8
-  (1976), Mai, S. 157--168
+\newblock {In: }\emph{Journal of Number Theory, vol.~8, no.~8, pp.~157-168}
+  (1976), S. 157--168
 
 \bibitem[\scshape{}Burton(2011)]{Burton2011}
 \dinatlabel{\upshape{}Burton 2011} \textsc{Burton}, David:
 \newblock \emph{The History of Mathematics - An Introduction}.
 \newblock 7. Auflage.
 \newblock New York : McGraw-Hill, 2011. --
-\newblock  33--46 S. --
-\newblock ISBN 978--0--071--28920--7
+\newblock  33--46 S.
 
 \bibitem[\scshape{}Gong(1992)]{Gong1992}
 \dinatlabel{\upshape{}Gong 1992} \textsc{Gong}, Kevin:
@@ -61,8 +59,7 @@
   \textsc{Wells}, R.~O.:
 \newblock \emph{Mathematics in Civilization -}.
 \newblock Subsequent.
-\newblock New York : Dover Publications, 1984. --
-\newblock ISBN 978--0--486--24674--1
+\newblock New York : Dover Publications, 1984
 
 \bibitem[\scshape{}{The PARI~Group}(2018)]{PARI2018}
 \dinatlabel{\upshape{}{The PARI~Group} 2018} \textsc{{The PARI~Group}}:
