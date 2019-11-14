@@ -1,5 +1,5 @@
 \section[Theoretische Schranken]{Theoretische Schranken für die maximale Anzahl der Stammbrüche}\label{sec:theorie}
-Nachdem untersucht wurde, was in der Praxis mit ausgewählten Methoden erreicht werden kann, soll nun das Licht auf einen weiteren sehr interessanten Aspekt Ägyptischer Brüche gelenkt werden, nämlich den Dingen, die theoretische herleitbare Schranken haben. Vor allem im 20. Jahrhundert wurde von zahlreichen Mathematikern an dem Problem, solche theoretischen Grenzen zu finden und zu beweisen, gearbeitet, unter ihnen Bleicher, Erdös, Graham und andere \cite[S.87 ff]{Guy1981}.
+Nachdem untersucht wurde, was in der Praxis mit ausgewählten Methoden erreicht werden kann, soll nun das Licht auf einen weiteren sehr interessanten Aspekt Ägyptischer Brüche gelenkt werden, nämlich den Fällen, für die es theoretische herleitbare Schranken gibt. Vor allem im 20. Jahrhundert haben zahlreiche Mathematiker an dem Problem, solche theoretischen Grenzen zu finden und zu beweisen, gearbeitet, unter ihnen Bleicher, Erdös und Graham \cite[S.87 ff]{Guy1981}.
 
 \begin{satz}\label{satz:two/n}
 	Sei $n \in \N$ ungerade. $\frac{2}{n}$ lässt sich für jedes $n$ als Summe zweier Stammbrüche notieren, nämlich:
@@ -7,17 +7,17 @@ Nachdem untersucht wurde, was in der Praxis mit ausgewählten Methoden erreicht 
 \end{satz}
 \begin{bew}
 	Sei $m \in \N$ so gewählt, dass $n=2m+1$. Es folgt:
-	\begin{eqnarray*}
+	{\setstretch{2}\begin{eqnarray*}
 		\uf{\lceil \frac{n}{2} \rceil} + \uf{n \cdot \lceil \frac{n}{2} \rceil} & = & \uf{m+1} + \uf{(2m+1)(m+1)}\\
 		& = & \frac{2m+1}{(2m+1)(m+1)} + \frac{1}{(2m+1)(m+1)}\\
 		& = & \frac{2m+2}{(2m+1)(m+1)}\\
 		& = & \frac{2(m+1)}{(2m+1)(m+1)}\\
 		& = & \frac{2}{2m+1}\\
 		& = & \frac{2}{n}.
-	\end{eqnarray*}
+	\end{eqnarray*}}
 \end{bew}
 
-Da der Term $\uf{\lceil \frac{n}{2} \rceil}$ genau dem größten Stammbruch entspricht, der kleiner als $\frac{2}{n}$ ist, liefert der Greedy-Algorithmus hier für alle $\frac{2}{n}$ das gleiche Ergebnis wie die Rechenvorschrift aus Satz \ref{satz:two/n}. Damit lässt sich auch sofort eine weiterer Satz aufstellen, diesmal für $\frac{3}{n}$.
+Da der Term $\uf{\lceil \frac{n}{2} \rceil}$ genau dem größten Stammbruch entspricht, der kleiner als $\frac{2}{n}$ ist, liefert der Greedy-Algorithmus hier für alle $\frac{2}{n}$ das gleiche Ergebnis wie die Rechenvorschrift aus Satz \ref{satz:two/n}. Es lässt sich auch sofort eine weiterer Satz aufstellen, diesmal für $\frac{3}{n}$.
 
 \begin{satz}
 	Für jedes beliebige $n \in \N$ lässt sich $\frac{3}{n}$ als Summe von höchstens 3 Stammbrüchen schreiben.
@@ -33,5 +33,28 @@ Bleicher und Erdös vermuteten, dass für alle $n \in \N$ der Bruch $\frac{4}{n}
 Schinzel bewies zudem, dass der Ausdruck
 $$\frac{4}{at+b} = \uf{x(t)} + \uf{y(t)} + \uf{z(t)}$$
 für Polynome $x(t), y(t)$ und $z(t)$ mit ganzzahligen Koeffizienten genau dann gilt, wenn $b$ nicht quadratischer Rest modulo $a$ ist. \cite[S. 88]{Guy1981}
-\todo[inline]{mehr Theorie!!}
-Bereits das vergleichsweise einfache Beispiel $\frac{4}{n}$, für welches noch immer nicht klar ist, ob es sich für alle $n \in \N$ durch höchstens 3 Stammbrüche als Ägyptischer Bruch darstellen lässt, zeigt auf, wie viel in diesem Bereich der Mathematik noch unbekannt ist. Das Problemfeld der Ägyptischen Brüche, das vor knapp 4000 Jahren aufgeworfen wurde, stellt auch die heutigen Mathematiker noch vor viele ungelöste Aufgaben und Fragen.
+
+Wir wollen nun allgemeiner die obere Schranke für den größten Nenner der bestmöglichen Zerlegung für $\frac{p}{q} \in \Q_+$ betrachten, die von Bleicher und Erdös 1972 bewiesen wurde. Es soll dabei nur eine Beweisskizze gegeben werden, für den vollen Beweis siehe \cite[S.158-163]{BleicherErdoes1976}. Dazu seien die folgenden Notationen und Definitionen eingeführt.
+\begin{def1}
+	Seien $a, b\in \N,\, b\neq0$. $D(a,b)$ bezeichne den geringsten Wert des größten Nenners in allen möglichen Zerlegungen in Ägyptische Brüche für $\frac{a}{b}$. $D(b)$ sei zudem folgendermaßen definiert:
+	$$D(b) = \text{max}\left\{D(x,b) : 0<x<b\right\}.$$
+\end{def1}
+\begin{def1}
+	$P_k$ bezeichne die $k$-te Primzahl, wobei $P_1=2$ ist.
+\end{def1}
+\begin{def1}
+	Sei $\Pi_k = P_1 \cdot P_2 \cdot ... \cdot P_k$ das Produkt der ersten $k$ Primzahlen, wobei $\Pi_k = 1$ für $k \leq 0$ gilt.
+\end{def1}
+
+\begin{satz}
+	Es gibt eine Konstante $K$, sodass für alle $q \geq 2$ gilt:
+	$$D(q) \leq Kq(\ln q)^3.$$
+\end{satz}
+
+\paragraph{Beweisskizze}Finde $k \in \N$, sodass $\Pi_{k-1} < q \leq \Pi_{k}$. Dann unterscheidet man die Fälle ${q \mid \Pi_k}$ bzw. $q \nmid \Pi_k$. Im Fall der Teilbarkeit erweitert man den Bruch so, dass anstelle $q$ nunmehr $\Pi_k$ im Nenner steht, der entstehende Zähler ist dann nach \cite[Lemma 1]{BleicherErdoes1976} als Summe paarweise verschiedener Teiler von $\Pi_k$ zu schreiben und liefert mittels \cite[Lemma 4]{BleicherErdoes1976} eine Zerlegung in einen Ägyptischen Bruch mit jedem Nenner kleiner $q(\ln q)^3$. Für den Fall ${q \nmid \Pi_k}$ wird eine Zerlegung ähnlich des Binäralgorithmus vorgenommen, indem man $r, s \in \N$ so wählt, dass
+$$\frac{p}{q} = \frac{p \Pi_k}{q \Pi_k} = \frac{qs+r}{q \Pi_k} = \frac{s}{\Pi_k} + \frac{r}{q\Pi_k}$$
+mit $\Pi_k(1-\uf{k}) \leq r \leq \Pi_k(2-\uf{k})$ gilt. Nach ähnlichen Argumenten wie im Beweis zu Satz \ref{satz:termination_binary} wird dann argumentiert, dass die sich jeweils aus dem Schreiben der Zähler als Summe von Teilern von $\Pi_k$ ergebenden Nenner alle paarweise verschieden sein müssen. Mit einer weiteren Hilfsaussage kommen Bleicher und Erdös zu dem Ergebnis
+$$D(q) \leq \frac{2}{c}q(\ln q)^3,$$
+wobei c eine sich im Beweis aus dem Umschreiben von $r$ in eine Summe von Teilern von $\Pi_k$ ergebende Konstante ist. \cite[S.162-163]{BleicherErdoes1976}
+
+Damit lässt sich also zeigen, dass es tatsächlich beweisbare Schranken für beliebige ${\frac{p}{q} \in \Q_+}$ gibt, von denen die Ergebnisse der meisten Zerlegungsalgorithmen jedoch abweichen. Der Beweis dieses Satzes gibt zudem einen Eindruck davon, wie schnell die Komplexität elementarer Untersuchungen mit steigender Abstraktheit der Frage zunimmt. Doch ist für die Erkenntnis, dass es in diesem Bereich der Mathematik noch eine riesige Menge ungelöster Fragen und Probleme gibt, diese Komplexität nicht nötig, denn schon für das vergleichsweise einfache Beispiel $\frac{4}{n}$ ist nicht klar, ob es sich für alle $n \in \N$ durch höchstens 3 Stammbrüche als Ägyptischer Bruch darstellen lässt, obwohl inzwischen eine erhebliche Menge Arbeit dafür aufgewandt wurde. Somit stellt das Problemfeld der Ägyptischen Brüche, das vor knapp 4000 Jahren aufgeworfen wurde, auch die heutigen Mathematiker noch vor viele ungelöste Aufgaben und Fragen.

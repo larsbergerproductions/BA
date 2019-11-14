@@ -6,33 +6,34 @@
 \BOOKMARK [2][-]{subsection.11}{2.2 \304gyptische Division}{section.8}% 6
 \BOOKMARK [3][-]{subsubsection.12}{2.2.1 Ganzzahlige Division}{subsection.11}% 7
 \BOOKMARK [3][-]{subsubsection.14}{2.2.2 Division mit Rest}{subsection.11}% 8
-\BOOKMARK [2][-]{subsection.18}{2.3 Ermittlung \304gyptischer Zerlegungen von Br\374chen}{section.8}% 9
-\BOOKMARK [1][-]{section.19}{3 Algorithmen zur Erstellung \304gyptischer Br\374che}{}% 10
-\BOOKMARK [2][-]{subsection.21}{3.1 Der Greedy-Algorithmus}{section.19}% 11
-\BOOKMARK [2][-]{subsection.30}{3.2 Der Farey-Folgen-Algorithmus}{section.19}% 12
-\BOOKMARK [2][-]{subsection.41}{3.3 Der Bin\344ralgorithmus}{section.19}% 13
-\BOOKMARK [2][-]{subsection.52}{3.4 Beispielrechnungen}{section.19}% 14
-\BOOKMARK [2][-]{subsection.69}{3.5 Fazit und Vergleich}{section.19}% 15
-\BOOKMARK [1][-]{section.72}{4 Auswertung einiger Testreihen}{}% 16
-\BOOKMARK [2][-]{subsection.73}{4.1 Methodik}{section.72}% 17
-\BOOKMARK [2][-]{subsection.74}{4.2 Anf\344ngliche Probleme und Effizienzsteigerung w\344hrend der Implementierung}{section.72}% 18
-\BOOKMARK [2][-]{subsection.77}{4.3 Auswertung der Daten}{section.72}% 19
-\BOOKMARK [3][-]{subsubsection.78}{4.3.1 Laufzeiten}{subsection.77}% 20
-\BOOKMARK [3][-]{subsubsection.80}{4.3.2 Durchschnittliche Anzahl der Terme}{subsection.77}% 21
-\BOOKMARK [3][-]{subsubsection.82}{4.3.3 Minimale Anzahl der Terme}{subsection.77}% 22
-\BOOKMARK [3][-]{subsubsection.83}{4.3.4 Maximale Anzahl der Terme}{subsection.77}% 23
-\BOOKMARK [3][-]{subsubsection.85}{4.3.5 Minimum der gr\366\337ten Nenner}{subsection.77}% 24
-\BOOKMARK [3][-]{subsubsection.87}{4.3.6 Maximum der gr\366\337ten Nenner}{subsection.77}% 25
-\BOOKMARK [3][-]{subsubsection.89}{4.3.7 Zusammenhang innerhalb des Bin\344ralgorithmus}{subsection.77}% 26
-\BOOKMARK [3][-]{subsubsection.90}{4.3.8 Vergleich mit Erwartungswerten}{subsection.77}% 27
-\BOOKMARK [2][-]{subsection.94}{4.4 Zusammenfassung}{section.72}% 28
-\BOOKMARK [1][-]{section.95}{5 Theoretische Schranken}{}% 29
-\BOOKMARK [1][-]{section.99}{6 Zusammenfassende Auswertung}{}% 30
-\BOOKMARK [1][-]{section.100}{7 Anhang}{}% 31
-\BOOKMARK [2][-]{subsection.101}{7.1 Hilfsfunktionen}{section.100}% 32
-\BOOKMARK [2][-]{subsection.206}{7.2 PARI/GP Code f\374r den Greedy-Algorithmus}{section.100}% 33
-\BOOKMARK [3][-]{subsubsection.243}{7.2.1 Optimierter Greedy-Algorithmus}{subsection.206}% 34
-\BOOKMARK [2][-]{subsection.293}{7.3 PARI/GP Code f\374r den Farey-Folgen-Algorithmus}{section.100}% 35
-\BOOKMARK [2][-]{subsection.315}{7.4 PARI/GP Code f\374r den Bin\344ralgorithmus}{section.100}% 36
-\BOOKMARK [1][-]{section*.338}{Literaturverzeichnis}{}% 37
-\BOOKMARK [1][-]{section*.339}{Eidesstattliche Erkl\344rung}{}% 38
+\BOOKMARK [2][-]{subsection.18}{2.3 Zerlegung in \304gyptische Br\374che}{section.8}% 9
+\BOOKMARK [1][-]{section.26}{3 Algorithmen zur Erstellung \304gyptischer Br\374che}{}% 10
+\BOOKMARK [2][-]{subsection.28}{3.1 Der Greedy-Algorithmus}{section.26}% 11
+\BOOKMARK [2][-]{subsection.37}{3.2 Der Farey-Folgen-Algorithmus}{section.26}% 12
+\BOOKMARK [2][-]{subsection.48}{3.3 Der Bin\344ralgorithmus}{section.26}% 13
+\BOOKMARK [2][-]{subsection.59}{3.4 Beispielrechnungen}{section.26}% 14
+\BOOKMARK [2][-]{subsection.76}{3.5 Fazit und Vergleich}{section.26}% 15
+\BOOKMARK [1][-]{section.79}{4 Auswertung einiger Testreihen}{}% 16
+\BOOKMARK [2][-]{subsection.80}{4.1 Methodik}{section.79}% 17
+\BOOKMARK [2][-]{subsection.81}{4.2 Anf\344ngliche Probleme und Effizienzsteigerung w\344hrend der Implementierung}{section.79}% 18
+\BOOKMARK [2][-]{subsection.84}{4.3 Auswertung der Daten}{section.79}% 19
+\BOOKMARK [3][-]{subsubsection.85}{4.3.1 Laufzeiten}{subsection.84}% 20
+\BOOKMARK [3][-]{subsubsection.87}{4.3.2 Durchschnittliche Anzahl der Terme}{subsection.84}% 21
+\BOOKMARK [3][-]{subsubsection.89}{4.3.3 Minimale Anzahl der Terme}{subsection.84}% 22
+\BOOKMARK [3][-]{subsubsection.90}{4.3.4 Maximale Anzahl der Terme}{subsection.84}% 23
+\BOOKMARK [3][-]{subsubsection.92}{4.3.5 Minimum der gr\366\337ten Nenner}{subsection.84}% 24
+\BOOKMARK [3][-]{subsubsection.94}{4.3.6 Maximum der gr\366\337ten Nenner}{subsection.84}% 25
+\BOOKMARK [3][-]{subsubsection.96}{4.3.7 Zusammenhang innerhalb des Bin\344ralgorithmus}{subsection.84}% 26
+\BOOKMARK [3][-]{subsubsection.97}{4.3.8 Vergleich mit Erwartungswerten}{subsection.84}% 27
+\BOOKMARK [2][-]{subsection.100}{4.4 Zusammenfassung}{section.79}% 28
+\BOOKMARK [1][-]{section.101}{5 Theoretische Schranken}{}% 29
+\BOOKMARK [1][-]{section.109}{6 Zusammenfassende Auswertung}{}% 30
+\BOOKMARK [1][-]{section.110}{7 Anhang}{}% 31
+\BOOKMARK [2][-]{subsection.111}{7.1 Hilfsfunktionen}{section.110}% 32
+\BOOKMARK [2][-]{subsection.216}{7.2 PARI/GP Code f\374r den Greedy-Algorithmus}{section.110}% 33
+\BOOKMARK [3][-]{subsubsection.253}{7.2.1 Optimierter Greedy-Algorithmus}{subsection.216}% 34
+\BOOKMARK [2][-]{subsection.303}{7.3 PARI/GP Code f\374r den Farey-Folgen-Algorithmus}{section.110}% 35
+\BOOKMARK [2][-]{subsection.326}{7.4 PARI/GP Code f\374r den Bin\344ralgorithmus}{section.110}% 36
+\BOOKMARK [2][-]{subsection.349}{7.5 Beispielhafter Testreihenaufruf}{section.110}% 37
+\BOOKMARK [1][-]{section*.374}{Literaturverzeichnis}{}% 38
+\BOOKMARK [1][-]{section*.375}{Eidesstattliche Erkl\344rung}{}% 39

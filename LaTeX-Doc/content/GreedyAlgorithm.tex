@@ -36,14 +36,14 @@ Im Anhang \ref{code:greedy} findet sich eine eigene Implementierung des Greedy-A
 	\end{equation}
 	Daraus folgt ein Rest $r$ von
 	$$ r = \frac{p}{q}-\uf{x} = \frac{px-q}{qx},$$
-	der den Zähler $(px-q)$ hat, welcher kleiner als p ist. Dies folgt aus (\ref{eqn:Greedy_Voraussetzungen}):
+	der den Zähler $(px-q)$ hat, welcher kleiner als $p$ ist. Dies folgt aus (\ref{eqn:Greedy_Voraussetzungen}):
 	\begin{eqnarray*}
 		\frac{p}{q} < \uf{x-1}& \gdw & p(x-1)<q\\
 		& \gdw & px-p < q\\
 		& \gdw & px-q < p.\\
 	\end{eqnarray*}
-	Somit verkleinert sich der Rest $r$ mit jedem Schritt und erreicht nach endlich vielen Schritten Null, wie gefordert.
+	Somit verkleinert sich der Zähler des verbleibenden Rests $r$ mit jedem Schritt und erreicht nach endlich vielen Schritten Null, wie gefordert.
 \end{bew}
 
-\paragraph{Abschätzung} Sei $\frac{p}{q} \in \Q_+$ der zu zerlegende Bruch. Der Greedy-Algorithmus liefert einer Zerlegung mit maximal $p$ Termen \cite[S.7]{Gong1992}.\\
+\paragraph{Abschätzung} Sei $\frac{p}{q} \in \Q_+$ der zu zerlegende Bruch. Der Greedy-Algorithmus liefert eine Zerlegung mit maximal $p$ Termen \cite[S.7]{Gong1992}.\\
 Die Nenner wachsen exponentiell \cite[S.157]{BleicherErdoes1976}.

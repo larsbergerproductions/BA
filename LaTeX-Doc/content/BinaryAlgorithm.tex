@@ -4,7 +4,7 @@ Dass die Ägypter schon damals implizit eine Art Binärschreibweise für ihre Mu
 Seien $m, n \in \N$ und $N = 2^n$. Alle $m < N$ lassen sich als Summe paarweise verschiedener Teiler von $N$ beschreiben, folglich also mit maximal $n$ Summanden. Praktisch lässt sich dies am Einfachsten anhand der Binärdarstellung von $m$ erkennen.
 
 \begin{algorithm}\label{algo:binary}
-	Sei $\frac{p}{q} \in Q_+, \, \frac{p}{q} < 1$ in gekürzter Form und $k \in \N$.
+	Sei $\frac{p}{q} \in \Q_+$ in gekürzter Form und $k \in \N$.
 	\begin{enumerate}
 		\item Finde $N_{k-1} < q \leq N_k$ wobei $N_k=2^k$ ist.
 		\item Falls $q = N_k$, schreibe $p$ als Summe von Teilern von $N_k$, hier $d_i$ genannt:
@@ -19,7 +19,7 @@ Seien $m, n \in \N$ und $N = 2^n$. Alle $m < N$ lassen sich als Summe paarweise 
 	\end{enumerate}
 \end{algorithm}
 
-\begin{satz}
+\begin{satz}\label{satz:termination_binary}
 	Der Binäralgorithmus, wie in \ref{algo:binary} beschrieben, terminiert für jede Eingabe.
 \end{satz}
 
@@ -27,15 +27,15 @@ Seien $m, n \in \N$ und $N = 2^n$. Alle $m < N$ lassen sich als Summe paarweise 
 	Falls $q = N_k$, hat das Ergebnis offensichtlich maximal $k$ Terme, da sich $N_k$ als Summe seiner $\log_2 N = k$ Terme schreiben lässt; in der Summe sind die $d_i$ paarweise verschieden, somit auch die $\frac{N_k}{d_i}$ und es gibt keinen Term mehrfach.\\
 	Falls $q < N_k$, gilt
 	$$qs+r = p N_k < q N_k.$$
-	Somit gibt es eine Zerlegung in Ägyptische Brüche jeweils für s und r. Diese beiden Zerlegungen liefern für sich genommen nach dem Argument aus Fall ''$q = N_k$'' paarweise verschiedene Stammbrüche. Dass diese sogar zusammengenommen paarweise verschieden sind, folgt daraus, dass die zu $s$ gehörenden Nenner immer Zweierpotenzen sind, die zu $r$ gehörigen aber niemals.
+	Somit gibt es eine Zerlegung in Ägyptische Brüche jeweils für $\frac{s}{N_k}$ und $\frac{r}{qN_k}$. Diese beiden Zerlegungen liefern für sich genommen nach dem Argument aus Fall ''$q = N_k$'' paarweise verschiedene Stammbrüche. Dass diese sogar zusammengenommen paarweise verschieden sind, folgt daraus, dass die zu $s$ gehörenden Nenner immer Zweierpotenzen sind, die zu $r$ gehörigen aber niemals.
 \end{bew}
 
 
-\paragraph{Abschätzung}Sei $\frac{p}{q} \in \Q_+, \frac{p}{q} < 1$. Gong zeigte, dass die Komplexitätsklasse für die Anzahl der Terme $O(\log n)$ ist \cite[S. 12]{Gong1992}. \\
-Falls $q = N_k$ ist, folgt, dass der maximale Nenner $q$ ist. Anderenfalls definiert sich dieser aus dem Term $\frac{r}{qN_k}$ mit einer $1$ in der Zerlegung von $r$ in Teiler von $N_k$. Schlimmstenfalls ist $q$ dann der Nachfolger einer Zweierpotenz und es gilt 
+\paragraph{Abschätzung}Sei $\frac{p}{q} \in \Q_+, \frac{p}{q} < 1$. Gong zeigte, dass die Komplexitätsklasse für die Anzahl der Terme $O(\log q)$ ist \cite[S. 12]{Gong1992}. \\
+Die Abschätzung des größten Nenners wollen wir uns selbst überlegen. Falls $q = N_k$ ist, folgt, dass der maximale Nenner $q$ ist. Anderenfalls definiert sich dieser aus dem Term $\frac{r}{qN_k}$ mit einer $1$ in der Zerlegung von $r$ in Teiler von $N_k$. Schlimmstenfalls ist $q$ dann der Nachfolger einer Zweierpotenz und es gilt 
 $$N_k = 2(q-1).$$
 Daraus folgt als kleinstmöglicher Bruch $\uf{q \cdot 2(q-1)} = \uf{2(q^2-q)}$, was die obere Schranke für den größten Nenner $2(q^2-q)$ impliziert, die in der Komplexitätsklasse $O(q^2)$ enthalten ist.
-
+\vspace{8mm}\\
 Da es für diesen Algorithmus zwei Fälle gibt, soll für jeden Fall ein Beispiel gezeigt werden. Dafür beginnen wir mit dem einfachen Fall.
 
 \begin{bsp}
@@ -48,7 +48,7 @@ Ist der Nenner des zu zerlegenden Bruchs also eine Zweierpotenz, terminiert der 
 	Sei $\frac{21}{23}$ der zu zerlegende Bruch. $N_k = 32$, da $16 < 23 \leq 32$.\\
 	Da $23<32$ ist, wird nach Schritt (3) aus Algorithmus \ref{algo:binary} verfahren:
 	$$\frac{21}{23} = \frac{21 \cdot 32}{23 \cdot 32}.$$
-	Aus der Bedingung $0<r<32$ folgt $s = 29$ und $r = 5$, da $$qs+r = 29 \cdot 23 + 5 = 21 \cdot 32 = p N_k.$$
+	Aus der Bedingung $0<r<23$ folgt $s = 29$ und $r = 5$, da $$qs+r = 29 \cdot 23 + 5 = 21 \cdot 32 = p N_k.$$
 	Daraus folgt:
 	$$\frac{21}{23} = \frac{23 \cdot 29+5}{23 \cdot 32} = \frac{29}{32} + \frac{5}{23 \cdot 32}.$$
 	Aus $$\frac{29}{32} = \frac{16+8+4+1}{32} = \uf{2} + \uf{4} + \uf{8} + \uf{32}$$ und $$\frac{5}{23 \cdot 32} = \frac{4+1}{23 \cdot 32} = \uf{23 \cdot 8} + \uf{23 \cdot 32}$$ folgt:

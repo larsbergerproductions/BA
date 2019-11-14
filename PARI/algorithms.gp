@@ -161,6 +161,7 @@ FS(fraction)={
 	local(adjacent, remainder, result, current_fraction);
 	result = List();
 	current_fraction = fraction;
+	if(numerator(fraction)==1, print("Farey_Sequence:\t", fraction," = ", fraction); return(Vec(fraction)));
 	while(1,
 		/*old: adjacent = findAdjacent(FareySeries(denominator(current_fraction)), current_fraction);*/
 		adjacent = adjacentFrel(current_fraction);
@@ -169,7 +170,7 @@ FS(fraction)={
 		if(numerator(adjacent) == 1,
 			listput(result, adjacent);
 			result = reverse_vecsort(Vec(result));
-			/*print("Farey_Sequence:\t", fraction, " = ", printEgypFrac(result));*/
+			print("Farey_Sequence:\t", fraction, " = ", printEgypFrac(result));
 			return(result);
 		);
 		current_fraction = adjacent;
@@ -208,7 +209,7 @@ binary_algo(fraction)={
 		summands = findDivisorsOf_k_addingup_n(Nk,r);
 		for(i=1, #summands, listput(result, 1/((q*Nk)/summands[i])));
 	);
-	/*print("Binary:\t\t", fraction, " = ", printEgypFrac(result));*/
+	print("Binary:\t\t", fraction, " = ", printEgypFrac(result));
 	return(reverse_vecsort(Vec(result)));
 }
 
@@ -349,12 +350,11 @@ fastfarey5()=automatic_test_fastfarey(9501,10000, "/home/lars/Schreibtisch/fastf
 
 
 automatic_test_binary(start,end)={
-	local(t, result, LenDenom, Terms, Time);
+	local(t, result, LenDenom, Terms);
 	LenDenom = List();
 	Terms=List();
-	Time=List();
 
-	write("/home/lars/Schreibtisch/results_binary.csv", "Nenner,AVG #Terms,MIN #Terms,MAX #Terms,MIN longest Denominator,MAX longest Denominator,Time");
+	write("results_binary.csv", "Nenner,AVG #Terms,MIN #Terms,MAX #Terms,MIN longest Denominator,MAX longest Denominator");
 	for(denom=start,end,
 		if(denom%10==0, print(denom));
 		for(num=2, denom,
@@ -363,10 +363,9 @@ automatic_test_binary(start,end)={
 				result = binary_algo(num/denom);
 				listput(Time, getabstime()-t);
 				listput(LenDenom, denominator(result[#result]));
-				listput(Terms, #result);
 			);
 		);
-		write("/home/lars/Schreibtisch/results_binary.csv", denom, ",", round(listsum(Terms)/#Terms), ",", listmin(Terms), ",", listmax(Terms), ",", listmin(LenDenom), ",", listmax(LenDenom),"," round(listsum(Time)/#Time));
+		write("results_binary.csv", denom, ",", round(listsum(Terms)/#Terms), ",", listmin(Terms), ",", listmax(Terms), ",", listmin(LenDenom), ",", listmax(LenDenom));
 		LenDenom = List();
 		Terms = List();
 		Time = List();
@@ -415,7 +414,7 @@ print("\n\n\n#########################\n#    Script provided    #\n#           b
 print("\n available main functions, not recommended for usage:\n - fibonacci_sylvester(frac, stepsize, start)\n");
 print("Available secondary functions:\n - Farey_Series(order)\n - largestUnitFractionLEQ(frac)\n - isAdjacent(frac1, frac2)\n");
 */
-print("Available Algorithms for Egyptian Fractions:\n - greedy(frac)\n - greedy_odd(frac)\n - greedy_even(frac)\n - greedy_fast(frac)\n - FS(frac): Farey-Sequence-Algorithm\n - binary_algo(fraction): Binary Algorithm");
+print("Available Algorithms for Egyptian Fractions:\n - greedy(frac)\n - greedy_odd(frac)\n - greedy_even(frac)\n - greedy_fast(frac): improved (and recommended) version\n - FS(frac): Farey-Sequence-Algorithm\n - binary_algo(fraction): Binary Algorithm\n - test_main(fraction): Test greedy_fast, farey-sequence and binary with the same fraction, also compares the results in a table\n");
 print("Please use \";\" after the commands since every algorithm produces a custom output.");
 
 /*****************************************************

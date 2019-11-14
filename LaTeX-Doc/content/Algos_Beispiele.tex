@@ -1,6 +1,6 @@
 \subsection{Beispielrechnungen}
 
-Anhand von drei Beispielen soll die Rechnung der einzelnen Methoden zur besseren Vergleichbarkeit verdeutlicht werden. Am Ende dieses Abschnitts sind die Ergebnisse tabellarisch gegenübergestellt.
+Anhand von drei Beispielen soll die Rechnung der einzelnen Methoden zur besseren Vergleichbarkeit verdeutlicht werden. Am Ende der Rechnungen sind die Ergebnisse tabellarisch gegenübergestellt.
 
 \begin{bsp}
 	Wir wollen zunächst einen einfachen Bruch zerlegen, für den alle drei der aufgezeigten Algorithmen das gleiche Ergebnis liefern, auch wenn sie dieses auf unterschiedlichem Wege erreichen.
@@ -10,10 +10,10 @@ Anhand von drei Beispielen soll die Rechnung der einzelnen Methoden zur besseren
 	Der verbleibende Rest $r$ ist dann $$r = \frac{5}{9} - \uf{2} = \uf{18}$$
 	und der Algorithmus terminiert, da die Summe dieser beiden Stammbrüche genau $\frac{5}{9}$ entspricht.
 	
-	\paragraph{Farey-Folgen-Algorithmus}Wir bilden den notwendigen Teil der Farey-Folge mit Ordnung $9$: $$F_{9rel} = \left\{ \frac{0}{1}, \uf{2}, \frac{5}{9}, \frac{4}{7}, \frac{3}{5}, \frac{2}{3}, \uf{1}\right\},$$ woraus folgt, dass $\uf{2}$ der zu $\frac{5}{9}$ adjazente Bruch in $F_9$ ist. Daraus folgt 
+	\paragraph{Farey-Folgen-Algorithmus}Wir bilden den notwendigen Teil der Farey-Folge mit Ordnung $9$: $$F_{9rel} = \left( \frac{0}{1}, \uf{2}, \frac{5}{9}, \frac{4}{7}, \frac{3}{5}, \frac{2}{3}, \uf{1}\right),$$ woraus folgt, dass $\uf{2}$ der zu $\frac{5}{9}$ adjazente Bruch in $F_9$ ist. Daraus folgt 
 	$$\frac{5}{9} = \uf{9 \cdot 2} + \uf{2} = \uf{2} + \uf{18}$$ und der Algorithmus terminiert nach dem ersten Schritt, da der Rest $\frac{r}{s} = \uf{2}$ schon Stammbruch ist.
 	
-	\paragraph{Binäralgorithmus}Die kleinste Zweierpotenz, die größer als der Nenner $9$ ist, ist $16$, da $8<9<16$; somit ist $N_k = 16$. Da der Nenner keine Zweierpotenz ist, springen wir zu Schritt 3 des Algorithmus \ref{algo:binary} und schreiben:
+	\paragraph{Binäralgorithmus}Die kleinste Zweierpotenz, die größer als der Nenner $9$ ist, ist $16$, da $8<9<16$; somit ist $N_k = 16$. Da der Nenner keine Zweierpotenz ist, springen wir zu Schritt (3) des Algorithmus \ref{algo:binary} und schreiben:
 	$$\frac{5}{9} = \frac{5\cdot16}{9 \cdot 16} = \frac{9 \cdot 8 + 8}{9 \cdot 16} = \frac{8}{16} + \frac{8}{144} = \uf{2} + \uf{18}.$$
 	
 	Es ergibt sich also bei allen Algorithmen das gleiche Ergebnis, obwohl die Herangehensweise sehr unterschiedlich ist. Das ist aber nur ein Ausnahmefall, die folgenden Beispiele werden zeigen, wie unterschiedlich die Ergebnisse werden können.
@@ -23,7 +23,7 @@ Anhand von drei Beispielen soll die Rechnung der einzelnen Methoden zur besseren
 		\centering
 		\begin{tabular}{|Sc | Sc | Sc | Sc|}
 			\hline
-			Algorithmus & Anzahl der Terme & Größter Nenner & Zerlegung \\ \hline
+			Algorithmus & Anzahl Terme & Größter Nenner & Zerlegung \\ \hline
 			Greedy & 2 & 18 & $\uf{2}+\uf{18}$ \\ \hline
 			Farey-Folgen-Algorithmus & 2 & 18 & $\uf{2}+\uf{18}$ \\ \hline
 			Binär-Algorithmus & 2 & 18 & $\uf{2}+\uf{18}$ \\ \hline
@@ -56,9 +56,9 @@ Anhand von drei Beispielen soll die Rechnung der einzelnen Methoden zur besseren
 		\centering
 		\begin{tabular}{|Sc | Sc | Sc | Sl|}
 			\hline
-			Algorithmus & Anzahl der Terme & Größter Nenner & Zerlegung \\ \hline
+			Algorithmus & Anzahl Terme & Größter Nenner & Zerlegung \\ \hline
 			Greedy & 4 & 2604 & $\uf{2} + \uf{4} + \uf{42} + \uf{2604}$ \\ \hline
-			Farey-Folgen-Algorithmus & 6 & 682 & $\uf{2}+\uf{6}+\uf{12}+\uf{52}+\uf{286}+\uf{682}$ \\ \hline
+			Farey-Folgen-Alg. & 6 & 682 & $\uf{2}+\uf{6}+\uf{12}+\uf{52}+\uf{286}+\uf{682}$ \\ \hline
 			Binär-Algorithmus & 4 & 124 & $\uf{2} + \uf{4} + \uf{62} + \uf{124}$ \\ \hline
 		\end{tabular}
 		\caption{Die Zerlegung von $\frac{24}{31}$ im Vergleich}
@@ -81,7 +81,7 @@ Anhand von drei Beispielen soll die Rechnung der einzelnen Methoden zur besseren
 		\centering
 		\begin{tabular}{|Sc | Sc | Sc | Sl|}
 			\hline
-			Algorithmus & Anzahl der Terme & Größter Nenner & Zerlegung \\ \hline
+			Algorithmus & Anzahl Terme & Größter Nenner & Zerlegung \\ \hline
 			Greedy & 3 & 170 & $\uf{2}+\uf{5}+\uf{170}$ \\ \hline
 			Farey-Folgen-Algorithmus & 4 & 170 & $\uf{2}+\uf{6}+\uf{30}+\uf{170}$ \\ \hline
 			Binär-Algorithmus & 5 & 272 & $\uf{2}+\uf{8}+\uf{16}+\uf{68}+\uf{272}$ \\ \hline
@@ -92,4 +92,4 @@ Anhand von drei Beispielen soll die Rechnung der einzelnen Methoden zur besseren
 \end{bsp}
 
 
-Es zeigt sich also, dass sich anhand relativ weniger Beispiele nicht sagen lässt, ob ein Algorithmus besser ist als ein anderer. Dazu braucht es einen großen, systematisch aufgebauten Datensatz, der dann statistisch ausgewertet wird. Trotzdem lässt sich daraus nicht ableiten, welcher Algorithmus im Einzelfall besser funktioniert. Viele Algorithmen sind mit aufwändigen Beweisen ihrer Schranken bezüglich ''Länge des größten Nenners'' und ''Anzahl der entstehenden Terme'' verbunden, diese sagen aber selten etwas über die durchschnittlichen Ergebnisse aus.
+Es zeigt sich also, dass sich anhand relativ weniger Beispiele nicht sagen lässt, ob ein Algorithmus besser ist als ein anderer. Dazu braucht es einen großen, systematisch aufgebauten Datensatz, der dann statistisch ausgewertet wird. Daraus wiederum lässt sich nicht automatisch ableiten, welcher Algorithmus im Einzelfall besser funktioniert. Viele Algorithmen sind mit aufwändigen Beweisen ihrer Schranken bezüglich ''Länge des größten Nenners'' und ''Anzahl der entstehenden Terme'' verbunden, diese sagen aber selten etwas über die durchschnittlichen Ergebnisse aus.

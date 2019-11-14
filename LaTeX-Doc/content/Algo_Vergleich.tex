@@ -5,11 +5,11 @@ Wie in den vorangegangenen Beispielen zu sehen, liefern verschiedene Methoden z.
 	\centering
 	\begin{longtable}{|Sc | Sc | Sc|}
 		\hline
-		Algorithmus & Anzahl der Summanden & Größtmöglicher Nenner\\
+		Algorithmus & Anzahl Summanden & Größtmöglicher Nenner\\
 		\hline
 		Fibonacci-Sylvester\newline(Greedy) & $p$ & - \\
 		\hline
-		Farey-Folgen-Algorithmus & $p$ & $q(q-1)$\\
+		Farey-Folgen-Algorithmus & $p$ & $q^2-q$\\
 		\hline
 		Binäralgorithmus & $O(\log q)$ & $2(q^2-q)$\\
 		\hline
@@ -17,4 +17,4 @@ Wie in den vorangegangenen Beispielen zu sehen, liefern verschiedene Methoden z.
 	\caption{Vergleich der beschriebenen Algorithmen (obere Schranken)}
 	\label{table:Algo_Vergleich}
 \end{table}
-Für den größtmöglichen Nenner des Greedy-Algorithmus gibt es eine Besonderheit, denn die Nenner dort wachsen exponentiell, weshalb sich keine genaue obere Schranke angeben lässt \cite[S. 157]{BleicherErdoes1976}.
+Für den größtmöglichen Nenner des Greedy-Algorithmus gibt es eine Besonderheit, denn die Nenner dort wachsen oft exponentiell, weshalb sich keine brauchbare obere Schranke angeben lässt \cite[S. 157]{BleicherErdoes1976}.

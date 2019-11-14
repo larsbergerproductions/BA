@@ -1,5 +1,6 @@
 import numpy as np
 import json
+import math
 
 
 def load_data_from_json():
@@ -57,8 +58,11 @@ for line in lines:
 myl = []
 diff = []
 for i in range(1, len(data["binary"]["maxDenom"])-1):
-	if data["binary"]["minTerms"][i] == 3:
+	if data["farey"]["minTerms"][i] == 3:
 		myl.append(data["n"][i])
+		if data["n"][i] % 2 == 1:
+			print("wrong at" + str(data["n"][i]))
+
 
 print(str(len(myl)) + ": " + str(myl))
 print(str(len(diff)) + ": " + str(diff))
