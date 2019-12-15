@@ -79,7 +79,9 @@
 \usepackage{graphicx} % Allows including images
 \usepackage{booktabs} % Allows the use of \toprule, \midrule and \bottomrule in tables
 \usepackage[utf8]{inputenc}
-
+\usepackage{dsfont}
+\usepackage{cellspace}
+\usepackage{todonotes}
 %----------------------------------------------------------------------------------------
 %	TITLE PAGE
 %----------------------------------------------------------------------------------------
@@ -87,15 +89,29 @@
 \title[Ägyptische Brüche]{Darstellung rationaler Zahlen durch Ägyptische Brüche} % The short title appears at the bottom of every slide, the full title is only on the title page
 
 \author{Lars Berger} % Your name
-\institute[UniBwM] % Your institution as it will appear on the bottom of every slide, may be shorthand to save space
-{
-Universität der Bundeswehr München \\ % Your institution for the title page
-\medskip
-\textit{lars.berger@unibw.de} % Your email address
-}
+\institute[UniBwM]{Universität der Bundeswehr München}
 \date{18. Dezember 2019} % Date, can be changed to a custom date
 
+
+
 \begin{document}
+\newcommand{\R}{\mathds{R}}
+\newcommand{\Z}{\mathds{Z}}
+\newcommand{\N}{\mathds{N}}
+\newcommand{\Q}{\mathds{Q}}
+\newcommand{\K}{\mathds{K}}
+\newcommand{\C}{\mathds{C}}
+\newcommand{\B}{\mathds{B}}
+\newcommand{\F}{\mathds{F}}
+\newcommand{\p}{\mathfrak{p}}
+\newcommand{\Pot}{\mathcal{P}}
+\newcommand{\id}{\textup{id}}
+\newcommand{\Ker}{\textup{Ker}}
+\newcommand{\Image}{\textup{Im}}
+\newcommand{\la}{\langle}
+\newcommand{\ra}{\rangle}
+\newcommand{\gdw}{\Leftrightarrow}
+\newcommand{\uf}[1]{\frac{1}{#1}}
 
 \begin{frame}
 \titlepage % Print the title page as the first slide
@@ -106,22 +122,234 @@ Universität der Bundeswehr München \\ % Your institution for the title page
 \tableofcontents
 \end{frame}
 
-
 \section{Einführung}
+\begin{frame}
+	\begin{block}{Definition}
+	Ein Bruch soll fortan ,,in ägyptischer Form'' bzw. ,,Ägyptischer Bruch'' heißen genau dann, wenn er in der Form
+	$$\uf{x_1} + \uf{x_2} + \cdots + \uf{x_n}, \quad n \in \N, n \ge 1$$
+	mit paarweise verschiedenen $x_i, \, i \in \left\{1,...,n\right\}$, vorliegt.
+	\end{block}
+\end{frame}
+
 \subsection{Geschichte}
+
 \subsection{Ägyptische Multiplikation}
+%\setbeamercovered{invisible}
+\begin{frame}
+	\frametitle{Ägyptische Multiplikation}
+	\begin{block}{Beispiel: $23\cdot69$}
+		\centering
+		\begin{tabular}{c r r}
+			\only<5->{$\checkmark$}&1&69\\
+			\only<4->{$\checkmark$}&2&138\\
+			\only<3->{$\checkmark$}&4&276\\
+			&8&552\\
+			\only<2->{$\checkmark$}&16&1104\\ \hline
+			Summe:&\only<1>{0&0}\only<2>{16&1104}\only<3>{20&1380}\only<4>{22&1518}\only<5->{23&1587}\\
+		\end{tabular}
+	\end{block}
+\end{frame}
+
 \subsection{Ägyptische Division}
+\begin{frame}
+\frametitle{Ägyptische Division}
+	\begin{block}{Beispiel: $117 \div 7$}
+		\centering
+		\begin{tabular}{Sc Sr Sr}
+			&1&7\\
+			&2&14\\
+			&4&28\\
+			&8&56\\
+			\only<2->{$\checkmark$}&16&112\\ \hline
+			Summe:&\only<1>{0&0}\only<2->{16&112}\\
+		\end{tabular}
+	\end{block}
+\end{frame}
+
+\begin{frame}
+		\centering
+		\begin{tabular}{Sr Sr}
+			1 & 7\\
+			$\uf{7}$ & $1$\\
+			$\uf{14}$ & $\uf{2}$\\
+			$\uf{28}$ & $\uf{4}$\\
+			$\vdots$ & $\vdots$ \\
+		\end{tabular}
+		\qquad \quad
+		\begin{tabular}{c | c}
+			&\\&\\&\\&\\&\\&\\
+		\end{tabular}
+		\qquad
+		\begin{tabular}[h]{Sr Sr}
+			$1$ & $7$\\
+			$\uf{2}$ & $3+\uf{2}$\\
+			$\uf{4}$ & $1+\uf{2}+\uf{4}$\\
+			$\uf{8}$ & $\uf{2}+\uf{4}+\uf{8}$\\
+			$\vdots$&$\vdots$\\
+		\end{tabular}
+\end{frame}
+
+\begin{frame}
+\frametitle{Ägyptische Division}
+	\begin{block}{Beispiel: $117 \div 7$}
+		\centering
+		\begin{tabular}{Sc Sr Sr}
+			&1&7\\
+			&2&14\\
+			&4&28\\
+			&8&56\\
+			$\checkmark$&16&112\\ 
+			\only<2->{$\checkmark$}&$\uf{2}$&$3+\uf{2}$\\
+			\only<3->{$\checkmark$}&$\uf{7}$&$1$\\
+			\only<4->{$\checkmark$}&$\uf{14}$&$\uf{2}$\\ \hline
+			Summe:&\only<1>{16&112}\only<2>{$16+\uf{2}$&$115+\uf{2}$}\only<3>{$16+\uf{2}+\uf{7}$&$116+\uf{2}$}\only<4->{$16+\uf{2}+\uf{7}+\uf{14}$&$117$}\\
+		\end{tabular}
+	\end{block}
+\end{frame}
 
 \section{Zerlegungsalgorithmen}
+
+\begin{frame}
+\frametitle{Zerlegungsalgorithmen}
+Betrachtung einer Auswahl:
+	\begin{itemize}
+		\item Greedy-Algortihmus
+		\item Farey-Folgen-Algorithmus
+		\item Binäralgorithmus
+	\end{itemize}
+\end{frame}
+
 \subsection{Greedy-Algorithmus}
+
+\begin{frame}
+	\frametitle{Der Greedy-Algorithmus}
+	\begin{block}{Ziel}
+		$$\frac{a}{b} = \frac{1}{x_1} + \frac{1}{x_2} + ... + \frac{1}{x_i} = \sum_{j=1}^{i} \frac{1}{x_j}.$$
+	\end{block}
+	\begin{block}{Algorithmus}<2->
+		\begin{enumerate}
+			\item finde den größten, noch nicht verwendeten Stammbruch $\uf{x}$, sodass $\uf{x} \leq \frac{p}{q}$.
+			\item setze $\uf{x}$ als weiteren Summanden des Ergebnisses
+			\item falls $\frac{p}{q} - \uf{x} > 0$, gehe zu Schritt 1 mit $\left(\frac{p}{q}\right) \leftarrow \left(\frac{p}{q}-\uf{x}\right)$.
+		\end{enumerate}
+	\end{block}
+\end{frame}
+
+\todo[inline]{Rechenbeispiel}
+
 \subsection{Farey-Folgen-Algorithmus}
+
+\begin{frame}
+\frametitle{Farey-Folgen}
+	\begin{block}{Definition}
+	Sei $q \in \N$. Die Farey-Folge der Ordnung $q$, $\, F_q$, ist definiert als die aufsteigend sortierte Folge aller einmalig darin vorkommenden gekürzten Brüche $\frac{a}{b} \in \Q$, für die gilt:
+	$0\leq a \leq b \leq q,\, b\neq 0$.
+	\end{block}
+	\hspace{5cm}
+	\begin{block}{Beispiel: $F_5$}<2->
+		$$F_5 = \left(\frac{0}{1}, \uf{5}, \uf{4}, \uf{3}, \frac{2}{5}, \uf{2}, \frac{3}{5}, \frac{2}{3}, \frac{3}{4}, \frac{4}{5}, \uf{1} \right).$$
+	\end{block}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Der Farey-Foglen-Algorithmus}
+	\begin{block}{Algorithmus}
+		Sei $\frac{p}{q} \in \Q_+$ in gekürzter Form der zu zerlegende Bruch.\\
+		\begin{enumerate}
+			\item Konstruiere $F_q$.
+			\item Sei $\frac{r}{s}$ der zu $\frac{p}{q}$ adjazente Bruch in $F_q$, sodass $\frac{r}{s} < \frac{p}{q}$. Aufgrund der Eigenschaften der Farey-Folge gilt dann
+			$$\frac{p}{q} = \uf{qs} + \frac{r}{s},$$ wobei $s<q,\, r<p$.
+			\item Wiederhole dieses Vorgehen für $\frac{r}{s}$ solange, bis $s=1 \gdw r=0$.
+		\end{enumerate}
+	\end{block}
+\end{frame}
+
+\todo[inline]{Rechenbeispiel}
+
 \subsection{Binär-Algorithmus}
 
+\begin{frame}
+	\frametitle{Der Binäralgorithmus}
+	\begin{block}{Algorihtmus}
+		\only<1>{Sei $\frac{p}{q} \in \Q_+$ in gekürzter Form und $k \in \N$.}
+		\begin{enumerate}
+			\only<1>{\item Finde $N_{k-1} < q \leq N_k$ wobei $N_k=2^k$ ist.
+			\item Falls $q = N_k$, schreibe $p$ als Summe von Teilern von $N_k$, hier $d_i$ genannt:
+			$$\frac{p}{q} = \sum_{i=1}^{j} \frac{d_i}{N_k}=  \sum_{i = 1}^{j}\frac{1}{\frac{N_k}{d_i}}$$}
+			\only<2>{\setcounter{enumi}{2}\item Sonst seien $s, r \in \N, 0 \leq r < q$ so gewählt, dass:
+			$$pN_k = qs+r.$$
+			Es folgt:
+			$$\frac{p}{q} = \frac{p N_k}{q N_k} = \frac{qs + r}{q N_k} = \frac{s}{N_k} + \frac{r}{q N_k}.$$
+			\item Schreibe $s = \sum d_i$ und $r = \sum d_i'$, wobei $d_i, d_i'$ jeweils paarweise verschiedene Teiler von $N_k$ sind.
+			\item Erhalte den Ägyptischen Bruch:
+			$$\sum \uf{\frac{N_k}{d_i}} + \sum \uf{\frac{q N_k}{d_i'}}.$$}
+		\end{enumerate}
+	\end{block}
+
+\end{frame}
+
+\todo[inline]{Rechenbeispiel}
+
 \section{Auswertung einiger Testreihen}
+\subsection{Methodik}
+\begin{frame}
+	Datensatzform: $M_q = \left\{ \frac{p}{q} \, | \left(\, 2\leq p < q\right) \wedge \left(\text{ggT}(p,q) = 1\right)\right\}$\\ \vspace{1cm}
+	Enthaltene Informationen:
+	\begin{itemize}
+		\item die durchschnittliche Anzahl der Summanden, \emph{avgTerms(q)}
+		\item das Minimum der Anzahl der Summanden, \emph{minTerms(q)}
+		\item das Maximum der Anzahl der Summanden, \emph{maxTerms(q)}
+		\item das Minimum des jeweils größten Nenners, \emph{minDenom(q)}
+		\item das Maximum des jeweils größten Nenners, \emph{maxDenom(q)}.
+	\end{itemize}
+\end{frame}
+
+\subsection[Ergebnisse]{Nennenswerte Ergebnisse}
+\begin{frame}
+	\frametitle{Durchschnittliche Anzahl der Terme}
+	\todo[inline]{bild}
+\end{frame}
+
+\begin{frame}
+\frametitle{Minimum der größten Nenner}
+\todo[inline]{bild}
+\end{frame}
+
+\begin{frame}
+\frametitle{Maximum der größten Nenner}
+\todo[inline]{bild}
+\end{frame}
 
 \section{Theorie und Ausblick}
-\subsection{Theoretische Schranke für \frac{2}{n}}
+\subsection{Theoretische Schranken}
+
+\begin{frame}
+	\frametitle{Bekannte theoretische Schranken}
+	\begin{block}{Berechnung von $\frac{2}{n}$}
+	Sei $n \in \N$ ungerade. $\frac{2}{n}$ lässt sich für jedes $n$ als Summe zweier Stammbrüche notieren, nämlich:
+	$$\frac{2}{n} = \uf{\lceil \frac{n}{2} \rceil} + \uf{n \cdot \lceil \frac{n}{2} \rceil}.$$
+	\end{block}
+	\begin{block}{Berechnung von $\frac{3}{n}$}<2->
+		$$\frac{3}{n} = \uf{n} + \uf{\lceil \frac{n}{2} \rceil} + \uf{n \cdot \lceil \frac{n}{2} \rceil}.$$
+	\end{block}
+\end{frame}
+
 \subsection{Ungeklärte theoretische Fragen}
+
+\begin{frame}
+	\frametitle{Sonstige Ansätze und offene Fragen}
+	Weitere Ansätze und Fragen umfassen u.a.:
+	\begin{itemize}
+		\item Thesen für $\frac{4}{n}$, $\frac{5}{n}$ usw.
+		\item allgemeingültige Schranken für
+		\begin{itemize}
+			\item Größe der Nenner
+			\item Anzahl der Summanden
+		\end{itemize}
+		\item Zulassen auch negativer Terme
+		\item Umgang mit Polynomen.
+	\end{itemize}
+\end{frame}
 
 %%----------------------------------------------------------------------------------------
 %%	PRESENTATION SLIDES
@@ -274,4 +502,4 @@ Universität der Bundeswehr München \\ % Your institution for the title page
 %
 %%----------------------------------------------------------------------------------------
 %
-%\end{document}
+\end{document}
