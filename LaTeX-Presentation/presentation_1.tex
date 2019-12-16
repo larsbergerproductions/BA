@@ -118,7 +118,7 @@
 \end{frame}
 
 \begin{frame}
-\frametitle{Inhaltsverzeichnis}
+\frametitle{Inhalt}
 \tableofcontents
 \end{frame}
 
@@ -167,6 +167,7 @@
 \end{frame}
 
 \begin{frame}
+\frametitle{Ägyptische Division}
 		\centering
 		\begin{tabular}{Sr Sr}
 			1 & 7\\
@@ -198,7 +199,7 @@
 			&2&14\\
 			&4&28\\
 			&8&56\\
-			$\checkmark$&16&112\\ 
+			$\checkmark$&16&112\\
 			\only<2->{$\checkmark$}&$\uf{2}$&$3+\uf{2}$\\
 			\only<3->{$\checkmark$}&$\uf{7}$&$1$\\
 			\only<4->{$\checkmark$}&$\uf{14}$&$\uf{2}$\\ \hline
@@ -235,7 +236,31 @@ Betrachtung einer Auswahl:
 	\end{block}
 \end{frame}
 
-\todo[inline]{Rechenbeispiel}
+\begin{frame}
+	\frametitle{Der Greedy-Algorithmus: Rechenbeispiel}
+	Gesucht: Zerlegung für $\frac{5}{9}$.
+	$$\frac{5}{9}\only<3-4>{>}\only<5->{=}\only<3->{\uf{2}}\only<5->{+\uf{18}}$$
+	\only<-4>{Nebenrechnungen:}
+	\only<2-3>{$$\uf{2} \leq \frac{5}{9} < \uf{1}$$}
+	\only<4>{$$\frac{5}{9} - \uf{2} = \uf{18}$$}
+\end{frame}
+
+%\begin{frame}
+%	\frametitle{Der Greedy-Algorithmus: Rechenbeispiel}
+%	Gesucht: Zerlegung für $\frac{24}{31}$.\\
+%	\begin{center}
+%		$\frac{24}{31}$ \only<-10>{$>$}\only<11->{$=$} $\only<1-2>{0}\only<3->{\uf{2}}\only<6->{+\uf{4}}\only<9->{+\uf{42}}\only<11->{+\uf{2604}}$
+%	\end{center}
+%	\only<-10>{Nebenrechnungen:\\}
+%	\begin{center}
+%		\only<2-3>{$\uf{2}\leq \frac{24}{31} < \uf{1}$}
+%		\only<4>{$\frac{24}{31} - \uf{2} = \frac{17}{62}$}
+%		\only<5-6>{$\uf{4}\leq \frac{17}{62} < \uf{3}$}
+%		\only<7>{$\frac{17}{62} - \uf{4} = \frac{3}{124}$}
+%		\only<8-9>{$\uf{42}\leq \frac{3}{124} < \uf{41}$}
+%		\only<10>{$\frac{3}{124} - \uf{42} = \uf{2604}$}
+%	\end{center}
+%\end{frame}
 
 \subsection{Farey-Folgen-Algorithmus}
 
@@ -252,7 +277,7 @@ Betrachtung einer Auswahl:
 \end{frame}
 
 \begin{frame}
-	\frametitle{Der Farey-Foglen-Algorithmus}
+	\frametitle{Der Farey-Folgen-Algorithmus}
 	\begin{block}{Algorithmus}
 		Sei $\frac{p}{q} \in \Q_+$ in gekürzter Form der zu zerlegende Bruch.\\
 		\begin{enumerate}
@@ -264,13 +289,19 @@ Betrachtung einer Auswahl:
 	\end{block}
 \end{frame}
 
-\todo[inline]{Rechenbeispiel}
+\begin{frame}
+\frametitle{Der Farey-Folgen-Algorithmus: Rechenbeispiel}
+	Gesucht: Zerlegung für $\frac{5}{9}$.
+	$$\frac{p}{q} = \frac{5}{9} = \uf{qs} + \frac{r}{s}$$\\
+	\onslide<2->{$$F_{9rel} = \left( \frac{0}{1}, \uf{2}, \frac{5}{9}, \frac{4}{7}, \frac{3}{5}, \frac{2}{3}, \uf{1}\right)$$} \onslide<3->{$$\Rightarrow\frac{r}{s} = \uf{2}$$}
+	\onslide<4->{$$\frac{5}{9} = \uf{9 \cdot 2} + \uf{2} =  \uf{2} + \uf{18}$$}
+\end{frame}
 
 \subsection{Binär-Algorithmus}
 
 \begin{frame}
 	\frametitle{Der Binäralgorithmus}
-	\begin{block}{Algorihtmus}
+	\begin{block}{Algorithmus}
 		\only<1>{Sei $\frac{p}{q} \in \Q_+$ in gekürzter Form und $k \in \N$.}
 		\begin{enumerate}
 			\only<1>{\item Finde $N_{k-1} < q \leq N_k$ wobei $N_k=2^k$ ist.
@@ -288,11 +319,19 @@ Betrachtung einer Auswahl:
 
 \end{frame}
 
-\todo[inline]{Rechenbeispiel}
+\begin{frame}
+\frametitle{Der Binär-Algorithmus: Rechenbeispiel}
+	Gesucht: Zerlegung für $\frac{5}{9}$.
+	\onslide<2->{$$8<9<16 \Rightarrow N_k = 16$$\\}
+	\begin{center}
+		\onslide<3->{$\frac{5}{9}$} \only<4->{$ = \frac{5\cdot16}{9 \cdot 16}$} \only<5->{$ = \frac{9 \cdot 8 + 8}{9 \cdot 16}$} \only<6->{$ = \frac{8}{16} + \frac{8}{144}$} \only<7->{$ = \uf{2} + \uf{18}.$}
+	\end{center}
+\end{frame}
 
 \section{Auswertung einiger Testreihen}
 \subsection{Methodik}
 \begin{frame}
+	\frametitle{Auswertung von Testreihen: Methodik}
 	Datensatzform: $M_q = \left\{ \frac{p}{q} \, | \left(\, 2\leq p < q\right) \wedge \left(\text{ggT}(p,q) = 1\right)\right\}$\\ \vspace{1cm}
 	Enthaltene Informationen:
 	\begin{itemize}
@@ -307,17 +346,23 @@ Betrachtung einer Auswahl:
 \subsection[Ergebnisse]{Nennenswerte Ergebnisse}
 \begin{frame}
 	\frametitle{Durchschnittliche Anzahl der Terme}
-	\todo[inline]{bild}
+	\begin{figure}[h]
+		\includegraphics[width=\textwidth]{../LaTeX-Doc/images/maxTerms.png}
+	\end{figure}
 \end{frame}
 
 \begin{frame}
 \frametitle{Minimum der größten Nenner}
-\todo[inline]{bild}
+\begin{figure}[h]
+	\includegraphics[width=\textwidth]{../LaTeX-Doc/images/minDenom.png}
+\end{figure}
 \end{frame}
 
 \begin{frame}
 \frametitle{Maximum der größten Nenner}
-\todo[inline]{bild}
+\begin{figure}[h]
+	\includegraphics[width=\textwidth]{../LaTeX-Doc/images/maxDenom2in1.png}
+\end{figure}
 \end{frame}
 
 \section{Theorie und Ausblick}
