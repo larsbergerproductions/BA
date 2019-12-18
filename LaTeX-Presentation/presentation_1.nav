@@ -1,79 +1,79 @@
 \headcommand {\slideentry {0}{0}{1}{1/1}{}{0}}
 \headcommand {\beamer@framepages {1}{1}}
-\headcommand {\slideentry {0}{0}{2}{2/2}{}{0}}
+\headcommand {\beamer@sectionpages {1}{1}}
+\headcommand {\beamer@subsectionpages {1}{1}}
+\headcommand {\sectionentry {1}{Einf\IeC {\"u}hrung}{2}{Einf\IeC {\"u}hrung}{0}}
+\headcommand {\beamer@subsectionpages {2}{1}}
+\headcommand {\beamer@subsectionentry {0}{1}{1}{2}{Geschichte}}
+\headcommand {\slideentry {1}{1}{1}{2/2}{Geschichte}{0}}
 \headcommand {\beamer@framepages {2}{2}}
-\headcommand {\beamer@sectionpages {1}{2}}
-\headcommand {\beamer@subsectionpages {1}{2}}
-\headcommand {\sectionentry {1}{Einf\IeC {\"u}hrung}{3}{Einf\IeC {\"u}hrung}{0}}
-\headcommand {\slideentry {1}{0}{1}{3/3}{}{0}}
-\headcommand {\beamer@framepages {3}{3}}
-\headcommand {\beamer@subsectionpages {3}{3}}
-\headcommand {\beamer@subsectionentry {0}{1}{1}{4}{Geschichte}}
-\headcommand {\beamer@subsectionpages {4}{3}}
-\headcommand {\beamer@subsectionentry {0}{1}{2}{4}{\IeC {\"A}gyptische Multiplikation}}
-\headcommand {\slideentry {1}{2}{1}{4/8}{\IeC {\"A}gyptische Multiplikation}{0}}
-\headcommand {\beamer@framepages {4}{8}}
-\headcommand {\beamer@subsectionpages {4}{8}}
-\headcommand {\beamer@subsectionentry {0}{1}{3}{9}{\IeC {\"A}gyptische Division}}
-\headcommand {\slideentry {1}{3}{1}{9/10}{\IeC {\"A}gyptische Division}{0}}
-\headcommand {\beamer@framepages {9}{10}}
-\headcommand {\slideentry {1}{3}{2}{11/11}{\IeC {\"A}gyptische Division}{0}}
-\headcommand {\beamer@framepages {11}{11}}
-\headcommand {\slideentry {1}{3}{3}{12/15}{\IeC {\"A}gyptische Division}{0}}
-\headcommand {\beamer@framepages {12}{15}}
-\headcommand {\beamer@sectionpages {3}{15}}
-\headcommand {\beamer@subsectionpages {9}{15}}
-\headcommand {\sectionentry {2}{Zerlegungsalgorithmen}{16}{Zerlegungsalgorithmen}{0}}
-\headcommand {\slideentry {2}{0}{1}{16/16}{}{0}}
-\headcommand {\beamer@framepages {16}{16}}
-\headcommand {\beamer@subsectionpages {16}{16}}
-\headcommand {\beamer@subsectionentry {0}{2}{1}{17}{Greedy-Algorithmus}}
-\headcommand {\slideentry {2}{1}{1}{17/18}{Greedy-Algorithmus}{0}}
-\headcommand {\beamer@framepages {17}{18}}
-\headcommand {\slideentry {2}{1}{2}{19/23}{Greedy-Algorithmus}{0}}
-\headcommand {\beamer@framepages {19}{23}}
-\headcommand {\beamer@subsectionpages {17}{23}}
-\headcommand {\beamer@subsectionentry {0}{2}{2}{24}{Farey-Folgen-Algorithmus}}
-\headcommand {\slideentry {2}{2}{1}{24/25}{Farey-Folgen-Algorithmus}{0}}
-\headcommand {\beamer@framepages {24}{25}}
-\headcommand {\slideentry {2}{2}{2}{26/26}{Farey-Folgen-Algorithmus}{0}}
-\headcommand {\beamer@framepages {26}{26}}
-\headcommand {\slideentry {2}{2}{3}{27/30}{Farey-Folgen-Algorithmus}{0}}
-\headcommand {\beamer@framepages {27}{30}}
-\headcommand {\beamer@subsectionpages {24}{30}}
-\headcommand {\beamer@subsectionentry {0}{2}{3}{31}{Bin\IeC {\"a}r-Algorithmus}}
-\headcommand {\slideentry {2}{3}{1}{31/32}{Bin\IeC {\"a}r-Algorithmus}{0}}
-\headcommand {\beamer@framepages {31}{32}}
-\headcommand {\slideentry {2}{3}{2}{33/39}{Bin\IeC {\"a}r-Algorithmus}{0}}
-\headcommand {\beamer@framepages {33}{39}}
-\headcommand {\beamer@sectionpages {16}{39}}
-\headcommand {\beamer@subsectionpages {31}{39}}
-\headcommand {\sectionentry {3}{Auswertung einiger Testreihen}{40}{Auswertung einiger Testreihen}{0}}
-\headcommand {\beamer@subsectionpages {40}{39}}
-\headcommand {\beamer@subsectionentry {0}{3}{1}{40}{Methodik}}
-\headcommand {\slideentry {3}{1}{1}{40/40}{Methodik}{0}}
-\headcommand {\beamer@framepages {40}{40}}
-\headcommand {\beamer@subsectionpages {40}{40}}
-\headcommand {\beamer@subsectionentry {0}{3}{2}{41}{Ergebnisse}}
-\headcommand {\slideentry {3}{2}{1}{41/41}{Ergebnisse}{0}}
+\headcommand {\slideentry {1}{1}{2}{3/4}{Geschichte}{0}}
+\headcommand {\beamer@framepages {3}{4}}
+\headcommand {\beamer@subsectionpages {2}{4}}
+\headcommand {\beamer@subsectionentry {0}{1}{2}{5}{Rechenwege der \IeC {\"A}gypter}}
+\headcommand {\slideentry {1}{2}{1}{5/9}{Rechenwege der \IeC {\"A}gypter}{0}}
+\headcommand {\beamer@framepages {5}{9}}
+\headcommand {\slideentry {1}{2}{2}{10/11}{Rechenwege der \IeC {\"A}gypter}{0}}
+\headcommand {\beamer@framepages {10}{11}}
+\headcommand {\slideentry {1}{2}{3}{12/12}{Rechenwege der \IeC {\"A}gypter}{0}}
+\headcommand {\beamer@framepages {12}{12}}
+\headcommand {\slideentry {1}{2}{4}{13/16}{Rechenwege der \IeC {\"A}gypter}{0}}
+\headcommand {\beamer@framepages {13}{16}}
+\headcommand {\beamer@sectionpages {2}{16}}
+\headcommand {\beamer@subsectionpages {5}{16}}
+\headcommand {\sectionentry {2}{Zerlegungsalgorithmen}{17}{Zerlegungsalgorithmen}{0}}
+\headcommand {\slideentry {2}{0}{1}{17/17}{}{0}}
+\headcommand {\beamer@framepages {17}{17}}
+\headcommand {\beamer@subsectionpages {17}{17}}
+\headcommand {\beamer@subsectionentry {0}{2}{1}{18}{Greedy-Algorithmus}}
+\headcommand {\slideentry {2}{1}{1}{18/19}{Greedy-Algorithmus}{0}}
+\headcommand {\beamer@framepages {18}{19}}
+\headcommand {\slideentry {2}{1}{2}{20/24}{Greedy-Algorithmus}{0}}
+\headcommand {\beamer@framepages {20}{24}}
+\headcommand {\beamer@subsectionpages {18}{24}}
+\headcommand {\beamer@subsectionentry {0}{2}{2}{25}{Farey-Folgen-Algorithmus}}
+\headcommand {\slideentry {2}{2}{1}{25/26}{Farey-Folgen-Algorithmus}{0}}
+\headcommand {\beamer@framepages {25}{26}}
+\headcommand {\slideentry {2}{2}{2}{27/27}{Farey-Folgen-Algorithmus}{0}}
+\headcommand {\beamer@framepages {27}{27}}
+\headcommand {\slideentry {2}{2}{3}{28/31}{Farey-Folgen-Algorithmus}{0}}
+\headcommand {\beamer@framepages {28}{31}}
+\headcommand {\beamer@subsectionpages {25}{31}}
+\headcommand {\beamer@subsectionentry {0}{2}{3}{32}{Bin\IeC {\"a}r-Algorithmus}}
+\headcommand {\slideentry {2}{3}{1}{32/33}{Bin\IeC {\"a}r-Algorithmus}{0}}
+\headcommand {\beamer@framepages {32}{33}}
+\headcommand {\slideentry {2}{3}{2}{34/40}{Bin\IeC {\"a}r-Algorithmus}{0}}
+\headcommand {\beamer@framepages {34}{40}}
+\headcommand {\slideentry {2}{3}{3}{41/41}{Bin\IeC {\"a}r-Algorithmus}{0}}
 \headcommand {\beamer@framepages {41}{41}}
-\headcommand {\slideentry {3}{2}{2}{42/42}{Ergebnisse}{0}}
+\headcommand {\beamer@sectionpages {17}{41}}
+\headcommand {\beamer@subsectionpages {32}{41}}
+\headcommand {\sectionentry {3}{Auswertung einiger Testreihen}{42}{Auswertung einiger Testreihen}{0}}
+\headcommand {\beamer@subsectionpages {42}{41}}
+\headcommand {\beamer@subsectionentry {0}{3}{1}{42}{Methodik}}
+\headcommand {\slideentry {3}{1}{1}{42/42}{Methodik}{0}}
 \headcommand {\beamer@framepages {42}{42}}
-\headcommand {\slideentry {3}{2}{3}{43/43}{Ergebnisse}{0}}
+\headcommand {\beamer@subsectionpages {42}{42}}
+\headcommand {\beamer@subsectionentry {0}{3}{2}{43}{Ergebnisse}}
+\headcommand {\slideentry {3}{2}{1}{43/43}{Ergebnisse}{0}}
 \headcommand {\beamer@framepages {43}{43}}
-\headcommand {\beamer@sectionpages {40}{43}}
-\headcommand {\beamer@subsectionpages {41}{43}}
-\headcommand {\sectionentry {4}{Theorie und Ausblick}{44}{Theorie und Ausblick}{0}}
-\headcommand {\beamer@subsectionpages {44}{43}}
-\headcommand {\beamer@subsectionentry {0}{4}{1}{44}{Theoretische Schranken}}
-\headcommand {\slideentry {4}{1}{1}{44/45}{Theoretische Schranken}{0}}
-\headcommand {\beamer@framepages {44}{45}}
-\headcommand {\beamer@subsectionpages {44}{45}}
-\headcommand {\beamer@subsectionentry {0}{4}{2}{46}{Ungekl\IeC {\"a}rte theoretische Fragen}}
-\headcommand {\slideentry {4}{2}{1}{46/46}{Ungekl\IeC {\"a}rte theoretische Fragen}{0}}
-\headcommand {\beamer@framepages {46}{46}}
-\headcommand {\beamer@partpages {1}{46}}
-\headcommand {\beamer@subsectionpages {46}{46}}
-\headcommand {\beamer@sectionpages {44}{46}}
-\headcommand {\beamer@documentpages {46}}
-\headcommand {\gdef \inserttotalframenumber {21}}
+\headcommand {\slideentry {3}{2}{2}{44/44}{Ergebnisse}{0}}
+\headcommand {\beamer@framepages {44}{44}}
+\headcommand {\slideentry {3}{2}{3}{45/45}{Ergebnisse}{0}}
+\headcommand {\beamer@framepages {45}{45}}
+\headcommand {\beamer@sectionpages {42}{45}}
+\headcommand {\beamer@subsectionpages {43}{45}}
+\headcommand {\sectionentry {4}{Theorie und Ausblick}{46}{Theorie und Ausblick}{0}}
+\headcommand {\beamer@subsectionpages {46}{45}}
+\headcommand {\beamer@subsectionentry {0}{4}{1}{46}{Theoretische Schranken}}
+\headcommand {\slideentry {4}{1}{1}{46/47}{Theoretische Schranken}{0}}
+\headcommand {\beamer@framepages {46}{47}}
+\headcommand {\beamer@subsectionpages {46}{47}}
+\headcommand {\beamer@subsectionentry {0}{4}{2}{48}{Ungekl\IeC {\"a}rte theoretische Fragen}}
+\headcommand {\slideentry {4}{2}{1}{48/48}{Ungekl\IeC {\"a}rte theoretische Fragen}{0}}
+\headcommand {\beamer@framepages {48}{48}}
+\headcommand {\beamer@partpages {1}{48}}
+\headcommand {\beamer@subsectionpages {48}{48}}
+\headcommand {\beamer@sectionpages {46}{48}}
+\headcommand {\beamer@documentpages {48}}
+\headcommand {\gdef \inserttotalframenumber {22}}

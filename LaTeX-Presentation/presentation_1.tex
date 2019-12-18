@@ -82,6 +82,7 @@
 \usepackage{dsfont}
 \usepackage{cellspace}
 \usepackage{todonotes}
+\usepackage{hieroglf}
 %----------------------------------------------------------------------------------------
 %	TITLE PAGE
 %----------------------------------------------------------------------------------------
@@ -117,23 +118,34 @@
 \titlepage % Print the title page as the first slide
 \end{frame}
 
-\begin{frame}
-\frametitle{Inhalt}
-\tableofcontents
-\end{frame}
+%\begin{frame}
+%\frametitle{Inhalt}
+%\tableofcontents
+%\end{frame}
 
 \section{Einführung}
+\subsection{Geschichte}
+
+\begin{frame}
+	\frametitle{Geschichte}
+	\begin{figure}
+	\includegraphics[width=.9\textwidth]{images/Rhind.jpg}
+	\tiny{https://research.britishmuseum.org/research/collection\_online/collection\_object\_details/\\collection\_image\_gallery.aspx?assetId=766120001\&objectId=117389\&partId=1}
+	\end{figure}
+\end{frame}
+
 \begin{frame}
 	\begin{block}{Definition}
 	Ein Bruch soll fortan ,,in ägyptischer Form'' bzw. ,,Ägyptischer Bruch'' heißen genau dann, wenn er in der Form
 	$$\uf{x_1} + \uf{x_2} + \cdots + \uf{x_n}, \quad n \in \N, n \ge 1$$
 	mit paarweise verschiedenen $x_i, \, i \in \left\{1,...,n\right\}$, vorliegt.
 	\end{block}
+	\begin{block}{Anmerkung}<2->
+		Es werden nur Brüche $\frac{p}{q}$ mit $0<\frac{p}{q}<1$ betrachtet.
+	\end{block}
 \end{frame}
 
-\subsection{Geschichte}
-
-\subsection{Ägyptische Multiplikation}
+\subsection{Rechenwege der Ägypter}
 %\setbeamercovered{invisible}
 \begin{frame}
 	\frametitle{Ägyptische Multiplikation}
@@ -150,7 +162,6 @@
 	\end{block}
 \end{frame}
 
-\subsection{Ägyptische Division}
 \begin{frame}
 \frametitle{Ägyptische Division}
 	\begin{block}{Beispiel: $117 \div 7$}
@@ -323,13 +334,18 @@ Betrachtung einer Auswahl:
 \frametitle{Der Binär-Algorithmus: Rechenbeispiel}
 	Gesucht: Zerlegung für $\frac{5}{9}$.
 	\onslide<2->{$$8<9<16 \Rightarrow N_k = 16$$\\}
-	\begin{center}
-		\onslide<3->{$\frac{5}{9}$} \only<4->{$ = \frac{5\cdot16}{9 \cdot 16}$} \only<5->{$ = \frac{9 \cdot 8 + 8}{9 \cdot 16}$} \only<6->{$ = \frac{8}{16} + \frac{8}{144}$} \only<7->{$ = \uf{2} + \uf{18}.$}
-	\end{center}
+		\onslide<3->$${\frac{5}{9}} \uncover<4->{ = \frac{5\cdot16}{9 \cdot 16}} \uncover<5->{ = \frac{9 \cdot 8 + 8}{9 \cdot 16}} \uncover<6->{ = \frac{8}{16} + \frac{8}{144}} \uncover<7->{ = \uf{2} + \uf{18}.}$$
+		%\uncover<overlay specification>{text}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Weitere Rechenbeispiele}
+	%Gesucht: Zerlegung für $\frac{24}{31}.$
 \end{frame}
 
 \section{Auswertung einiger Testreihen}
 \subsection{Methodik}
+
 \begin{frame}
 	\frametitle{Auswertung von Testreihen: Methodik}
 	Datensatzform: $M_q = \left\{ \frac{p}{q} \, | \left(\, 2\leq p < q\right) \wedge \left(\text{ggT}(p,q) = 1\right)\right\}$\\ \vspace{1cm}
@@ -343,7 +359,8 @@ Betrachtung einer Auswahl:
 	\end{itemize}
 \end{frame}
 
-\subsection[Ergebnisse]{Nennenswerte Ergebnisse}
+\subsection[Ergebnisse]{Wichtige Ergebnisse}
+
 \begin{frame}
 	\frametitle{Durchschnittliche Anzahl der Terme}
 	\begin{figure}[h]
@@ -392,7 +409,7 @@ Betrachtung einer Auswahl:
 			\item Anzahl der Summanden
 		\end{itemize}
 		\item Zulassen auch negativer Terme
-		\item Umgang mit Polynomen.
+%		\item Umgang mit Polynomen.
 	\end{itemize}
 \end{frame}
 

@@ -1,14 +1,13 @@
-\beamer@sectionintoc {1}{Einf\IeC {\"u}hrung}{3}{0}{1}
-\beamer@subsectionintoc {1}{1}{Geschichte}{4}{0}{1}
-\beamer@subsectionintoc {1}{2}{\IeC {\"A}gyptische Multiplikation}{4}{0}{1}
-\beamer@subsectionintoc {1}{3}{\IeC {\"A}gyptische Division}{9}{0}{1}
-\beamer@sectionintoc {2}{Zerlegungsalgorithmen}{16}{0}{2}
-\beamer@subsectionintoc {2}{1}{Greedy-Algorithmus}{17}{0}{2}
-\beamer@subsectionintoc {2}{2}{Farey-Folgen-Algorithmus}{24}{0}{2}
-\beamer@subsectionintoc {2}{3}{Bin\IeC {\"a}r-Algorithmus}{31}{0}{2}
-\beamer@sectionintoc {3}{Auswertung einiger Testreihen}{40}{0}{3}
-\beamer@subsectionintoc {3}{1}{Methodik}{40}{0}{3}
-\beamer@subsectionintoc {3}{2}{Nennenswerte Ergebnisse}{41}{0}{3}
-\beamer@sectionintoc {4}{Theorie und Ausblick}{44}{0}{4}
-\beamer@subsectionintoc {4}{1}{Theoretische Schranken}{44}{0}{4}
-\beamer@subsectionintoc {4}{2}{Ungekl\IeC {\"a}rte theoretische Fragen}{46}{0}{4}
+\beamer@sectionintoc {1}{Einf\IeC {\"u}hrung}{2}{0}{1}
+\beamer@subsectionintoc {1}{1}{Geschichte}{2}{0}{1}
+\beamer@subsectionintoc {1}{2}{Rechenwege der \IeC {\"A}gypter}{5}{0}{1}
+\beamer@sectionintoc {2}{Zerlegungsalgorithmen}{17}{0}{2}
+\beamer@subsectionintoc {2}{1}{Greedy-Algorithmus}{18}{0}{2}
+\beamer@subsectionintoc {2}{2}{Farey-Folgen-Algorithmus}{25}{0}{2}
+\beamer@subsectionintoc {2}{3}{Bin\IeC {\"a}r-Algorithmus}{32}{0}{2}
+\beamer@sectionintoc {3}{Auswertung einiger Testreihen}{42}{0}{3}
+\beamer@subsectionintoc {3}{1}{Methodik}{42}{0}{3}
+\beamer@subsectionintoc {3}{2}{Wichtige Ergebnisse}{43}{0}{3}
+\beamer@sectionintoc {4}{Theorie und Ausblick}{46}{0}{4}
+\beamer@subsectionintoc {4}{1}{Theoretische Schranken}{46}{0}{4}
+\beamer@subsectionintoc {4}{2}{Ungekl\IeC {\"a}rte theoretische Fragen}{48}{0}{4}
