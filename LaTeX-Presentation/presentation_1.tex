@@ -343,6 +343,22 @@ Betrachtung einer Auswahl:
 	%Gesucht: Zerlegung für $\frac{24}{31}.$
 \end{frame}
 
+\begin{frame}
+\frametitle{Komplexitätsabschätzung}
+\scriptsize{
+	\begin{tabular}{|Sc | Sc | Sc|}
+		\hline
+		Algorithmus & Anzahl Summanden & Größtmöglicher Nenner\\
+		\hline
+		Fibonacci-Sylvester\newline(Greedy) & $p$ & - \\
+		\hline
+		Farey-Folgen-Algorithmus & $p$ & $q^2-q$\\
+		\hline
+		Binäralgorithmus & $O(\log q)$ & $2(q^2-q)$\\
+		\hline
+\end{tabular}}
+\end{frame}
+
 \section{Auswertung einiger Testreihen}
 \subsection{Methodik}
 
@@ -360,6 +376,20 @@ Betrachtung einer Auswahl:
 \end{frame}
 
 \subsection[Ergebnisse]{Wichtige Ergebnisse}
+\begin{frame}
+	\frametitle{Laufzeiten}
+	\begin{center}
+	\begin{tabular}{|l | c c c|}
+		\hline
+		\multicolumn{1}{|c|}{\textbf{Algorithmus}} & h & min & sek \\ \hline
+		Binär-Algorithmus & & 33 & 22 \\ \hline
+		Greedy-Algorithmus & & 40 &  53 \\ \hline
+		Farey-Folgen-Algorithmus & 62 & 33 & 38 \\ \hline
+	\end{tabular}
+	\end{center}
+\end{frame}
+
+
 
 \begin{frame}
 	\frametitle{Durchschnittliche Anzahl der Terme}
