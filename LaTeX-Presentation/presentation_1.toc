@@ -5,9 +5,9 @@
 \beamer@subsectionintoc {2}{1}{Greedy-Algorithmus}{18}{0}{2}
 \beamer@subsectionintoc {2}{2}{Farey-Folgen-Algorithmus}{25}{0}{2}
 \beamer@subsectionintoc {2}{3}{Bin\IeC {\"a}r-Algorithmus}{32}{0}{2}
-\beamer@sectionintoc {3}{Auswertung einiger Testreihen}{43}{0}{3}
-\beamer@subsectionintoc {3}{1}{Methodik}{43}{0}{3}
-\beamer@subsectionintoc {3}{2}{Wichtige Ergebnisse}{44}{0}{3}
-\beamer@sectionintoc {4}{Theorie und Ausblick}{48}{0}{4}
-\beamer@subsectionintoc {4}{1}{Theoretische Schranken}{48}{0}{4}
-\beamer@subsectionintoc {4}{2}{Ungekl\IeC {\"a}rte theoretische Fragen}{50}{0}{4}
+\beamer@sectionintoc {3}{Auswertung einiger Testreihen}{42}{0}{3}
+\beamer@subsectionintoc {3}{1}{Methodik}{42}{0}{3}
+\beamer@subsectionintoc {3}{2}{Wichtige Ergebnisse}{43}{0}{3}
+\beamer@sectionintoc {4}{Theorie und Ausblick}{46}{0}{4}
+\beamer@subsectionintoc {4}{1}{Theoretische Schranken}{46}{0}{4}
+\beamer@subsectionintoc {4}{2}{Ungekl\IeC {\"a}rte theoretische Fragen}{48}{0}{4}

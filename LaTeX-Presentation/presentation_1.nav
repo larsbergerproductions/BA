@@ -46,38 +46,34 @@
 \headcommand {\beamer@framepages {34}{40}}
 \headcommand {\slideentry {2}{3}{3}{41/41}{Bin\IeC {\"a}r-Algorithmus}{0}}
 \headcommand {\beamer@framepages {41}{41}}
-\headcommand {\slideentry {2}{3}{4}{42/42}{Bin\IeC {\"a}r-Algorithmus}{0}}
+\headcommand {\beamer@sectionpages {17}{41}}
+\headcommand {\beamer@subsectionpages {32}{41}}
+\headcommand {\sectionentry {3}{Auswertung einiger Testreihen}{42}{Auswertung einiger Testreihen}{0}}
+\headcommand {\beamer@subsectionpages {42}{41}}
+\headcommand {\beamer@subsectionentry {0}{3}{1}{42}{Methodik}}
+\headcommand {\slideentry {3}{1}{1}{42/42}{Methodik}{0}}
 \headcommand {\beamer@framepages {42}{42}}
-\headcommand {\beamer@sectionpages {17}{42}}
-\headcommand {\beamer@subsectionpages {32}{42}}
-\headcommand {\sectionentry {3}{Auswertung einiger Testreihen}{43}{Auswertung einiger Testreihen}{0}}
-\headcommand {\beamer@subsectionpages {43}{42}}
-\headcommand {\beamer@subsectionentry {0}{3}{1}{43}{Methodik}}
-\headcommand {\slideentry {3}{1}{1}{43/43}{Methodik}{0}}
+\headcommand {\beamer@subsectionpages {42}{42}}
+\headcommand {\beamer@subsectionentry {0}{3}{2}{43}{Ergebnisse}}
+\headcommand {\slideentry {3}{2}{1}{43/43}{Ergebnisse}{0}}
 \headcommand {\beamer@framepages {43}{43}}
-\headcommand {\beamer@subsectionpages {43}{43}}
-\headcommand {\beamer@subsectionentry {0}{3}{2}{44}{Ergebnisse}}
-\headcommand {\slideentry {3}{2}{1}{44/44}{Ergebnisse}{0}}
+\headcommand {\slideentry {3}{2}{2}{44/44}{Ergebnisse}{0}}
 \headcommand {\beamer@framepages {44}{44}}
-\headcommand {\slideentry {3}{2}{2}{45/45}{Ergebnisse}{0}}
+\headcommand {\slideentry {3}{2}{3}{45/45}{Ergebnisse}{0}}
 \headcommand {\beamer@framepages {45}{45}}
-\headcommand {\slideentry {3}{2}{3}{46/46}{Ergebnisse}{0}}
-\headcommand {\beamer@framepages {46}{46}}
-\headcommand {\slideentry {3}{2}{4}{47/47}{Ergebnisse}{0}}
-\headcommand {\beamer@framepages {47}{47}}
-\headcommand {\beamer@sectionpages {43}{47}}
-\headcommand {\beamer@subsectionpages {44}{47}}
-\headcommand {\sectionentry {4}{Theorie und Ausblick}{48}{Theorie und Ausblick}{0}}
-\headcommand {\beamer@subsectionpages {48}{47}}
-\headcommand {\beamer@subsectionentry {0}{4}{1}{48}{Theoretische Schranken}}
-\headcommand {\slideentry {4}{1}{1}{48/49}{Theoretische Schranken}{0}}
-\headcommand {\beamer@framepages {48}{49}}
-\headcommand {\beamer@subsectionpages {48}{49}}
-\headcommand {\beamer@subsectionentry {0}{4}{2}{50}{Ungekl\IeC {\"a}rte theoretische Fragen}}
-\headcommand {\slideentry {4}{2}{1}{50/50}{Ungekl\IeC {\"a}rte theoretische Fragen}{0}}
-\headcommand {\beamer@framepages {50}{50}}
-\headcommand {\beamer@partpages {1}{50}}
-\headcommand {\beamer@subsectionpages {50}{50}}
-\headcommand {\beamer@sectionpages {48}{50}}
-\headcommand {\beamer@documentpages {50}}
-\headcommand {\gdef \inserttotalframenumber {24}}
+\headcommand {\beamer@sectionpages {42}{45}}
+\headcommand {\beamer@subsectionpages {43}{45}}
+\headcommand {\sectionentry {4}{Theorie und Ausblick}{46}{Theorie und Ausblick}{0}}
+\headcommand {\beamer@subsectionpages {46}{45}}
+\headcommand {\beamer@subsectionentry {0}{4}{1}{46}{Theoretische Schranken}}
+\headcommand {\slideentry {4}{1}{1}{46/47}{Theoretische Schranken}{0}}
+\headcommand {\beamer@framepages {46}{47}}
+\headcommand {\beamer@subsectionpages {46}{47}}
+\headcommand {\beamer@subsectionentry {0}{4}{2}{48}{Ungekl\IeC {\"a}rte theoretische Fragen}}
+\headcommand {\slideentry {4}{2}{1}{48/48}{Ungekl\IeC {\"a}rte theoretische Fragen}{0}}
+\headcommand {\beamer@framepages {48}{48}}
+\headcommand {\beamer@partpages {1}{48}}
+\headcommand {\beamer@subsectionpages {48}{48}}
+\headcommand {\beamer@sectionpages {46}{48}}
+\headcommand {\beamer@documentpages {48}}
+\headcommand {\gdef \inserttotalframenumber {22}}
